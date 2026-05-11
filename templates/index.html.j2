@@ -179,6 +179,8 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
   font-family:'Playfair Display',serif;font-size:.75rem;flex-shrink:0;margin-top:.25rem}
 .step-icon-wrap{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .step-icon-wrap svg{width:48px;height:48px}
+.step-icon-img{width:48px;height:48px;border-radius:6px;object-fit:cover;
+  border:1px solid var(--bd);background:var(--card)}
 .step-text{flex:1;min-width:0}
 .step-action-row{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
   color:var(--a1);font-weight:700;margin-bottom:.2rem;display:flex;align-items:center;gap:.45rem}
@@ -627,11 +629,26 @@ function buildMacroCell(val, lbl) {
 }
 
 /* ── Build step item ─────────────────────────────────────────── */
-function buildStep(s, i) {
+const STEP_ICONS = {{ step_icons_json | default('{}') }};
+
+function _stepIconNode(recipeId, i, fallbackIc) {
+  const key = `${recipeId}__${String(i).padStart(2, '0')}`;
+  const entry = STEP_ICONS[key];
+  if (entry && entry.url) {
+    const img = el('img', 'step-icon-img');
+    img.src = entry.url;
+    img.alt = entry.action || '';
+    img.loading = 'lazy';
+    return img;
+  }
+  return buildIcon(fallbackIc);
+}
+
+function buildStep(s, i, recipeId) {
   const li = el('li', 'step-item');
   const num = el('div', 'step-num', String(i + 1).padStart(2, '0'));
   const iconWrap = el('div', 'step-icon-wrap');
-  iconWrap.appendChild(buildIcon(s.ic));
+  iconWrap.appendChild(_stepIconNode(recipeId, i, s.ic));
   const textDiv = el('div', 'step-text');
   const actionRow = el('div', 'step-action-row', s.act);
   if (s.t) {
@@ -732,7 +749,7 @@ function openModal(id) {
   const stepsHead = el('div', 'section-head');
   stepsHead.appendChild(el('h3', null, 'Procedimiento'));
   const stepsList = el('ol', 'steps-list');
-  r.steps.forEach((s, i) => stepsList.appendChild(buildStep(s, i)));
+  r.steps.forEach((s, i) => stepsList.appendChild(buildStep(s, i, currentId)));
   append(right, stepsHead, stepsList);
 
   /* tip */
