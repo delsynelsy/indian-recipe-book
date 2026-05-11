@@ -74,6 +74,7 @@ def generate_html(
     template_dir: Path,
     output_path: Path,
     meal_plan_html: str = "",
+    template_name: str = "index.html.j2",
 ) -> None:
     env = Environment(
         loader=FileSystemLoader(str(template_dir)),
@@ -81,7 +82,8 @@ def generate_html(
         keep_trailing_newline=True,
     )
     env.filters["ing_slug"] = _slugify
-    template = env.get_template("index.html.j2")
+    env.filters["zeropad"] = lambda n, w=2: str(int(n)).zfill(w)
+    template = env.get_template(template_name)
 
     icons = _load_ingredient_icons()
     step_icons = _load_step_icons()

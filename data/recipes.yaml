@@ -421,3 +421,1527 @@ recipes:
         time: ""
         text: "Decorar con cilantro fresco y rodajas de cebolla morada marinada. Servir con arroz o bhatura."
     tip: "La caramelización lenta de la cebolla (10 min completos a fuego bajo-medio) es la clave del sabor profundo que define un chana masala excepcional."
+    tip: "La caramelización lenta de la cebolla (10 min completos a fuego bajo-medio) es la clave del sabor profundo que define un chana masala excepcional."
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # NUEVAS RECETAS — COMPLETAN EL PLAN DE 8 SEMANAS
+  # ──────────────────────────────────────────────────────────────────────────
+
+  - id: besan_chilla
+    name: Besan Chilla
+    subtitle: Tortitas crujientes de harina de garbanzo con especias
+    phase: "Fase 1–4"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "8 min"
+    prep_note: ""
+    cook: "15 min"
+    servings: "2 porciones (4 chillas)"
+    nutrition:
+      kcal: 260
+      protein: 12
+      carbs: 32
+      fat: 8
+    image:
+      src: "https://images.mohammadasjad.com/hero/besan_chilla.webp"
+      css_class: img-besan-chilla
+    highlight_ingredients:
+      - Harina garbanzo
+      - Cebolla
+      - Tomate
+      - Cilantro
+      - Comino
+    ingredients:
+      - "1 taza harina de garbanzo (besan)"
+      - "1/2 cebolla finamente picada"
+      - "1 tomate pequeño finamente picado"
+      - "1/4 taza cilantro fresco picado"
+      - "1 chile verde picado (opcional)"
+      - "1/2 cdta comino molido"
+      - "1/2 cdta cúrcuma"
+      - "Sal al gusto"
+      - "Aceite de oliva para cocinar"
+    steps:
+      - icon: mix
+        action: Mezclar
+        time: "3 min"
+        text: "En un bol amplio, combinar harina de garbanzo con comino, cúrcuma y sal. Añadir agua poco a poco hasta obtener una masa sin grumos."
+      - icon: mix
+        action: Agregar
+        time: "2 min"
+        text: "Incorporar cebolla picada, tomate, cilantro y chile verde a la masa. La consistencia debe ser similar a la de una crema fluida."
+      - icon: rest
+        action: Reposar
+        time: "5 min"
+        text: "Dejar reposar la masa 5 minutos para que el besan se hidrate completamente y los sabores se integren."
+      - icon: heat
+        action: Calentar
+        time: "2 min"
+        text: "Calentar una sartén antiadherente a fuego medio. Pincelar ligeramente con aceite cuando esté caliente."
+      - icon: pour
+        action: Verter
+        time: "1 min"
+        text: "Verter un cucharón de masa en el centro y extender en círculo con el reverso de la cuchara hasta ~16 cm de diámetro."
+      - icon: cook
+        action: Cocinar
+        time: "2–3 min"
+        text: "Cocinar a fuego medio hasta que los bordes se vean secos y aparezcan pequeñas burbujas en la superficie. Rociar unas gotas de aceite por los bordes."
+      - icon: flip
+        action: Voltear
+        time: "1–2 min"
+        text: "Voltear con cuidado con una espátula plana. Cocinar 1–2 minutos más hasta que el otro lado esté dorado y crujiente."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir caliente con chutney verde de cilantro-menta y una cucharada de yogur natural sin azúcar."
+    tip: "Para un chilla más crujiente, extiende la masa lo más delgada posible. Si se rompe al voltear, la sartén no está suficientemente caliente o la masa es muy espesa."
+
+  - id: upma
+    name: Vegetable Upma
+    subtitle: Sémola de trigo salteada con verduras y especias
+    phase: "Fase 1–2"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "10 min"
+    prep_note: ""
+    cook: "15 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 290
+      protein: 8
+      carbs: 46
+      fat: 7
+    image:
+      src: "https://images.mohammadasjad.com/hero/upma.webp"
+      css_class: img-upma
+    highlight_ingredients:
+      - Sémola trigo
+      - Mostaza
+      - Cebolla
+      - Zanahoria
+      - Ghee
+    ingredients:
+      - "3/4 taza sémola de trigo (rava/suji)"
+      - "1/2 cebolla mediana picada"
+      - "1 zanahoria pequeña en cubos"
+      - "1/4 taza guisantes frescos o congelados"
+      - "1/2 cdta semillas de mostaza"
+      - "1/2 cdta dal urad"
+      - "6–8 hojas de curry (kari patta)"
+      - "1 cdta ghee o aceite de oliva"
+      - "1.5 tazas agua caliente"
+      - "Sal y zumo de limón al gusto"
+    steps:
+      - icon: toast
+        action: Tostar
+        time: "4–5 min"
+        text: "Tostar la sémola en seco en una sartén a fuego medio, removiendo constantemente, hasta que emita un aroma a nuez y tome un color ligeramente dorado."
+      - icon: heat
+        action: Templar
+        time: "1 min"
+        text: "En otra olla, calentar el ghee a fuego medio. Agregar semillas de mostaza y esperar a que comiencen a chisporrotear."
+      - icon: sauté
+        action: Sofreír
+        time: "1 min"
+        text: "Añadir dal urad y hojas de curry. Sofreír 30 segundos hasta que el dal tome color dorado y las hojas se pongan crujientes."
+      - icon: mix
+        action: Cebolla
+        time: "3 min"
+        text: "Agregar la cebolla picada y sofreír 3 minutos hasta que quede translúcida. Añadir las verduras (zanahoria, guisantes) y cocinar 2 minutos más."
+      - icon: pour
+        action: Agua
+        time: "1 min"
+        text: "Verter el agua caliente, añadir sal y llevar a ebullición. El agua debe estar caliente para evitar grumos al añadir la sémola."
+      - icon: mix
+        action: Incorporar
+        time: "2 min"
+        text: "Reducir fuego a bajo y añadir la sémola tostada en forma de lluvia, removiendo constantemente para evitar grumos."
+      - icon: cook
+        action: Cocinar
+        time: "2–3 min"
+        text: "Tapar y cocinar a fuego muy bajo 2–3 minutos hasta que la sémola absorba toda el agua y tenga textura esponjosa."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Esponjar con un tenedor y servir caliente con un chorrito de zumo de limón. Acompañar con chutney de coco o yogur."
+    tip: "Tostar bien la sémola en seco es el paso clave: una sémola bien tostada nunca queda pegajosa o apelmazada. El upma debe tener cada grano suelto."
+
+  - id: idli
+    name: Idli con Sambar
+    subtitle: Bollos de arroz al vapor con sopa de lentejas y verduras
+    phase: "Fase 1–2"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "10 min"
+    prep_note: "+ 8 h fermentación"
+    cook: "15 min"
+    servings: "2 porciones (4 idlis)"
+    nutrition:
+      kcal: 275
+      protein: 10
+      carbs: 48
+      fat: 4
+    image:
+      src: "https://images.mohammadasjad.com/hero/idli.webp"
+      css_class: img-idli
+    highlight_ingredients:
+      - Arroz
+      - Dal urad
+      - Sambar
+      - Mostaza
+      - Cilantro
+    ingredients:
+      - "1 taza arroz de grano corto o arroz idli"
+      - "1/4 taza dal urad descascarillado"
+      - "1/2 cdta sal"
+      - "1 taza sambar listo (o preparado aparte)"
+      - "Chutney de coco para acompañar"
+    steps:
+      - icon: soak
+        action: Remojar
+        time: "6–8 h"
+        text: "Remojar el arroz y el dal urad por separado durante 6–8 horas o toda la noche hasta que estén bien hidratados."
+      - icon: blend
+        action: Moler
+        time: "5 min"
+        text: "Moler el dal urad con poca agua hasta obtener una pasta muy suave y esponjosa. Luego moler el arroz hasta conseguir una textura ligeramente granulada."
+      - icon: mix
+        action: Mezclar
+        time: "2 min"
+        text: "Combinar ambas pastas en un bol grande. Añadir sal y mezclar bien con las manos limpias para incorporar aire."
+      - icon: rest
+        action: Fermentar
+        time: "8 h"
+        text: "Cubrir el bol con un paño húmedo y dejar fermentar en un lugar cálido durante 8 horas o hasta que la masa suba y burbujee."
+      - icon: heat
+        action: Preparar
+        time: "3 min"
+        text: "Engrasar ligeramente los moldes de idli con aceite. Calentar la vaporera con agua en el fondo."
+      - icon: pour
+        action: Verter
+        time: "2 min"
+        text: "Remover suavemente la masa fermentada y verterla en los moldes sin sobrepasar 3/4 de capacidad."
+      - icon: cook
+        action: Vaporizar
+        time: "10–12 min"
+        text: "Colocar los moldes en la vaporera y cocinar al vapor 10–12 minutos. Los idlis están listos cuando un palillo sale limpio al insertarlo."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Desmoldar con una cucharita húmeda y servir calientes con sambar caliente y chutney de coco."
+    tip: "La temperatura de fermentación es crucial: en climas fríos, coloca el bol dentro del horno apagado con la luz encendida para crear el ambiente cálido que necesita la masa."
+
+  - id: oats_dosa
+    name: Oats Dosa
+    subtitle: Crepe instantánea de avena y arroz con especias del sur
+    phase: "Fase 3–4"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "10 min"
+    prep_note: "+ 10 min reposo"
+    cook: "15 min"
+    servings: "2 porciones (4 dosas)"
+    nutrition:
+      kcal: 240
+      protein: 9
+      carbs: 38
+      fat: 5
+    image:
+      src: "https://images.mohammadasjad.com/hero/oats_dosa.webp"
+      css_class: img-oats-dosa
+    highlight_ingredients:
+      - Avena
+      - Arroz
+      - Mostaza
+      - Cebolla
+      - Cilantro
+    ingredients:
+      - "1/2 taza avena en hojuelas finas"
+      - "1/4 taza arroz (o harina de arroz)"
+      - "2 cdas dal urad (opcional)"
+      - "1/2 cebolla pequeña finamente picada"
+      - "1/4 taza cilantro fresco picado"
+      - "1/2 cdta semillas de comino"
+      - "Sal y pimienta negra al gusto"
+      - "Aceite de oliva para cocinar"
+    steps:
+      - icon: blend
+        action: Moler
+        time: "3 min"
+        text: "Moler la avena en un procesador o licuadora hasta obtener una harina fina. Mezclar con la harina de arroz en un bol."
+      - icon: mix
+        action: Masa
+        time: "3 min"
+        text: "Añadir agua poco a poco a la mezcla de harinas, removiendo constantemente hasta lograr una masa muy líquida y fluida (más líquida que un chilla normal)."
+      - icon: mix
+        action: Sazonar
+        time: "1 min"
+        text: "Incorporar la cebolla picada, cilantro, comino, sal y pimienta. La masa debe poder verterse fácilmente como agua espesa."
+      - icon: rest
+        action: Reposar
+        time: "10 min"
+        text: "Dejar reposar la masa 10 minutos para que la avena se hidrate completamente y la textura se estabilice."
+      - icon: heat
+        action: Calentar
+        time: "2 min"
+        text: "Calentar bien una sartén antiadherente o de hierro a fuego alto. Pincelar ligeramente con aceite."
+      - icon: pour
+        action: Extender
+        time: "1 min"
+        text: "Verter un cucharón de masa en espiral desde el centro hacia afuera, extendiendo rápidamente. La masa debe quedar muy delgada y con pequeños agujeros."
+      - icon: cook
+        action: Cocinar
+        time: "2–3 min"
+        text: "Cocinar a fuego medio-alto sin voltear hasta que los bordes estén crujientes y dorados y el centro esté completamente seco."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Doblar en triángulo o enrollar y servir de inmediato con sambar caliente y chutney de coco."
+    tip: "A diferencia de la dosa tradicional, los oats dosa no se voltean: se cocinan de un solo lado. La clave es una masa muy líquida y la sartén muy caliente."
+
+  - id: ragi_porridge
+    name: Ragi Porridge
+    subtitle: Gachas de mijo rojo con leche y especias cálidas
+    phase: "Fase 3–6"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "5 min"
+    prep_note: ""
+    cook: "10 min"
+    servings: "1 porción"
+    nutrition:
+      kcal: 220
+      protein: 7
+      carbs: 40
+      fat: 4
+    image:
+      src: "https://images.mohammadasjad.com/hero/ragi_porridge.webp"
+      css_class: img-ragi-porridge
+    highlight_ingredients:
+      - Harina ragi
+      - Leche desnatada
+      - Cardamomo
+      - Dátiles
+      - Almendras
+    ingredients:
+      - "3 cdas harina de ragi (mijo rojo)"
+      - "1 taza leche desnatada o bebida vegetal"
+      - "1/2 taza agua"
+      - "2 dátiles sin hueso picados (o 1 cdta miel)"
+      - "1/4 cdta cardamomo molido"
+      - "5–6 almendras tostadas en láminas"
+      - "Pizca de sal"
+    steps:
+      - icon: mix
+        action: Disolver
+        time: "2 min"
+        text: "En un bol pequeño, mezclar la harina de ragi con 1/4 taza de agua fría hasta obtener una pasta sin grumos."
+      - icon: heat
+        action: Calentar
+        time: "2 min"
+        text: "En un cazo pequeño, calentar la leche con el agua restante a fuego medio hasta que esté a punto de hervir."
+      - icon: pour
+        action: Incorporar
+        time: "1 min"
+        text: "Verter la pasta de ragi en la leche caliente en un hilo fino, removiendo constantemente con una cuchara de madera."
+      - icon: cook
+        action: Cocinar
+        time: "4–5 min"
+        text: "Cocinar a fuego bajo-medio, removiendo sin parar, durante 4–5 minutos hasta que la mezcla espese y burbujee suavemente."
+      - icon: mix
+        action: Endulzar
+        time: "1 min"
+        text: "Añadir los dátiles picados o la miel, el cardamomo molido y la pizca de sal. Remover bien para integrar."
+      - icon: cook
+        action: Textura
+        time: "2 min"
+        text: "Continuar cocinando 1–2 minutos más hasta alcanzar la consistencia deseada. Retirar del fuego."
+      - icon: mix
+        action: Topping
+        time: "1 min"
+        text: "Verter en un cuenco y añadir las almendras tostadas en láminas. Opcionalmente agregar semillas de chía o un chorrito de miel."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir de inmediato caliente. Se puede preparar con antelación y recalentar añadiendo un poco de leche para recuperar la textura."
+    tip: "El ragi tiene un sabor naturalmente terroso y ligeramente amargo. El cardamomo y los dátiles equilibran ese amargor. Nunca dejes de remover o se formarán grumos difíciles de deshacer."
+
+  - id: oats_chilla
+    name: Oats Chilla
+    subtitle: Tortitas proteicas de avena con vegetales rallados
+    phase: "Fase 5–8"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "8 min"
+    prep_note: ""
+    cook: "12 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 230
+      protein: 10
+      carbs: 34
+      fat: 5
+    image:
+      src: "https://images.mohammadasjad.com/hero/oats_chilla.webp"
+      css_class: img-oats-chilla
+    highlight_ingredients:
+      - Avena
+      - Yogur
+      - Zanahoria
+      - Cebolla
+      - Cilantro
+    ingredients:
+      - "3/4 taza avena en hojuelas (molida a harina)"
+      - "1/4 taza yogur natural sin azúcar"
+      - "1 zanahoria pequeña rallada"
+      - "1/2 cebolla pequeña rallada"
+      - "1/4 taza cilantro fresco picado"
+      - "1/2 cdta comino molido"
+      - "1/4 cdta cúrcuma"
+      - "Sal y pimienta al gusto"
+      - "Aceite de oliva para cocinar"
+    steps:
+      - icon: blend
+        action: Moler
+        time: "2 min"
+        text: "Moler la avena en un procesador o licuadora hasta conseguir una harina gruesa. Reservar en un bol."
+      - icon: mix
+        action: Mezclar
+        time: "3 min"
+        text: "Añadir yogur, zanahoria rallada, cebolla rallada, cilantro, comino, cúrcuma y sal. Mezclar hasta obtener una masa homogénea."
+      - icon: mix
+        action: Ajustar
+        time: "1 min"
+        text: "Si la masa está muy espesa, añadir agua de a cucharadas. Debe quedar como una masa de panqueques espesa pero vertible."
+      - icon: rest
+        action: Reposar
+        time: "5 min"
+        text: "Dejar reposar 5 minutos para que la avena absorba la humedad de las verduras y el yogur."
+      - icon: heat
+        action: Calentar
+        time: "2 min"
+        text: "Calentar una sartén antiadherente a fuego medio. Pincelar con aceite y esperar a que esté bien caliente."
+      - icon: pour
+        action: Verter
+        time: "1 min"
+        text: "Colocar un cucharón de masa y extender suavemente hasta unos 15 cm de diámetro. No extender demasiado o se romperá."
+      - icon: cook
+        action: Cocinar
+        time: "3 min"
+        text: "Cocinar a fuego medio hasta que los bordes estén firmes y la superficie aparezca con pequeños agujeros. Tapar un minuto para que el centro se cocine."
+      - icon: flip
+        action: Voltear
+        time: "2 min"
+        text: "Voltear con cuidado y cocinar 1–2 minutos más. Repetir con el resto de la masa."
+    tip: "El yogur es fundamental aquí: aporta proteína y la acidez que ayuda a que la avena sea más digestiva. Usa un yogur griego para un chilla más denso y proteico."
+
+  - id: paneer_bhurji
+    name: Paneer Bhurji
+    subtitle: Queso fresco indio salteado con cebolla, tomate y especias
+    phase: "Fase 3–4"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "8 min"
+    prep_note: ""
+    cook: "12 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 320
+      protein: 22
+      carbs: 12
+      fat: 20
+    image:
+      src: "https://images.mohammadasjad.com/hero/paneer_bhurji.webp"
+      css_class: img-paneer-bhurji
+    highlight_ingredients:
+      - Paneer
+      - Tomate
+      - Cebolla
+      - Cúrcuma
+      - Cilantro
+    ingredients:
+      - "200 g paneer (queso fresco indio) desmenuzado"
+      - "1 cebolla mediana finamente picada"
+      - "2 tomates medianos finamente picados"
+      - "1 chile verde picado"
+      - "1 cdta pasta de jengibre-ajo"
+      - "1/2 cdta cúrcuma"
+      - "1/2 cdta garam masala"
+      - "1 cdta aceite de oliva"
+      - "Cilantro fresco y limón para servir"
+    steps:
+      - icon: mix
+        action: Desmenuzar
+        time: "2 min"
+        text: "Desmenuzar el paneer con los dedos en trozos irregulares, como si fuera requesón. Reservar. No desmenuzar demasiado fino."
+      - icon: heat
+        action: Calentar
+        time: "1 min"
+        text: "Calentar el aceite en una sartén a fuego medio. Debe estar bien caliente antes de añadir la cebolla."
+      - icon: sauté
+        action: Sofreír
+        time: "5 min"
+        text: "Sofreír la cebolla picada 5 minutos removiendo frecuentemente hasta que tome un color dorado. Añadir el chile verde y sofreír 30 segundos más."
+      - icon: mix
+        action: Aromatizar
+        time: "1–2 min"
+        text: "Agregar la pasta de jengibre-ajo y cocinar 1–2 minutos hasta que el olor crudo desaparezca."
+      - icon: mix
+        action: Tomate
+        time: "3 min"
+        text: "Incorporar los tomates picados con cúrcuma. Cocinar 3 minutos a fuego medio-alto hasta que los tomates pierdan el agua y formen una base espesa."
+      - icon: mix
+        action: Paneer
+        time: "2 min"
+        text: "Añadir el paneer desmenuzado y el garam masala. Mezclar suavemente para que absorba los sabores sin que los trozos se deshagan."
+      - icon: cook
+        action: Integrar
+        time: "2 min"
+        text: "Cocinar 2 minutos más a fuego medio, removiendo con cuidado. El paneer no debe dorarse, solo calentarse y absorber los sabores."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Decorar con cilantro fresco picado y un chorrito de limón. Servir caliente con paratha integral o como relleno en un wrap de trigo integral."
+    tip: "El secreto del paneer bhurji es no sobrecocinarlo: el paneer seco y grumoso arruina el plato. Añade una cucharadita de agua si ves que se seca demasiado al final."
+
+  - id: tofu_bhurji
+    name: Tofu Bhurji
+    subtitle: Tofu salteado al estilo de huevos revueltos indios
+    phase: "Fase 5–8"
+    meal: Desayuno
+    type: Vegano
+    prep: "8 min"
+    prep_note: ""
+    cook: "12 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 250
+      protein: 18
+      carbs: 10
+      fat: 14
+    image:
+      src: "https://images.mohammadasjad.com/hero/tofu_bhurji.webp"
+      css_class: img-tofu-bhurji
+    highlight_ingredients:
+      - Tofu firme
+      - Cebolla
+      - Tomate
+      - Cúrcuma
+      - Jengibre
+    ingredients:
+      - "250 g tofu firme bien escurrido"
+      - "1 cebolla mediana picada"
+      - "1 tomate mediano picado"
+      - "1 cdta jengibre fresco rallado"
+      - "1 chile verde picado (opcional)"
+      - "1/2 cdta cúrcuma"
+      - "1/2 cdta comino molido"
+      - "1/4 cdta pimienta negra"
+      - "1 cdta aceite de oliva"
+      - "Cilantro y limón para servir"
+    steps:
+      - icon: mix
+        action: Prensar
+        time: "10 min"
+        text: "Envolver el tofu en un paño limpio y presionar firmemente 10 minutos para eliminar el exceso de agua. Cuanto más seco, mejor textura."
+      - icon: mix
+        action: Desmenuzar
+        time: "2 min"
+        text: "Desmenuzar el tofu con las manos en trozos irregulares del tamaño de huevo revuelto. La textura irregular da el aspecto auténtico."
+      - icon: heat
+        action: Calentar
+        time: "1 min"
+        text: "Calentar el aceite en una sartén a fuego medio-alto. Añadir el jengibre rallado y el chile verde, sofreír 30 segundos."
+      - icon: sauté
+        action: Cebolla
+        time: "4 min"
+        text: "Añadir la cebolla picada y sofreír 4 minutos hasta que tome color dorado. Remover frecuentemente para que se cocine uniformemente."
+      - icon: mix
+        action: Tomate
+        time: "2 min"
+        text: "Incorporar el tomate picado y cocinar 2 minutos hasta que se ablande. Añadir cúrcuma, comino y pimienta negra."
+      - icon: mix
+        action: Tofu
+        time: "3 min"
+        text: "Agregar el tofu desmenuzado y mezclar suavemente con los vegetales. La cúrcuma lo teñirá de amarillo, como huevos."
+      - icon: cook
+        action: Dorar
+        time: "3 min"
+        text: "Cocinar a fuego medio-alto 3 minutos sin remover demasiado para que el tofu se dore ligeramente en algunos lados."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Decorar con cilantro fresco y un chorrito generoso de limón. Servir con chilla de avena o tostada integral."
+    tip: "El paso de prensar el tofu es imprescindible: sin él, el tofu suelta agua durante la cocción y se cuece en lugar de saltearse. Más seco = más sabroso."
+
+  - id: masoor_dal
+    name: Masoor Dal
+    subtitle: Lentejas rojas en curry suave y reconfortante
+    phase: "Fase 1–2"
+    meal: Almuerzo
+    type: Vegano
+    prep: "10 min"
+    prep_note: ""
+    cook: "25 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 290
+      protein: 18
+      carbs: 42
+      fat: 4
+    image:
+      src: "https://images.mohammadasjad.com/hero/masoor_dal.webp"
+      css_class: img-masoor-dal
+    highlight_ingredients:
+      - Lentejas rojas
+      - Tomate
+      - Cebolla
+      - Comino
+      - Cilantro
+    ingredients:
+      - "3/4 taza lentejas rojas (masoor dal)"
+      - "1 cebolla pequeña finamente picada"
+      - "2 tomates pequeños triturados"
+      - "1 cdta pasta de jengibre-ajo"
+      - "1/2 cdta cúrcuma"
+      - "1/2 cdta comino molido"
+      - "1/2 cdta garam masala"
+      - "1 cdta aceite de oliva"
+      - "Cilantro fresco y limón para servir"
+    steps:
+      - icon: wash
+        action: Lavar
+        time: "2 min"
+        text: "Lavar las lentejas rojas varias veces hasta que el agua salga clara. A diferencia de otros dales, el masoor no necesita remojo previo."
+      - icon: boil
+        action: Cocer
+        time: "15 min"
+        text: "Cocer las lentejas en 2 tazas de agua con cúrcuma a fuego medio. Las lentejas rojas se deshacen naturalmente en 12–15 minutos hasta formar un puré suave."
+      - icon: heat
+        action: Templar
+        time: "1 min"
+        text: "En otra sartén pequeña, calentar el aceite a fuego medio. Añadir el comino y esperar a que chisporrotee y suelte su aroma."
+      - icon: sauté
+        action: Sofreír
+        time: "4 min"
+        text: "Sofreír la cebolla en el aceite especiado hasta que se dore bien, unos 4 minutos. Un buen dorado de cebolla es la base del sabor."
+      - icon: mix
+        action: Aromatizar
+        time: "2 min"
+        text: "Agregar la pasta de jengibre-ajo y cocinar 2 minutos hasta que el olor crudo se evapore."
+      - icon: mix
+        action: Tomate
+        time: "3 min"
+        text: "Añadir los tomates triturados y el garam masala. Cocinar 3 minutos hasta que se forme una salsa espesa y el aceite se separe en los bordes."
+      - icon: mix
+        action: Unir
+        time: "5 min"
+        text: "Verter el tarka (sofrito) sobre las lentejas cocidas. Mezclar y cocinar juntos 5 minutos a fuego bajo para que los sabores se fusionen."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir caliente decorado con cilantro fresco y un generoso chorrito de limón. Acompañar con arroz basmati o roti integral."
+    tip: "Las lentejas rojas se cocinan muy rápido y se deshacen solas: eso es lo correcto. Si quieres textura, añade 1/4 taza más de lentejas al final y cocina solo 5 minutos más."
+
+  - id: palak_dal
+    name: Palak Dal
+    subtitle: Dal de lentejas amarillas con espinacas frescas
+    phase: "Fase 1–2"
+    meal: Almuerzo
+    type: Vegano
+    prep: "10 min"
+    prep_note: ""
+    cook: "30 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 270
+      protein: 16
+      carbs: 36
+      fat: 6
+    image:
+      src: "https://images.mohammadasjad.com/hero/palak_dal.webp"
+      css_class: img-palak-dal
+    highlight_ingredients:
+      - Dal moong
+      - Espinacas
+      - Tomate
+      - Comino
+      - Jengibre
+    ingredients:
+      - "1/2 taza dal moong partido o masoor dal"
+      - "2 tazas espinacas frescas picadas"
+      - "1 tomate mediano triturado"
+      - "1 cebolla pequeña picada"
+      - "1 cdta jengibre fresco rallado"
+      - "1/2 cdta comino molido"
+      - "1/2 cdta cúrcuma"
+      - "1/4 cdta chile en polvo"
+      - "1 cdta ghee o aceite"
+      - "Sal y limón al gusto"
+    steps:
+      - icon: wash
+        action: Preparar
+        time: "3 min"
+        text: "Lavar bien el dal varias veces. Lavar y picar las espinacas frescas. Triturar el tomate y picar finamente la cebolla."
+      - icon: boil
+        action: Cocinar
+        time: "15 min"
+        text: "Cocer el dal con 1.5 tazas de agua, cúrcuma y sal a fuego medio hasta que esté completamente tierno y cremoso."
+      - icon: mix
+        action: Espinacas
+        time: "3 min"
+        text: "Añadir las espinacas picadas al dal cocido. Cocinar 3 minutos hasta que se marchiten completamente e integren con el dal."
+      - icon: heat
+        action: Tarka
+        time: "1 min"
+        text: "Calentar el ghee en una sartén pequeña. Añadir el comino y dejar que chisporrotee 30 segundos."
+      - icon: sauté
+        action: Sofreír
+        time: "4 min"
+        text: "Sofreír la cebolla en el ghee especiado 4 minutos hasta dorar. Agregar el jengibre y el chile en polvo."
+      - icon: mix
+        action: Tomate
+        time: "3 min"
+        text: "Añadir el tomate triturado y cocinar 3 minutos hasta que la mezcla se espese y el aceite se separe en los bordes."
+      - icon: mix
+        action: Unir
+        time: "3 min"
+        text: "Verter el tarka sobre el dal con espinacas. Mezclar bien y cocinar juntos a fuego bajo 3 minutos para integrar todos los sabores."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir caliente con un chorrito de limón. Acompañar con arroz basmati o roti integral y una cucharada de yogur natural."
+    tip: "No sobrecocines las espinacas: añádelas cuando el dal ya está listo y cuécelas solo 3 minutos para preservar el color verde vibrante y los nutrientes."
+
+  - id: dal_tadka
+    name: Dal Tadka
+    subtitle: Dal de lentejas amarillas con tarka de ajo y comino
+    phase: "Fase 3–4"
+    meal: Almuerzo
+    type: Vegano
+    prep: "10 min"
+    prep_note: ""
+    cook: "30 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 310
+      protein: 16
+      carbs: 44
+      fat: 7
+    image:
+      src: "https://images.mohammadasjad.com/hero/dal_tadka.webp"
+      css_class: img-dal-tadka
+    highlight_ingredients:
+      - Dal moong
+      - Ajo
+      - Comino
+      - Ghee
+      - Cilantro
+    ingredients:
+      - "3/4 taza toor dal (lentejas amarillas partidas)"
+      - "4 dientes de ajo finamente picados"
+      - "1 cebolla pequeña picada"
+      - "1 tomate mediano triturado"
+      - "1/2 cdta comino entero"
+      - "1/4 cdta chile rojo seco (o en polvo)"
+      - "1/2 cdta cúrcuma"
+      - "1 cdta ghee"
+      - "Cilantro fresco y limón para servir"
+    steps:
+      - icon: wash
+        action: Lavar
+        time: "2 min"
+        text: "Lavar el toor dal hasta que el agua salga completamente clara. Remojar 20 minutos si hay tiempo (acelera la cocción)."
+      - icon: boil
+        action: Cocer
+        time: "20 min"
+        text: "Cocinar el dal con 2 tazas de agua y la cúrcuma a presión media, o en olla normal 20 minutos hasta que esté muy tierno y cremoso."
+      - icon: mix
+        action: Batir
+        time: "1 min"
+        text: "Batir el dal cocido con una cuchara de madera o un batidor hasta conseguir una textura cremosa. Ajustar sal."
+      - icon: heat
+        action: Ghee
+        time: "1 min"
+        text: "En una sartén pequeña, calentar el ghee a fuego medio-alto hasta que esté bien caliente pero sin humear."
+      - icon: temper
+        action: Tarka
+        time: "30 s"
+        text: "Añadir el comino al ghee caliente. Cuando chisporrotee, agregar el chile rojo. En 10 segundos el chile cambiará de color: momento perfecto."
+      - icon: sauté
+        action: Ajo
+        time: "1–2 min"
+        text: "Añadir el ajo picado inmediatamente. Sofreír 1–2 minutos removiendo constantemente hasta que se dore uniformemente pero sin quemarse."
+      - icon: mix
+        action: Tomate
+        time: "2 min"
+        text: "Incorporar el tomate triturado y cocinar 2 minutos hasta que se sofría. Verter inmediatamente esta tarka sobre el dal en la olla."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Mezclar suavemente la tarka con el dal. Decorar con cilantro fresco y servir con arroz basmati y un limón partido."
+    tip: "El tarka (sofrito final) es lo que define el dal tadka: debe hacerse rápido con aceite muy caliente. El sonido chisporroteo al verter los ingredientes es la señal de que la temperatura es correcta."
+
+  - id: soya_masala
+    name: Soya Chunk Masala
+    subtitle: Proteína de soja texturizada en salsa masala especiada
+    phase: "Fase 3–4"
+    meal: Almuerzo
+    type: Vegano
+    prep: "15 min"
+    prep_note: "+ 15 min remojo"
+    cook: "20 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 280
+      protein: 24
+      carbs: 22
+      fat: 8
+    image:
+      src: "https://images.mohammadasjad.com/hero/soya_masala.webp"
+      css_class: img-soya-masala
+    highlight_ingredients:
+      - Soja texturizada
+      - Tomate
+      - Cebolla
+      - Garam masala
+      - Jengibre
+    ingredients:
+      - "1 taza soya chunks (proteína de soja texturizada)"
+      - "1 cebolla mediana finamente picada"
+      - "2 tomates medianos triturados"
+      - "1 cdta pasta de jengibre-ajo"
+      - "1/2 cdta garam masala"
+      - "1/2 cdta comino molido"
+      - "1/2 cdta cúrcuma"
+      - "1/4 cdta chile en polvo"
+      - "1 cdta aceite de oliva"
+      - "Cilantro fresco para decorar"
+    steps:
+      - icon: soak
+        action: Hidratar
+        time: "15 min"
+        text: "Remojar los soya chunks en agua caliente con sal durante 15 minutos hasta que se hinchen y doblen su tamaño."
+      - icon: wash
+        action: Escurrir
+        time: "2 min"
+        text: "Escurrir y exprimir los soya chunks con ambas manos para eliminar el agua amarga. Repetir el proceso con agua limpia si el sabor aún es muy fuerte."
+      - icon: heat
+        action: Calentar
+        time: "1 min"
+        text: "Calentar el aceite en una sartén. Añadir comino entero y dejar que chisporrotee hasta que suelte su aroma."
+      - icon: sauté
+        action: Cebolla
+        time: "6 min"
+        text: "Sofreír la cebolla a fuego medio-bajo durante 6 minutos, removiendo frecuentemente, hasta que tome color marrón dorado profundo."
+      - icon: mix
+        action: Masala
+        time: "3 min"
+        text: "Agregar la pasta de jengibre-ajo, sofreír 1 minuto. Añadir los tomates triturados con cúrcuma, chile y garam masala. Cocinar 3 minutos."
+      - icon: mix
+        action: Soya
+        time: "5 min"
+        text: "Incorporar los soya chunks escurridos. Mezclar bien con la salsa masala y cocinar a fuego medio 5 minutos removiendo ocasionalmente."
+      - icon: simmer
+        action: Cocinar
+        time: "5 min"
+        text: "Añadir 1/2 taza de agua, tapar y cocinar a fuego bajo 5 minutos para que los chunks absorban completamente los sabores."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Decorar con cilantro fresco y servir caliente con arroz basmati, roti integral o como relleno de un wrap."
+    tip: "Exprimir bien los soya chunks después del remojo es fundamental para eliminar el sabor amargo característico de la soja. Cuanto más los exprimas, mejor sabor tendrán."
+
+  - id: quinoa_khichdi
+    name: Quinoa Khichdi
+    subtitle: Versión alta en proteína del khichdi tradicional con quinoa
+    phase: "Fase 3–6"
+    meal: Almuerzo
+    type: Vegano
+    prep: "10 min"
+    prep_note: ""
+    cook: "25 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 320
+      protein: 14
+      carbs: 50
+      fat: 6
+    image:
+      src: "https://images.mohammadasjad.com/hero/quinoa_khichdi.webp"
+      css_class: img-quinoa-khichdi
+    highlight_ingredients:
+      - Quinoa
+      - Dal moong
+      - Comino
+      - Cúrcuma
+      - Ghee
+    ingredients:
+      - "1/2 taza quinoa blanca"
+      - "1/4 taza dal moong partido"
+      - "1/2 cebolla pequeña picada"
+      - "1 tomate pequeño picado"
+      - "1/2 cdta comino entero"
+      - "1/2 cdta cúrcuma"
+      - "1/4 cdta garam masala"
+      - "1 cdta ghee"
+      - "Sal, cilantro y limón al gusto"
+    steps:
+      - icon: wash
+        action: Lavar
+        time: "3 min"
+        text: "Lavar la quinoa varias veces hasta que el agua salga clara. Lavar también el dal moong. La quinoa tiene saponinas amargas: lavarla bien es esencial."
+      - icon: heat
+        action: Ghee
+        time: "1 min"
+        text: "Calentar el ghee en una olla a fuego medio. Añadir el comino entero y esperar a que chisporrotee y suelte su aroma."
+      - icon: sauté
+        action: Sofreír
+        time: "3 min"
+        text: "Sofreír la cebolla en el ghee especiado 3 minutos hasta que quede translúcida. Añadir el tomate y cocinar 2 minutos."
+      - icon: mix
+        action: Especias
+        time: "1 min"
+        text: "Añadir la cúrcuma y el garam masala. Remover y cocinar 1 minuto hasta que las especias se integren con la base de cebolla y tomate."
+      - icon: mix
+        action: Quinoa
+        time: "1 min"
+        text: "Agregar la quinoa lavada y el dal moong a la olla. Mezclar bien con la base de especias para que absorban el sabor desde el inicio."
+      - icon: pour
+        action: Agua
+        time: "1 min"
+        text: "Añadir 2.5 tazas de agua caliente y sal. Llevar a ebullición a fuego alto."
+      - icon: cook
+        action: Cocinar
+        time: "15 min"
+        text: "Reducir a fuego bajo, tapar y cocinar 15 minutos hasta que la quinoa y el dal estén completamente cocidos y el agua se haya absorbido."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Retirar del fuego y dejar reposar tapado 5 minutos. Esponjar con un tenedor y servir con yogur, cilantro y limón."
+    tip: "La quinoa y el dal moong juntos forman una proteína completa. La quinoa ya tiene un perfil de aminoácidos completo, pero la combinación mejora aún más la biodisponibilidad."
+
+  - id: dal_makhani
+    name: Dal Makhani
+    subtitle: Dal negro de mantequilla — versión light para el plan
+    phase: "Fase 1–2"
+    meal: Almuerzo
+    type: Vegetariano
+    prep: "15 min"
+    prep_note: "+ remojo nocturno"
+    cook: "45 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 340
+      protein: 16
+      carbs: 42
+      fat: 11
+    image:
+      src: "https://images.mohammadasjad.com/hero/dal_makhani.webp"
+      css_class: img-dal-makhani
+    highlight_ingredients:
+      - Urad dal negro
+      - Frijoles rojos
+      - Tomate
+      - Ghee
+      - Garam masala
+    ingredients:
+      - "1/2 taza urad dal negro entero"
+      - "2 cdas frijoles rojos (kidney beans)"
+      - "1 cebolla pequeña finamente picada"
+      - "2 tomates medianos triturados"
+      - "1 cdta pasta de jengibre-ajo"
+      - "1/4 cdta chile rojo en polvo"
+      - "1/2 cdta garam masala"
+      - "1 cdta ghee (vs 2 cdas de la versión original)"
+      - "2 cdas yogur natural"
+      - "Cilantro fresco para decorar"
+    steps:
+      - icon: soak
+        action: Remojar
+        time: "8–10 h"
+        text: "Remojar el urad dal negro y los frijoles rojos en agua fría durante toda la noche. El remojo largo es indispensable: no hay atajo."
+      - icon: boil
+        action: Cocer
+        time: "25 min"
+        text: "Escurrir y cocer en olla a presión con agua fresca, cúrcuma y sal durante 25 minutos hasta que el dal esté completamente tierno."
+      - icon: heat
+        action: Tarka
+        time: "1 min"
+        text: "Calentar el ghee en una olla gruesa. Añadir comino entero. Cuando chisporrotee, añadir la cebolla."
+      - icon: sauté
+        action: Cebolla
+        time: "8 min"
+        text: "Sofreír la cebolla a fuego bajo-medio durante 8 minutos removiendo frecuentemente hasta que tome un color caramelo profundo."
+      - icon: mix
+        action: Masala
+        time: "5 min"
+        text: "Agregar pasta de jengibre-ajo, sofreír 2 minutos. Añadir los tomates triturados, chile y garam masala. Cocinar 5 minutos hasta reducir."
+      - icon: mix
+        action: Unir
+        time: "2 min"
+        text: "Verter el dal cocido con parte de su agua de cocción sobre la salsa masala. Mezclar suavemente."
+      - icon: simmer
+        action: Simmer
+        time: "20 min"
+        text: "Cocinar a fuego muy bajo 20 minutos, removiendo ocasionalmente. El dal makhani auténtico se cocina horas; cada minuto más mejora el sabor."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Añadir el yogur al final y remover suavemente. Decorar con cilantro y un chorrito de limón. Servir con arroz basmati."
+    tip: "Esta versión usa 1 cdta de ghee en lugar de las 2 cdas tradicionales. El yogur al final reemplaza la crema y añade proteína. El resultado es un 40% menos calórico que el original."
+
+  - id: paratha
+    name: Whole Wheat Vegetable Paratha
+    subtitle: Pan integral relleno de verduras y especias al estilo punjabi
+    phase: "Fase 1–2"
+    meal: Almuerzo
+    type: Vegetariano
+    prep: "20 min"
+    prep_note: ""
+    cook: "20 min"
+    servings: "2 porciones (4 parathas)"
+    nutrition:
+      kcal: 280
+      protein: 8
+      carbs: 44
+      fat: 8
+    image:
+      src: "https://images.mohammadasjad.com/hero/paratha.webp"
+      css_class: img-paratha
+    highlight_ingredients:
+      - Harina integral
+      - Coliflor
+      - Cebolla
+      - Comino
+      - Yogur
+    ingredients:
+      - "1.5 tazas harina integral de trigo"
+      - "1 taza coliflor rallada (o relleno de patata/guisantes)"
+      - "1/2 cebolla pequeña rallada"
+      - "1/4 taza cilantro fresco picado"
+      - "1/2 cdta comino molido"
+      - "1/4 cdta garam masala"
+      - "Pizca de chile rojo"
+      - "Sal al gusto"
+      - "Ghee o aceite para cocinar"
+    steps:
+      - icon: mix
+        action: Masa
+        time: "5 min"
+        text: "Mezclar harina integral con sal y agua tibia poco a poco hasta obtener una masa suave y elástica. Amasar 5 minutos. Cubrir y reposar 10 minutos."
+      - icon: mix
+        action: Relleno
+        time: "3 min"
+        text: "Mezclar la coliflor rallada bien escurrida con cebolla, cilantro, comino, garam masala, chile y sal. Eliminar el exceso de humedad."
+      - icon: mix
+        action: Dividir
+        time: "2 min"
+        text: "Dividir la masa en 4 porciones iguales. Dividir también el relleno en 4 partes iguales."
+      - icon: mix
+        action: Rellenar
+        time: "3 min"
+        text: "Extender cada porción de masa en un disco de 10 cm. Colocar el relleno en el centro, plegar los bordes hacia el centro y cerrar como un bolso."
+      - icon: mix
+        action: Aplanar
+        time: "2 min"
+        text: "Aplanar cuidadosamente el paratha relleno con un rodillo hasta unos 20 cm de diámetro. Hacerlo suavemente para evitar que se rompa."
+      - icon: heat
+        action: Calentar
+        time: "2 min"
+        text: "Calentar una tawa o sartén plana a fuego medio-alto hasta que esté bien caliente."
+      - icon: cook
+        action: Cocinar
+        time: "2–3 min"
+        text: "Colocar el paratha en la sartén caliente. Cocinar 2 minutos, voltear, aplicar un poco de ghee y cocinar 2 minutos más hasta que aparezcan manchas doradas."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir caliente con yogur natural, chutney verde o una ensalada de pepino. Los parathas se endurecen al enfriarse: comer inmediatamente."
+    tip: "El secreto de un paratha sin grumos es eliminar todo el exceso de agua del relleno antes de rellenar. Una coliflor húmeda romperá la masa inevitablemente."
+
+  - id: quinoa_pulao
+    name: Quinoa Pulao
+    subtitle: Arroz de quinoa con verduras y especias enteras
+    phase: "Fase 5–6"
+    meal: Almuerzo
+    type: Vegano
+    prep: "10 min"
+    prep_note: ""
+    cook: "20 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 300
+      protein: 12
+      carbs: 48
+      fat: 6
+    image:
+      src: "https://images.mohammadasjad.com/hero/quinoa_pulao.webp"
+      css_class: img-quinoa-pulao
+    highlight_ingredients:
+      - Quinoa
+      - Guisantes
+      - Comino
+      - Ghee
+      - Cilantro
+    ingredients:
+      - "1 taza quinoa blanca lavada"
+      - "1/2 cebolla mediana en rodajas finas"
+      - "1/2 taza guisantes frescos o congelados"
+      - "1 zanahoria pequeña en cubos"
+      - "1 rama canela"
+      - "3 vainas cardamomo"
+      - "1/2 cdta comino entero"
+      - "1 cdta ghee"
+      - "Sal, cilantro y limón al gusto"
+    steps:
+      - icon: wash
+        action: Lavar
+        time: "3 min"
+        text: "Lavar la quinoa 3–4 veces hasta que el agua salga sin espuma. La saponina superficial tiene un sabor amargo que se debe eliminar."
+      - icon: heat
+        action: Especias
+        time: "1 min"
+        text: "Calentar el ghee en una olla. Añadir la canela, el cardamomo y el comino. Cuando el comino chisporrotee y suelte aroma, las especias están listas."
+      - icon: sauté
+        action: Cebolla
+        time: "4 min"
+        text: "Sofreír la cebolla en las especias enteras a fuego medio hasta que tome color dorado y se caramelice ligeramente."
+      - icon: mix
+        action: Verduras
+        time: "2 min"
+        text: "Añadir la zanahoria en cubos y los guisantes. Sofreír 2 minutos. Las verduras deben quedar crujientes: no sobrecocinar en este paso."
+      - icon: mix
+        action: Quinoa
+        time: "1 min"
+        text: "Añadir la quinoa lavada a la olla. Remover bien para que se impregne con el ghee especiado."
+      - icon: pour
+        action: Agua
+        time: "1 min"
+        text: "Añadir 1.75 tazas de agua caliente y sal. Llevar a ebullición a fuego alto sin tapar."
+      - icon: cook
+        action: Cocinar
+        time: "12 min"
+        text: "Reducir a fuego muy bajo, tapar herméticamente y cocinar 12 minutos sin abrir la tapa."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Apagar el fuego y dejar reposar tapado 5 minutos. Esponjar con un tenedor, decorar con cilantro fresco y servir con raita de yogur."
+    tip: "La proporción exacta es 1 taza de quinoa por 1.75 tazas de agua para un pulao suelto. Más agua lo vuelve pegajoso. El reposo final de 5 minutos es el secreto de los granos sueltos."
+
+  - id: fish_tikka
+    name: Fish Tikka
+    subtitle: Pescado marinado en yogur y especias, horneado al estilo tandoor
+    phase: "Fase 3–8"
+    meal: Cena
+    type: Proteico
+    prep: "15 min"
+    prep_note: "+ 30 min marinado"
+    cook: "20 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 240
+      protein: 32
+      carbs: 8
+      fat: 8
+    image:
+      src: "https://images.mohammadasjad.com/hero/fish_tikka.webp"
+      css_class: img-fish-tikka
+    highlight_ingredients:
+      - Pescado blanco
+      - Yogur
+      - Tikka masala
+      - Lima
+      - Jengibre
+    ingredients:
+      - "300 g pescado blanco firme (tilapia, bacalao o merluza)"
+      - "1/2 taza yogur natural sin azúcar"
+      - "1 cdta tikka masala o garam masala"
+      - "1/2 cdta cúrcuma"
+      - "1 cdta pasta de jengibre-ajo"
+      - "Zumo de 1 lima"
+      - "1/4 cdta chile rojo en polvo"
+      - "Sal al gusto"
+      - "Aceite para el molde"
+    steps:
+      - icon: mix
+        action: Marinada
+        time: "5 min"
+        text: "Mezclar yogur, tikka masala, cúrcuma, pasta de jengibre-ajo, zumo de lima, chile y sal hasta formar una marinada homogénea."
+      - icon: mix
+        action: Marinar
+        time: "30 min"
+        text: "Cortar el pescado en trozos de 4–5 cm. Cubrir completamente con la marinada. Refrigerar mínimo 30 minutos (ideal 2 horas para más sabor)."
+      - icon: heat
+        action: Precalentar
+        time: "10 min"
+        text: "Precalentar el horno a 220°C con la rejilla en posición alta (modo grill si está disponible). Cubrir una bandeja con papel de aluminio y engrasar ligeramente."
+      - icon: bake
+        action: Preparar
+        time: "2 min"
+        text: "Colocar los trozos de pescado marinado en la bandeja sin amontonar. Desechar la marinada sobrante."
+      - icon: cook
+        action: Hornear
+        time: "10 min"
+        text: "Hornear a 220°C durante 10 minutos. El pescado está listo cuando los bordes están ligeramente dorados y la carne se separa fácilmente con un tenedor."
+      - icon: flip
+        action: Voltear
+        time: "5 min"
+        text: "Voltear los trozos suavemente y hornear 5 minutos más. Activar el grill los últimos 2 minutos para obtener el característico toque ahumado."
+      - icon: mix
+        action: Reposar
+        time: "2 min"
+        text: "Retirar del horno y dejar reposar 2 minutos. El pescado continúa cocinándose con el calor residual."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir sobre una cama de cebolla morada y pimiento en rodajas. Acompañar con rodajas de lima, chutney verde y una ensalada de pepino."
+    tip: "No sobrecocines el pescado: está listo cuando se separa en lascas al tocarlo con el tenedor. El exceso de cocción lo seca completamente. Usa pescado firme para que no se rompa."
+
+  - id: tofu_tikka
+    name: Tofu Tikka
+    subtitle: Cubos de tofu marinados en yogur de soja y especias tikka
+    phase: "Fase 3–8"
+    meal: Cena
+    type: Vegano
+    prep: "15 min"
+    prep_note: "+ 30 min marinado"
+    cook: "20 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 220
+      protein: 16
+      carbs: 10
+      fat: 12
+    image:
+      src: "https://images.mohammadasjad.com/hero/tofu_tikka.webp"
+      css_class: img-tofu-tikka
+    highlight_ingredients:
+      - Tofu firme
+      - Yogur
+      - Tikka masala
+      - Lima
+      - Pimiento
+    ingredients:
+      - "250 g tofu extra-firme bien prensado"
+      - "1/2 taza yogur natural (o yogur de soja para versión vegana)"
+      - "1 cdta tikka masala"
+      - "1/2 cdta cúrcuma"
+      - "1 cdta pasta de jengibre-ajo"
+      - "Zumo de 1/2 lima"
+      - "1/4 cdta chile rojo en polvo"
+      - "1 pimiento verde o rojo en cubos"
+      - "1 cebolla pequeña en cubos"
+    steps:
+      - icon: mix
+        action: Prensar
+        time: "15 min"
+        text: "Prensar el tofu entre paños y platos pesados 15 minutos para eliminar todo el agua posible. Un tofu bien seco es la base del éxito."
+      - icon: mix
+        action: Marinada
+        time: "3 min"
+        text: "Mezclar yogur, tikka masala, cúrcuma, pasta de jengibre-ajo, lima y chile hasta formar una pasta aromática y consistente."
+      - icon: mix
+        action: Marinar
+        time: "30 min"
+        text: "Cortar el tofu en cubos de 3 cm. Cubrir junto con el pimiento y la cebolla con la marinada. Refrigerar 30 minutos mínimo."
+      - icon: heat
+        action: Precalentar
+        time: "10 min"
+        text: "Precalentar el horno a 220°C o la freidora de aire a 200°C. Cubrir una bandeja con papel de aluminio engrasado."
+      - icon: bake
+        action: Disponer
+        time: "2 min"
+        text: "Colocar los cubos de tofu marinados en la bandeja sin tocar. Los pimientos y cebollas también se hornean junto a ellos."
+      - icon: cook
+        action: Hornear
+        time: "15 min"
+        text: "Hornear 15 minutos o usar freidora de aire 12 minutos a 200°C hasta que los bordes estén ligeramente dorados y la textura sea firme."
+      - icon: flip
+        action: Voltear
+        time: "5 min"
+        text: "Voltear a mitad de cocción para que todos los lados se doren uniformemente."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir sobre lechuga o espinacas tiernas. Acompañar con chutney verde y rodajas de lima. Opcional: ensartar en palillos de brocheta."
+    tip: "La freidora de aire produce el mejor resultado para el tofu tikka: crujiente por fuera y jugoso por dentro. Si usas horno, el modo grill los últimos 3 minutos da el acabado dorado perfecto."
+
+  - id: chicken_curry
+    name: Chicken Curry
+    subtitle: Curry de pollo tierno en salsa de cebolla y tomate suave
+    phase: "Fase 1–2"
+    meal: Cena
+    type: Proteico
+    prep: "15 min"
+    prep_note: ""
+    cook: "30 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 320
+      protein: 30
+      carbs: 14
+      fat: 14
+    image:
+      src: "https://images.mohammadasjad.com/hero/chicken_curry.webp"
+      css_class: img-chicken-curry
+    highlight_ingredients:
+      - Pechuga pollo
+      - Cebolla
+      - Tomate
+      - Garam masala
+      - Yogur
+    ingredients:
+      - "300 g pechuga de pollo en cubos de 4 cm"
+      - "1 cebolla grande finamente picada"
+      - "2 tomates medianos triturados"
+      - "1 cdta pasta de jengibre-ajo"
+      - "1/2 taza yogur natural sin azúcar"
+      - "1 cdta garam masala"
+      - "1/2 cdta cúrcuma"
+      - "1/2 cdta comino molido"
+      - "1/4 cdta chile rojo"
+      - "1 cdta aceite de oliva"
+    steps:
+      - icon: mix
+        action: Marinar
+        time: "15 min"
+        text: "Mezclar el pollo con yogur, cúrcuma y una pizca de sal. Dejar marinar 15 minutos mínimo. El yogur ablanda las fibras del pollo."
+      - icon: heat
+        action: Calentar
+        time: "1 min"
+        text: "Calentar el aceite en una olla o cazuela a fuego medio. Añadir comino entero y esperar a que chisporrotee."
+      - icon: sauté
+        action: Cebolla
+        time: "8 min"
+        text: "Sofreír la cebolla a fuego medio 8 minutos removiendo frecuentemente hasta obtener un color marrón dorado profundo. No acortar este paso."
+      - icon: mix
+        action: Masala
+        time: "4 min"
+        text: "Añadir la pasta de jengibre-ajo, sofreír 1 minuto. Incorporar los tomates triturados con garam masala y chile. Cocinar 4 minutos hasta espesar."
+      - icon: mix
+        action: Pollo
+        time: "2 min"
+        text: "Agregar el pollo marinado con todo el yogur de la marinada. Mezclar bien con la salsa masala y sellar el pollo 2 minutos a fuego alto."
+      - icon: simmer
+        action: Cocinar
+        time: "15 min"
+        text: "Añadir 1/2 taza de agua caliente. Tapar y cocinar a fuego bajo 15 minutos hasta que el pollo esté tierno y la salsa haya espesado."
+      - icon: mix
+        action: Ajustar
+        time: "2 min"
+        text: "Probar y ajustar sal. Si la salsa es muy espesa, añadir un poco de agua. Si es muy líquida, cocinar destapado 2–3 minutos."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Decorar con cilantro fresco y servir caliente con arroz basmati o roti integral. Acompañar con una rodaja de lima para exprimir al gusto."
+    tip: "No saltes el paso del marinado con yogur: el ácido láctico ablanda el pollo y asegura que quede jugoso. La cebolla bien dorada (marrón, no beige) es lo que da profundidad al curry."
+
+  - id: tofu_stir_fry
+    name: Tofu & Vegetable Stir-Fry
+    subtitle: Salteado de tofu con brócoli y pimientos en salsa de jengibre
+    phase: "Fase 5–8"
+    meal: Cena
+    type: Vegano
+    prep: "15 min"
+    prep_note: ""
+    cook: "15 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 200
+      protein: 14
+      carbs: 12
+      fat: 10
+    image:
+      src: "https://images.mohammadasjad.com/hero/tofu_stir_fry.webp"
+      css_class: img-tofu-stir-fry
+    highlight_ingredients:
+      - Tofu firme
+      - Brócoli
+      - Pimiento
+      - Jengibre
+      - Salsa soja
+    ingredients:
+      - "200 g tofu firme prensado y en cubos"
+      - "1 taza brócoli en floretes pequeños"
+      - "1 pimiento rojo en juliana"
+      - "1 cebolla pequeña en medias lunas"
+      - "2 dientes de ajo picados"
+      - "1 cdta jengibre fresco rallado"
+      - "1 cda salsa de soja baja en sodio"
+      - "1/2 cdta aceite de sésamo"
+      - "1 cdta aceite de oliva"
+      - "Pimienta negra y semillas de sésamo para servir"
+    steps:
+      - icon: mix
+        action: Prensar
+        time: "10 min"
+        text: "Prensar el tofu 10 minutos para eliminar el exceso de agua. Cortar en cubos de 2 cm. Preparar y cortar todas las verduras antes de comenzar."
+      - icon: heat
+        action: Dorar
+        time: "5 min"
+        text: "Calentar aceite de oliva en una sartén o wok a fuego alto. Saltear los cubos de tofu sin moverlos 2 minutos por cada lado hasta que estén dorados."
+      - icon: mix
+        action: Retirar
+        time: "1 min"
+        text: "Retirar el tofu dorado y reservar. En la misma sartén caliente añadir un poco más de aceite si es necesario."
+      - icon: sauté
+        action: Aromáticos
+        time: "30 s"
+        text: "Sofreír el ajo picado y el jengibre rallado 30 segundos a fuego alto. Remover constantemente para evitar que se quemen."
+      - icon: mix
+        action: Verduras
+        time: "4 min"
+        text: "Añadir la cebolla y el pimiento. Saltear 2 minutos a fuego alto. Agregar el brócoli y saltear 2 minutos más. Las verduras deben quedar crujientes."
+      - icon: mix
+        action: Salsa
+        time: "1 min"
+        text: "Verter la salsa de soja y el aceite de sésamo sobre las verduras. Mezclar rápidamente a fuego alto."
+      - icon: mix
+        action: Unir
+        time: "1 min"
+        text: "Reincorporar el tofu dorado a la sartén. Mezclar suavemente con las verduras y la salsa."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir de inmediato (el stir-fry se arruina si se deja reposar). Espolvorear semillas de sésamo y pimienta negra. Acompañar con arroz de coliflor o edamame."
+    tip: "El stir-fry requiere fuego muy alto durante todo el proceso. Si la sartén no humea ligeramente, el fuego es demasiado bajo y las verduras se cocerán en lugar de saltearse."
+
+  - id: palak_soup
+    name: Palak Soup
+    subtitle: Sopa cremosa de espinacas al estilo indio con jengibre y comino
+    phase: "Fase 7–8"
+    meal: Cena
+    type: Vegano
+    prep: "10 min"
+    prep_note: ""
+    cook: "15 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 120
+      protein: 6
+      carbs: 12
+      fat: 4
+    image:
+      src: "https://images.mohammadasjad.com/hero/palak_soup.webp"
+      css_class: img-palak-soup
+    highlight_ingredients:
+      - Espinacas
+      - Jengibre
+      - Comino
+      - Lima
+      - Ajo
+    ingredients:
+      - "4 tazas espinacas frescas (o 2 tazas congeladas)"
+      - "1 cebolla pequeña picada"
+      - "3 dientes de ajo picados"
+      - "1 cdta jengibre fresco rallado"
+      - "1/2 cdta comino molido"
+      - "1/4 cdta chile en polvo"
+      - "Zumo de 1/2 lima"
+      - "2 tazas agua o caldo de verduras"
+      - "1 cdta aceite de oliva"
+      - "Sal y pimienta negra al gusto"
+    steps:
+      - icon: heat
+        action: Sofreír
+        time: "3 min"
+        text: "Calentar el aceite en una olla. Sofreír la cebolla, el ajo y el jengibre a fuego medio 3 minutos hasta que estén suaves y fragantes."
+      - icon: mix
+        action: Especias
+        time: "30 s"
+        text: "Añadir el comino molido y el chile en polvo. Sofreír 30 segundos hasta que las especias se integren con el sofrito."
+      - icon: mix
+        action: Espinacas
+        time: "2 min"
+        text: "Añadir las espinacas frescas. Cocinar 2 minutos removiendo hasta que se marchiten completamente y reduzcan su volumen."
+      - icon: pour
+        action: Líquido
+        time: "1 min"
+        text: "Añadir el agua o caldo. Llevar a ebullición y cocinar 5 minutos a fuego medio."
+      - icon: blend
+        action: Triturar
+        time: "2 min"
+        text: "Retirar del fuego y triturar con un batidor de mano hasta obtener una sopa completamente lisa y cremosa."
+      - icon: mix
+        action: Ajustar
+        time: "2 min"
+        text: "Volver al fuego suave. Ajustar sal y pimienta. Si la sopa es muy espesa, añadir un poco de agua. Añadir el zumo de lima."
+      - icon: cook
+        action: Hervir
+        time: "2 min"
+        text: "Dar un hervor final de 2 minutos a fuego suave para integrar el sabor de la lima y ajustar la textura final."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir en cuencos calientes. Decorar con unas gotas de aceite de oliva, semillas de comino tostadas y pimienta negra recién molida."
+    tip: "Para la fase final del plan (7–8), esta sopa ligera es perfecta como cena. Añadir 1 cda de yogur griego al servir incrementa la proteína sin afectar demasiado las calorías."
+
+  - id: moong_soup
+    name: Moong Dal Soup
+    subtitle: Caldo de lentejas verdes suave y reconfortante, ideal para la noche
+    phase: "Fase 7–8"
+    meal: Cena
+    type: Vegano
+    prep: "5 min"
+    prep_note: ""
+    cook: "20 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 160
+      protein: 10
+      carbs: 22
+      fat: 3
+    image:
+      src: "https://images.mohammadasjad.com/hero/moong_soup.webp"
+      css_class: img-moong-soup
+    highlight_ingredients:
+      - Dal moong
+      - Jengibre
+      - Comino
+      - Lima
+      - Cilantro
+    ingredients:
+      - "1/2 taza dal moong partido amarillo"
+      - "1 cdta jengibre fresco rallado"
+      - "2 dientes de ajo"
+      - "1/2 cdta comino entero"
+      - "1/4 cdta cúrcuma"
+      - "1/4 cdta pimienta negra"
+      - "3 tazas agua"
+      - "1/2 cdta ghee o aceite de oliva"
+      - "Cilantro fresco y zumo de lima para servir"
+    steps:
+      - icon: wash
+        action: Lavar
+        time: "2 min"
+        text: "Lavar el dal moong partido varias veces hasta que el agua salga completamente clara."
+      - icon: boil
+        action: Cocer
+        time: "15 min"
+        text: "Cocer el dal con 3 tazas de agua, cúrcuma y ajo a fuego medio durante 15 minutos hasta que las lentejas estén completamente deshechas."
+      - icon: blend
+        action: Batir
+        time: "1 min"
+        text: "Batir ligeramente el dal cocido con un tenedor o batidor para obtener una sopa con textura suave pero no completamente lisa."
+      - icon: heat
+        action: Tarka
+        time: "1 min"
+        text: "En una sartén pequeña, calentar el ghee. Añadir el comino entero y esperar a que chisporrotee y se torne aromático."
+      - icon: mix
+        action: Jengibre
+        time: "1 min"
+        text: "Añadir el jengibre rallado y la pimienta negra al ghee especiado. Sofreír 30 segundos. El jengibre fresco añade calidez digestiva al caldo."
+      - icon: mix
+        action: Verter
+        time: "1 min"
+        text: "Verter la tarka sobre el caldo de dal. Mezclar bien y llevar de nuevo a fuego suave."
+      - icon: cook
+        action: Ajustar
+        time: "3 min"
+        text: "Cocinar 3 minutos más a fuego bajo para integrar los sabores. Ajustar la consistencia con agua si es necesario y rectificar la sal."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir bien caliente. Exprimir abundante lima fresca y decorar con hojas de cilantro. Esta sopa es ligera y reconfortante para las cenas del plan final."
+    tip: "Esta sopa es el plato perfecto para la fase final: alta en proteína, baja en calorías y muy fácil de digerir por la noche. El dal moong partido no necesita remojo y se cocina rápidamente."

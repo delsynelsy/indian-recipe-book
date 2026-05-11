@@ -514,6 +514,7 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
 <nav class="section-nav">
   <button class="snav-btn on" onclick="showSection('recipes',this)">◈ Recetario</button>
   <button class="snav-btn"   onclick="showSection('plan',this)">◈ Plan 8 Semanas</button>
+  <button class="snav-btn"   onclick="showSection('cards',this)">◈ Tarjetas</button>
 </nav>
 
 <!-- ═══ GRID ══════════════════════════════════════════════════════ -->
@@ -547,6 +548,15 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
       {{ meal_plan_html | safe }}
     </div>
   </div>
+</section>
+
+<!-- ═══ TARJETAS INFOGRÁFICAS ════════════════════════════════════════ -->
+<section id="sec-cards" style="display:none">
+  <iframe id="cards-iframe"
+          data-src="cards.html"
+          frameborder="0"
+          style="width:100%;height:4800px;border:none;display:block">
+  </iframe>
 </section>
 
 <!-- ═══ RECIPE DETAIL MODAL ═══════════════════════════════════════ -->
@@ -881,10 +891,14 @@ function setT(name, btn) {
 }
 
 function showSection(name, btn) {
-  document.querySelectorAll('#sec-recipes, #sec-plan').forEach(s => s.style.display = 'none');
+  document.querySelectorAll('#sec-recipes, #sec-plan, #sec-cards').forEach(s => s.style.display = 'none');
   document.getElementById('sec-' + name).style.display = '';
   document.querySelectorAll('.snav-btn').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
+  if (name === 'cards') {
+    const ifr = document.getElementById('cards-iframe');
+    if (!ifr.getAttribute('src')) ifr.src = ifr.dataset.src;
+  }
 }
 </script>
 </body>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recetas Indias — Colección</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700;1,900&family=Cinzel+Decorative:wght@400;700&family=Cardo:ital,wght@0,400;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESET & TOKENS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root {
+  --ink:       #1A0D07;
+  --ink-soft:  #3C2010;
+  --parch:     #F8EEDB;
+  --parch-mid: #ECD9AE;
+  --parch-deep:#D4B87A;
+  --terra:     #B84020;
+  --saffron:   #E09418;
+  --sage:      #5E7548;
+  --cream:     #FEFAEF;
+  --gold:      #A87218;
+  --shadow:    rgba(26,13,7,0.18);
+}
+html { scroll-behavior:smooth }
+body {
+  font-family:'Cardo',serif;
+  color:var(--ink);
+  background-color:#D9C098;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 20% 10%, rgba(220,180,100,.22) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 70% at 85% 90%, rgba(180,64,32,.12) 0%,transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Ccircle cx='1' cy='1' r='.5' fill='rgba(0,0,0,.04)'/%3E%3C/svg%3E");
+  min-height:100vh;
+  padding-bottom:80px;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STICKY NAV
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.recipe-nav {
+  position:sticky;top:0;z-index:200;
+  display:flex;gap:8px;align-items:center;
+  padding:10px 28px;
+  background:rgba(254,250,239,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--parch-deep);
+  overflow-x:auto;scrollbar-width:none;
+}
+.recipe-nav::-webkit-scrollbar{display:none}
+.nav-brand {
+  font-family:'Cinzel Decorative',serif;
+  font-size:10px;letter-spacing:.2em;
+  color:var(--terra);opacity:.7;
+  flex-shrink:0;margin-right:8px;
+  white-space:nowrap;
+}
+.nav-sep { width:1px;height:18px;background:var(--parch-deep);flex-shrink:0 }
+.nav-pill {
+  flex-shrink:0;
+  text-decoration:none;
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:var(--terra);
+  padding:4px 14px;
+  border:1px solid var(--terra);
+  border-radius:20px;
+  transition:background .2s,color .2s;
+  white-space:nowrap;
+}
+.nav-pill:hover { background:var(--terra);color:var(--cream) }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PAGE HEADER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.page-header {
+  text-align:center;
+  padding:56px 24px 44px;
+}
+.orn { font-size:26px;color:var(--terra);opacity:.55;display:block;line-height:1 }
+.page-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,5.5vw,58px);
+  font-weight:700;font-style:italic;
+  color:var(--ink);line-height:1.05;
+  margin:12px 0 10px;
+}
+.page-sub {
+  font-family:'Cormorant Garamond',serif;
+  font-size:15px;letter-spacing:.14em;
+  color:var(--terra);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RECIPE CARD WRAPPER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.recipe-card {
+  max-width:1020px;
+  margin:0 auto 72px;
+  padding:0 20px;
+  opacity:0;
+  transform:translateY(20px);
+  animation:cardIn .6s ease forwards;
+}
+@keyframes cardIn {
+  to { opacity:1;transform:translateY(0) }
+}
+
+/* The parchment card frame */
+.card-frame {
+  position:relative;
+  background:var(--parch);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,transparent 3px,
+      rgba(0,0,0,.009) 3px,rgba(0,0,0,.009) 4px
+    );
+  padding:46px 52px 40px;
+  border:2px solid var(--terra);
+  box-shadow:
+    inset 0 0 0 7px var(--parch),
+    inset 0 0 0 9px var(--parch-deep),
+    0 2px 0 var(--parch-deep),
+    0 4px 0 var(--terra),
+    0 10px 48px var(--shadow),
+    0 2px 8px var(--shadow);
+}
+
+/* Corner ornaments — 4 positioned divs */
+.corner { position:absolute;width:48px;height:48px;color:var(--terra) }
+.corner.tl{top:10px;left:10px}
+.corner.tr{top:10px;right:10px;transform:scaleX(-1)}
+.corner.bl{bottom:10px;left:10px;transform:scaleY(-1)}
+.corner.br{bottom:10px;right:10px;transform:scale(-1)}
+.corner svg{width:100%;height:100%}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CARD HEADER  (hero oval + identity)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.card-header {
+  display:grid;
+  grid-template-columns:228px 1fr;
+  gap:40px;
+  align-items:center;
+  margin-bottom:32px;
+}
+
+/* Oval hero */
+.hero-wrap {
+  display:flex;justify-content:center;
+  position:relative;
+}
+.hero-ring {
+  position:relative;
+  width:220px;height:274px;
+}
+.hero-ring::before {
+  content:'';position:absolute;
+  inset:-10px;border-radius:50%;
+  border:1px solid var(--parch-deep);
+}
+.hero-ring::after {
+  content:'';position:absolute;
+  inset:-18px;border-radius:50%;
+  border:1.5px solid var(--terra);
+  opacity:.3;
+}
+.hero-oval {
+  width:220px;height:274px;
+  border-radius:50%;overflow:hidden;
+  border:2.5px solid var(--terra);
+  box-shadow:0 6px 24px var(--shadow),inset 0 0 24px rgba(0,0,0,.12);
+}
+.hero-img {
+  width:100%;height:100%;
+  object-fit:cover;object-position:center 40%;
+  filter:sepia(18%) contrast(1.06) brightness(1.02) saturate(1.08);
+  transition:transform .5s ease;
+  display:block;
+}
+.hero-oval:hover .hero-img { transform:scale(1.05) }
+
+/* Recipe identity */
+.recipe-identity { padding-top:4px }
+
+.recipe-tags {
+  display:flex;align-items:center;flex-wrap:wrap;gap:7px;
+  margin-bottom:12px;
+}
+.tag-pill {
+  font-family:'Cinzel Decorative',serif;
+  font-size:7.5px;letter-spacing:.15em;
+  color:var(--terra);
+  border:1px solid var(--terra);
+  padding:3px 9px;border-radius:2px;
+  opacity:.9;
+}
+.orn-sep { color:var(--parch-deep);font-size:9px }
+
+.recipe-name {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(26px,3.6vw,46px);
+  font-weight:700;font-style:italic;
+  color:var(--ink);line-height:1.1;
+  margin-bottom:8px;
+}
+.recipe-sub {
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-style:italic;
+  color:var(--terra);margin-bottom:18px;
+}
+
+/* Decorative rule */
+.div-rule {
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:22px;
+}
+.div-rule .line {
+  flex:1;height:1px;
+  background:linear-gradient(to right,transparent,var(--parch-deep));
+}
+.div-rule .line.rev {
+  background:linear-gradient(to left,transparent,var(--parch-deep));
+}
+.div-rule .star { font-size:11px;color:var(--saffron) }
+
+/* Meta row */
+.recipe-meta {
+  display:flex;flex-wrap:wrap;gap:20px;
+}
+.meta-item {
+  display:flex;flex-direction:column;
+  align-items:center;gap:2px;
+}
+.meta-icon-sym { font-size:17px;line-height:1 }
+.meta-lbl {
+  font-family:'Cinzel Decorative',serif;
+  font-size:6.5px;letter-spacing:.12em;
+  color:var(--terra);text-transform:uppercase;
+}
+.meta-val {
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-weight:600;color:var(--ink);
+}
+.meta-note-sm {
+  font-family:'Cardo',serif;
+  font-style:italic;font-size:10px;
+  color:var(--terra);opacity:.75;
+}
+.meta-item.kcal .meta-val {
+  font-size:22px;color:var(--terra);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CARD BODY  (ingredients + divider + nutrition)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.card-body {
+  display:grid;
+  grid-template-columns:1fr 1px 280px;
+  gap:0;
+  padding:26px 0 24px;
+  border-top:1px solid var(--parch-deep);
+  border-bottom:1px solid var(--parch-deep);
+  margin-bottom:28px;
+}
+.sec-title {
+  font-family:'Cinzel Decorative',serif;
+  font-size:8px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--terra);
+  margin-bottom:14px;display:block;
+}
+
+/* Ingredients as icon circles */
+.ing-sec { padding-right:20px }
+.ing-icons {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 10px;
+  align-items:flex-start;
+}
+.ing-icon-item {
+  display:flex;flex-direction:column;
+  align-items:center;gap:7px;
+  width:80px;
+}
+.ing-circle {
+  width:72px;height:72px;
+  border-radius:50%;overflow:hidden;
+  border:1.5px solid var(--parch-deep);
+  background:var(--cream);
+  box-shadow:0 2px 8px rgba(0,0,0,.12),inset 0 0 8px rgba(0,0,0,.04);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.ing-circle img {
+  width:100%;height:100%;
+  object-fit:cover;
+  mix-blend-mode:multiply;
+  display:block;
+}
+.ing-fallback {
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;font-style:italic;
+  color:var(--terra);
+}
+.ing-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;font-style:italic;
+  text-align:center;color:var(--ink);
+  line-height:1.3;
+}
+
+/* Vertical divider between ing and nutrition */
+.v-div {
+  background:linear-gradient(
+    to bottom,
+    transparent 0%,var(--parch-deep) 15%,
+    var(--parch-deep) 85%,transparent 100%
+  );
+  margin:0 32px;
+  width:1px;
+}
+
+/* Nutrition */
+.nut-sec {}
+.kcal-big {
+  display:flex;align-items:baseline;gap:5px;
+  margin-bottom:18px;
+}
+.kcal-n {
+  font-family:'Cormorant Garamond',serif;
+  font-size:50px;font-weight:600;
+  color:var(--terra);line-height:1;
+}
+.kcal-u {
+  font-family:'Cinzel Decorative',serif;
+  font-size:10px;letter-spacing:.1em;
+  color:var(--terra);opacity:.65;
+}
+.macro-list { display:flex;flex-direction:column;gap:11px }
+.macro-row {
+  display:grid;
+  grid-template-columns:56px 1fr 38px;
+  align-items:center;gap:9px;
+}
+.m-lbl {
+  font-family:'Cardo',serif;
+  font-size:11.5px;color:var(--ink);
+  text-align:right;
+}
+.m-track {
+  height:5px;
+  background:var(--parch-mid);
+  border-radius:3px;overflow:hidden;
+}
+.m-fill {
+  height:100%;border-radius:3px;
+}
+.m-fill.p { background:linear-gradient(to right,#B84020,#E09418) }
+.m-fill.c { background:linear-gradient(to right,#CC8810,#E8C030) }
+.m-fill.f { background:linear-gradient(to right,#5E7548,#8EA462) }
+.m-val {
+  font-family:'Cormorant Garamond',serif;
+  font-size:13.5px;font-weight:600;color:var(--ink);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STEPS  (horizontal filmstrip)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.steps-sec { margin-bottom:24px }
+.steps-head {
+  display:flex;align-items:center;gap:16px;
+  margin-bottom:18px;
+}
+.steps-head .sec-title { margin-bottom:0 }
+.h-line {
+  flex:1;height:1px;background:var(--parch-deep);
+}
+
+/* Filmstrip container */
+.filmstrip {
+  display:flex;
+  align-items:flex-start;
+  gap:0;
+  overflow-x:auto;
+  padding:6px 2px 14px;
+  scrollbar-width:thin;
+  scrollbar-color:var(--parch-deep) transparent;
+}
+.filmstrip::-webkit-scrollbar { height:3px }
+.filmstrip::-webkit-scrollbar-thumb {
+  background:var(--parch-deep);border-radius:2px;
+}
+
+/* Individual step tile */
+.step-tile {
+  flex-shrink:0;
+  width:122px;
+  position:relative;
+  display:flex;flex-direction:column;
+  align-items:center;
+}
+
+/* Polaroid-style photo frame — taller since no description text */
+.step-photo-wrap {
+  width:110px;height:104px;
+  background:white;
+  padding:4px 4px 4px;
+  box-shadow:2px 3px 8px rgba(0,0,0,.18),1px 1px 2px rgba(0,0,0,.1);
+  border:1px solid rgba(220,200,170,.6);
+  position:relative;
+  margin:10px auto 10px;
+}
+.step-tile:nth-child(4n+1) .step-photo-wrap { transform:rotate(-1.6deg) }
+.step-tile:nth-child(4n+2) .step-photo-wrap { transform:rotate( .9deg) }
+.step-tile:nth-child(4n+3) .step-photo-wrap { transform:rotate(-0.6deg) }
+.step-tile:nth-child(4n+0) .step-photo-wrap { transform:rotate( 1.8deg) }
+
+.step-photo {
+  width:100%;height:96px;
+  object-fit:cover;object-position:center;
+  display:block;
+}
+
+/* Step number badge */
+.step-num {
+  position:absolute;top:4px;left:6px;
+  width:22px;height:22px;
+  background:var(--terra);color:white;
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px;font-weight:600;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 1px 4px rgba(0,0,0,.25);
+  z-index:2;
+}
+
+.step-action {
+  font-family:'Cinzel Decorative',serif;
+  font-size:7.5px;letter-spacing:.08em;
+  color:var(--terra);text-transform:uppercase;
+  text-align:center;margin-bottom:3px;
+}
+.step-time {
+  font-family:'Cormorant Garamond',serif;
+  font-size:10.5px;font-style:italic;
+  color:var(--saffron);
+  text-align:center;margin-bottom:4px;
+}
+/* Arrow connector between steps */
+.step-arrow {
+  flex-shrink:0;
+  width:20px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--parch-deep);
+  padding-top:62px;
+}
+.step-arrow svg { width:14px;height:14px }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TIP BOX
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.tip-box {
+  display:flex;gap:11px;align-items:flex-start;
+  padding:13px 18px;
+  border-left:3px solid var(--saffron);
+  background:rgba(224,148,24,.06);
+  border-radius:0 3px 3px 0;
+}
+.tip-orn { font-size:15px;color:var(--saffron);flex-shrink:0;margin-top:1px }
+.tip-text {
+  font-family:'Cardo',serif;
+  font-size:13px;font-style:italic;
+  color:var(--ink);line-height:1.6;opacity:.82;
+}
+.tip-text em { font-style:normal;font-weight:700;color:var(--terra) }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PAGE FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.page-footer {
+  text-align:center;padding:36px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;letter-spacing:.18em;
+  color:var(--terra);opacity:.55;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media (max-width:760px) {
+  .card-frame { padding:28px 22px 26px }
+  .card-header { grid-template-columns:1fr;gap:20px }
+  .hero-wrap { justify-content:flex-start }
+  .card-body {
+    grid-template-columns:1fr;
+  }
+  .v-div { display:none }
+  .ing-sec { padding-right:0;padding-bottom:20px;
+    border-bottom:1px solid var(--parch-deep) }
+  .nut-sec { padding-top:20px }
+  .ing-list { grid-template-columns:1fr }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PRINT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media print {
+  body { background:white }
+  .recipe-nav,.page-header { display:none }
+  .recipe-card { page-break-after:always;max-width:100%;padding:0;opacity:1;transform:none;animation:none }
+  .card-frame { box-shadow:none;border:2px solid #888 }
+  .filmstrip { overflow:visible;flex-wrap:wrap }
+}
+</style>
+</head>
+<body>
+
+<!-- ── STICKY NAV ──────────────────────────────────── -->
+<nav class="recipe-nav">
+  <span class="nav-brand">Recetas Indias</span>
+  <div class="nav-sep"></div>
+  {% for recipe in recipes %}
+  <a href="#{{ recipe.id }}" class="nav-pill">{{ recipe.name }}</a>
+  {% endfor %}
+</nav>
+
+<!-- ── PAGE HEADER ────────────────────────────────── -->
+<div class="page-header">
+  <span class="orn">❧</span>
+  <h1 class="page-title">Colección de Recetas Indias</h1>
+  <p class="page-sub">Plan de 8 Semanas &nbsp;·&nbsp; {{ recipes|length }} Recetas</p>
+  <span class="orn" style="transform:scaleY(-1);display:inline-block;margin-top:10px">❧</span>
+</div>
+
+<!-- ── RECIPE CARDS ───────────────────────────────── -->
+{% for recipe in recipes %}
+{%- set prot_pct = [(recipe.nutrition.protein / 50 * 100)|round|int, 100]|min -%}
+{%- set carb_pct = [(recipe.nutrition.carbs  / 80 * 100)|round|int, 100]|min -%}
+{%- set fat_pct  = [(recipe.nutrition.fat    / 40 * 100)|round|int, 100]|min -%}
+
+<article class="recipe-card" id="{{ recipe.id }}"
+  style="animation-delay:{{ (loop.index0 * 0.12)|round(2) }}s">
+
+  <div class="card-frame">
+
+    <!-- Corner ornaments -->
+    {% for cls in ['tl','tr','bl','br'] %}
+    <div class="corner {{ cls }}">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 38 L4 4 L38 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/>
+        <path d="M10 28 L10 10 L28 10" stroke="currentColor" stroke-width=".8" opacity=".45" stroke-linecap="square"/>
+        <rect x="2.5" y="2.5" width="3.5" height="3.5" fill="currentColor"/>
+        <circle cx="10" cy="10" r="1.4" fill="currentColor" opacity=".5"/>
+        <circle cx="4" cy="38" r="1" fill="currentColor" opacity=".35"/>
+      </svg>
+    </div>
+    {% endfor %}
+
+    <!-- ── HEADER ─────────────────────────────────── -->
+    <header class="card-header">
+
+      <!-- Hero oval image -->
+      <div class="hero-wrap">
+        <div class="hero-ring">
+          <div class="hero-oval">
+            <img class="hero-img"
+                 src="{{ recipe.image.src }}"
+                 alt="{{ recipe.name }}"
+                 loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Identity & meta -->
+      <div class="recipe-identity">
+        <div class="recipe-tags">
+          {% for tag in recipe.tags %}
+          <span class="tag-pill">{{ tag }}</span>
+          {% if not loop.last %}<span class="orn-sep">◆</span>{% endif %}
+          {% endfor %}
+        </div>
+
+        <h2 class="recipe-name">{{ recipe.name }}</h2>
+        {% if recipe.subtitle %}<p class="recipe-sub">{{ recipe.subtitle }}</p>{% endif %}
+
+        <div class="div-rule">
+          <span class="line"></span>
+          <span class="star">✦</span>
+          <span class="line rev"></span>
+        </div>
+
+        <div class="recipe-meta">
+          <div class="meta-item">
+            <span class="meta-icon-sym">⏱</span>
+            <span class="meta-lbl">Preparación</span>
+            <span class="meta-val">{{ recipe.prep }}</span>
+            {% if recipe.prep_note %}<span class="meta-note-sm">{{ recipe.prep_note }}</span>{% endif %}
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon-sym">🔥</span>
+            <span class="meta-lbl">Cocción</span>
+            <span class="meta-val">{{ recipe.cook }}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon-sym">🍽</span>
+            <span class="meta-lbl">Porciones</span>
+            <span class="meta-val">{{ recipe.servings }}</span>
+          </div>
+          <div class="meta-item kcal">
+            <span class="meta-icon-sym">⚡</span>
+            <span class="meta-lbl">Energía</span>
+            <span class="meta-val">{{ recipe.nutrition.kcal }}</span>
+            <span class="meta-note-sm">kcal / porción</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── BODY: INGREDIENTS + NUTRITION ─────────── -->
+    <div class="card-body">
+
+      <!-- Ingredients as visual icons -->
+      <section class="ing-sec">
+        <span class="sec-title">Ingredientes Principales</span>
+        <div class="ing-icons">
+          {% for ing in recipe.highlight_ingredients %}
+          {%- set islug = ing | ing_slug -%}
+          {%- set iurl = ingredient_icons.get(islug) -%}
+          <div class="ing-icon-item">
+            <div class="ing-circle">
+              {% if iurl %}
+              <img src="{{ iurl }}" alt="{{ ing }}">
+              {% else %}
+              <span class="ing-fallback">{{ ing[0] }}</span>
+              {% endif %}
+            </div>
+            <span class="ing-name">{{ ing }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <div class="v-div"></div>
+
+      <!-- Nutrition -->
+      <section class="nut-sec">
+        <span class="sec-title">Nutrición</span>
+        <div class="kcal-big">
+          <span class="kcal-n">{{ recipe.nutrition.kcal }}</span>
+          <span class="kcal-u">kcal</span>
+        </div>
+        <div class="macro-list">
+          <div class="macro-row">
+            <span class="m-lbl">Proteína</span>
+            <div class="m-track"><div class="m-fill p" style="width:{{ prot_pct }}%"></div></div>
+            <span class="m-val">{{ recipe.nutrition.protein }}g</span>
+          </div>
+          <div class="macro-row">
+            <span class="m-lbl">Carbos</span>
+            <div class="m-track"><div class="m-fill c" style="width:{{ carb_pct }}%"></div></div>
+            <span class="m-val">{{ recipe.nutrition.carbs }}g</span>
+          </div>
+          <div class="macro-row">
+            <span class="m-lbl">Grasas</span>
+            <div class="m-track"><div class="m-fill f" style="width:{{ fat_pct }}%"></div></div>
+            <span class="m-val">{{ recipe.nutrition.fat }}g</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── STEPS FILMSTRIP ────────────────────────── -->
+    <section class="steps-sec">
+      <div class="steps-head">
+        <span class="h-line"></span>
+        <span class="sec-title">Procedimiento</span>
+        <span class="h-line"></span>
+      </div>
+
+      <div class="filmstrip">
+        {% for step in recipe.steps %}
+        {%- set sidx = loop.index0 | zeropad -%}
+        <div class="step-tile">
+          <div class="step-num">{{ loop.index | zeropad }}</div>
+          <div class="step-photo-wrap">
+            <img class="step-photo"
+                 src="https://images.mohammadasjad.com/steps/{{ recipe.id }}__{{ sidx }}.webp"
+                 alt="{{ step.action }}"
+                 loading="lazy">
+          </div>
+          <div class="step-action">{{ step.action }}</div>
+          {% if step.time %}<div class="step-time">{{ step.time }}</div>{% endif %}
+        </div>
+        {% if not loop.last %}
+        <div class="step-arrow">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14M14 7l5 5-5 5"
+                  stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- ── TIP ───────────────────────────────────── -->
+    {% if recipe.tip %}
+    <div class="tip-box">
+      <span class="tip-orn">✦</span>
+      <p class="tip-text"><em>Consejo:</em> {{ recipe.tip }}</p>
+    </div>
+    {% endif %}
+
+  </div><!-- .card-frame -->
+</article>
+{% endfor %}
+
+<footer class="page-footer">❧ &nbsp; Plan Alimenticio — 8 Semanas &nbsp; ❧</footer>
+
+</body>
+</html>

@@ -166,6 +166,17 @@ def regen_images(backend, override, recipe_id, refresh_prompts):
 
 
 @cli.command()
+def cards():
+    """Generate standalone vintage recipe cards → output/cards.html"""
+    recipes = load_recipes(DATA_FILE)
+    _swap_generated_images(recipes)
+    output = ROOT / "output" / "cards.html"
+    generate_html(recipes, TEMPLATES_DIR, output, template_name="cards.html.j2")
+    _sync_assets(output.parent)
+    console.print(f"[bold green]✓[/] Generated [cyan]{len(recipes)}[/] recipe cards → [bold]{output}[/]")
+
+
+@cli.command()
 def plan():
     """Analyse meal plan feasibility from meal_plan.md."""
     if not MEAL_PLAN_FILE.exists():
