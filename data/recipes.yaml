@@ -16,7 +16,7 @@ recipes:
       carbs: 38
       fat: 6
     image:
-      src: "imag_references/nutritious-plate-steamed-moong-dal-chilla-protein-rich-indian-pancake-366204370.webp"
+      src: "https://images.mohammadasjad.com/hero/chilla.webp"
       css_class: img-chilla
     highlight_ingredients:
       - Dal moong
@@ -84,7 +84,7 @@ recipes:
       carbs: 58
       fat: 6
     image:
-      src: "imag_references/istockphoto-1249754738-2048x2048.jpg"
+      src: "https://images.mohammadasjad.com/hero/rajma.webp"
       css_class: img-rajma
     highlight_ingredients:
       - Frijoles rojos
@@ -154,7 +154,7 @@ recipes:
       carbs: 44
       fat: 5
     image:
-      src: "imag_references/nutritious-plate-steamed-moong-dal-chilla-protein-rich-indian-pancake-366204370.webp"
+      src: "https://images.mohammadasjad.com/hero/dosa.webp"
       css_class: img-dosa
     highlight_ingredients:
       - Harina ragi
@@ -224,7 +224,7 @@ recipes:
       carbs: 8
       fat: 10
     image:
-      src: "imag_references/istockphoto-1663346623-2048x2048.jpg"
+      src: "https://images.mohammadasjad.com/hero/tikka.webp"
       css_class: img-tikka
     highlight_ingredients:
       - Pechuga pollo
@@ -294,7 +294,7 @@ recipes:
       carbs: 52
       fat: 6
     image:
-      src: "imag_references/raw-sprouted-mung-beans-paper-260nw-1697095837.webp"
+      src: "https://images.mohammadasjad.com/hero/khichdi.webp"
       css_class: img-khichdi
     highlight_ingredients:
       - Arroz
@@ -366,7 +366,7 @@ recipes:
       carbs: 48
       fat: 7
     image:
-      src: "imag_references/istockphoto-1249754738-2048x2048.jpg"
+      src: "https://images.mohammadasjad.com/hero/chana.webp"
       css_class: img-chana
     highlight_ingredients:
       - Garbanzos
