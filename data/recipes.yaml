@@ -1,0 +1,423 @@
+recipes:
+
+  - id: chilla
+    name: Moong Dal Chilla
+    subtitle: Tortitas proteicas de lentejas verdes
+    phase: "Fase 1–2"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "10 min"
+    prep_note: "+ 4–6 h remojo"
+    cook: "20 min"
+    servings: "4 chillas"
+    nutrition:
+      kcal: 280
+      protein: 16
+      carbs: 38
+      fat: 6
+    image:
+      src: "imag_references/nutritious-plate-steamed-moong-dal-chilla-protein-rich-indian-pancake-366204370.webp"
+      css_class: img-chilla
+    highlight_ingredients:
+      - Dal moong
+      - Jengibre
+      - Cilantro
+      - Chutney verde
+      - Comino
+    ingredients:
+      - "1 taza dal moong partido amarillo"
+      - "1 cdta jengibre fresco rallado"
+      - "1 chile verde (opcional)"
+      - "1/4 taza cilantro fresco picado"
+      - "1/2 cdta comino molido"
+      - "1/2 cdta sal"
+      - "Aceite de oliva para cocinar"
+      - "Chutney verde para acompañar"
+    steps:
+      - icon: soak
+        action: Remojar
+        time: "4–6 h"
+        text: "Lavar el dal moong bajo agua fría hasta que salga clara. Remojar en agua fresca durante 4–6 horas o toda la noche."
+      - icon: blend
+        action: Licuar
+        time: "5 min"
+        text: "Escurrir el dal y licuar con jengibre, chile verde y 1/4 taza de agua hasta obtener una pasta suave y homogénea."
+      - icon: mix
+        action: Mezclar
+        time: "2 min"
+        text: "Transferir a un bol. Agregar cilantro picado, comino, sal y una pizca de asafétida. Ajustar consistencia con cucharadas de agua."
+      - icon: heat
+        action: Calentar
+        time: "2 min"
+        text: "Calentar una sartén antiadherente a fuego medio hasta que una gota de agua baile sobre la superficie. Pincelar con aceite."
+      - icon: pour
+        action: Verter
+        time: "1 min"
+        text: "Verter 1/4 de la masa en el centro y extender rápidamente con movimientos circulares hasta ~18 cm de diámetro."
+      - icon: cook
+        action: Cocinar
+        time: "2–3 min"
+        text: "Cocinar a fuego medio-bajo hasta ver pequeñas burbujas en la superficie y los bordes se sequen y separen ligeramente."
+      - icon: flip
+        action: Voltear
+        time: "1–2 min"
+        text: "Con una espátula delgada, voltear con cuidado. Cocinar 1–2 minutos más hasta dorar ligeramente el otro lado."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir caliente con chutney verde de menta y cilantro, y una cucharada de yogur natural al lado."
+    tip: "La consistencia ideal es crema espesa que fluye al inclinar el bol. Si es muy gruesa, agrega agua de a cucharadas; si es muy líquida, se romperá al voltear."
+
+  - id: rajma
+    name: Rajma Chawal
+    subtitle: Frijoles rojos en salsa masala con arroz
+    phase: "Fase 1–2"
+    meal: Almuerzo
+    type: Vegetariano
+    prep: "15 min"
+    prep_note: "+ remojo nocturno"
+    cook: "45 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 380
+      protein: 18
+      carbs: 58
+      fat: 6
+    image:
+      src: "imag_references/istockphoto-1249754738-2048x2048.jpg"
+      css_class: img-rajma
+    highlight_ingredients:
+      - Frijoles rojos
+      - Tomate
+      - Cebolla
+      - Arroz basmati
+      - Garam masala
+    ingredients:
+      - "3/4 taza frijoles rojos (kidney beans)"
+      - "1 cebolla mediana picada"
+      - "2 tomates medianos triturados"
+      - "1 cdta pasta de jengibre-ajo"
+      - "1/2 taza arroz basmati"
+      - "1 cdta garam masala"
+      - "1/2 cdta cúrcuma (turmeric)"
+      - "1 cdta comino molido"
+      - "1 cdta ghee o aceite"
+      - "Cilantro fresco y lima al servir"
+    steps:
+      - icon: soak
+        action: Remojar
+        time: "8–10 h"
+        text: "Remojar los frijoles rojos en abundante agua fría durante 8–10 horas o toda la noche hasta que se hinchen al doble."
+      - icon: simmer
+        action: Presión
+        time: "20 min"
+        text: "Escurrir y enjuagar los frijoles. Cocinar en olla a presión con agua fresca 20 minutos hasta que estén completamente tiernos."
+      - icon: sauté
+        action: Sofreír
+        time: "8–10 min"
+        text: "Calentar ghee en una cacerola. Sofreír la cebolla picada a fuego medio 8–10 minutos hasta que tome un color dorado profundo."
+      - icon: temper
+        action: Aromatizar
+        time: "2 min"
+        text: "Agregar la pasta de jengibre-ajo y cocinar 2 minutos a fuego medio hasta que el olor crudo desaparezca y se vuelva fragante."
+      - icon: mix
+        action: Guisar
+        time: "5 min"
+        text: "Incorporar tomates triturados, cúrcuma, comino y garam masala. Cocinar 5 min hasta que el aceite se separe en los bordes."
+      - icon: simmer
+        action: Simmer
+        time: "15 min"
+        text: "Agregar frijoles cocidos con 1/2 taza de su agua. Cocinar a fuego bajo 15 min hasta que la salsa espese y el sabor se intensifique."
+      - icon: cook
+        action: Arroz
+        time: "20 min"
+        text: "Lavar el arroz basmati y cocinar con agua 1:1.5 en olla tapada: hervor 2 min, fuego mínimo 14 min, reposo 5 min."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir el rajma humeante sobre arroz esponjoso. Decorar con cilantro, cebolla morada y un chorrito de lima."
+    tip: "Para un rajma más cremoso, machacar una cucharada de frijoles contra la olla hacia el final para espesar la salsa naturalmente."
+
+  - id: dosa
+    name: Ragi Dosa con Sambar
+    subtitle: Dosa crujiente de mijo rojo con sopa de lentejas
+    phase: "Fase 2–3"
+    meal: Desayuno
+    type: Vegetariano
+    prep: "8 min"
+    prep_note: "+ 10 min reposo"
+    cook: "20 min"
+    servings: "4 dosas"
+    nutrition:
+      kcal: 265
+      protein: 9
+      carbs: 44
+      fat: 5
+    image:
+      src: "imag_references/nutritious-plate-steamed-moong-dal-chilla-protein-rich-indian-pancake-366204370.webp"
+      css_class: img-dosa
+    highlight_ingredients:
+      - Harina ragi
+      - Dal urad
+      - Mostaza
+      - Sambar
+      - Chutney coco
+    ingredients:
+      - "1 taza harina de ragi (mijo rojo)"
+      - "1/4 taza dal urad triturado (opcional)"
+      - "1/2 taza buttermilk o yogur diluido"
+      - "1/2 cebolla finamente picada"
+      - "1/4 taza cilantro fresco"
+      - "8–10 hojas de curry"
+      - "1 cdta semillas de mostaza negra"
+      - "Sal al gusto"
+      - "Aceite para cocinar"
+      - "Sambar y chutney de coco"
+    steps:
+      - icon: mix
+        action: Masa
+        time: "5 min"
+        text: "Mezclar la harina de ragi, el buttermilk y suficiente agua para obtener una masa líquida (más fluida que un crepe). Reposar 10 minutos."
+      - icon: mix
+        action: Sazonar
+        time: "2 min"
+        text: "Agregar cebolla finamente picada, cilantro, hojas de curry y sal. Mezclar bien hasta integrar todos los ingredientes."
+      - icon: temper
+        action: Templar
+        time: "1 min"
+        text: "Calentar 1 cdta de aceite en sartén pequeña. Agregar semillas de mostaza hasta que truenen. Verter el tempering sobre la masa y mezclar."
+      - icon: heat
+        action: Calentar
+        time: "2 min"
+        text: "Calentar una sartén de hierro colado a fuego medio-alto hasta estar muy caliente. Engrasar ligeramente con papel absorbente."
+      - icon: pour
+        action: Extender
+        time: "1 min"
+        text: "Verter un cucharón de masa y extender en movimientos circulares rápidos hasta una dosa delgada de ~25 cm."
+      - icon: cook
+        action: Cocinar
+        time: "2–3 min"
+        text: "Cocinar sin voltear hasta que los bordes comiencen a separarse y la superficie quede seca y mate."
+      - icon: flip
+        action: Doblar
+        time: "30 seg"
+        text: "Doblar la dosa a la mitad con una espátula. Deslizarla fuera de la sartén con un movimiento firme."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir inmediatamente con sambar caliente y chutney de coco recién hecho."
+    tip: "La sartén debe estar muy caliente: si una gota de agua no se evapora al instante, aún no está lista para verter la masa."
+
+  - id: tikka
+    name: Chicken Tikka
+    subtitle: Bocados de pollo ahumados con marinada de especias
+    phase: "Fase 3–4"
+    meal: Cena
+    type: Pollo
+    prep: "15 min"
+    prep_note: "+ mín. 2 h marinado"
+    cook: "25 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 285
+      protein: 36
+      carbs: 8
+      fat: 10
+    image:
+      src: "imag_references/istockphoto-1663346623-2048x2048.jpg"
+      css_class: img-tikka
+    highlight_ingredients:
+      - Pechuga pollo
+      - Yogur
+      - Tikka masala
+      - Lima
+      - Jengibre
+    ingredients:
+      - "300 g pechuga de pollo sin hueso"
+      - "1/2 taza yogur natural sin azúcar"
+      - "1 cdta tikka masala o garam masala"
+      - "1/2 cdta cúrcuma molida"
+      - "1/2 cdta chile rojo en polvo kashmiri"
+      - "1 cdta pasta de jengibre-ajo"
+      - "1 cdta jugo de lima"
+      - "Sal al gusto"
+      - "1 cdta aceite para marinar"
+      - "Lima, menta y cebolla morada para servir"
+    steps:
+      - icon: cut
+        action: Preparar
+        time: "5 min"
+        text: "Cortar el pollo en cubos de 3–4 cm. Hacer 2–3 cortes superficiales en cada pieza para que la marinada penetre profundamente."
+      - icon: marinate
+        action: Marinada
+        time: "5 min"
+        text: "Mezclar yogur, tikka masala, cúrcuma, chile en polvo, pasta de jengibre-ajo, jugo de lima, sal y aceite hasta obtener una pasta suave."
+      - icon: rest
+        action: Marinar
+        time: "Mín. 2 h"
+        text: "Cubrir completamente el pollo con la marinada. Refrigerar mínimo 2 horas; para mejor sabor, marinar toda la noche."
+      - icon: grill
+        action: Preparar asador
+        time: "5 min"
+        text: "Precalentar el broiler del horno a temperatura máxima o la parrilla de carbón. Insertar el pollo en brochetas metálicas."
+      - icon: grill
+        action: Asar
+        time: "15–20 min"
+        text: "Asar 8–10 minutos por lado hasta que los bordes se chamusquen ligeramente y el interior alcance 74°C."
+      - icon: rest
+        action: Reposar
+        time: "3 min"
+        text: "Retirar del fuego y dejar reposar 3 minutos antes de servir para redistribuir los jugos internos."
+      - icon: mix
+        action: Finalizar
+        time: "1 min"
+        text: "Rociar con jugo de lima fresco y espolvorear con chat masala (opcional) para un toque de acidez."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Servir sobre hojas de menta fresca con cebolla morada marinada y pan naan o arroz basmati."
+    tip: "El secreto es el fuego alto y el ligero 'char' en los bordes. El broiler al máximo o una plancha de hierro colado muy caliente da el mejor resultado."
+
+  - id: khichdi
+    name: Dal Khichdi
+    subtitle: Guiso reconfortante de arroz y lentejas con ghee
+    phase: "Fase 1–4"
+    meal: Cena
+    type: Vegetariano
+    prep: "5 min"
+    prep_note: ""
+    cook: "25 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 310
+      protein: 14
+      carbs: 52
+      fat: 6
+    image:
+      src: "imag_references/raw-sprouted-mung-beans-paper-260nw-1697095837.webp"
+      css_class: img-khichdi
+    highlight_ingredients:
+      - Arroz
+      - Dal moong
+      - Ghee
+      - Comino
+      - Chícharos
+    ingredients:
+      - "1/2 taza arroz blanco de grano corto"
+      - "1/2 taza dal moong partido"
+      - "1/2 taza chícharos frescos o congelados"
+      - "1 cebolla pequeña picada"
+      - "1 tomate pequeño picado"
+      - "1/2 cdta jengibre rallado"
+      - "1/2 cdta cúrcuma molida"
+      - "1/2 cdta comino"
+      - "1 hoja de laurel"
+      - "2 clavos enteros"
+      - "1 cdta ghee"
+      - "Cilantro y yogur para servir"
+    steps:
+      - icon: soak
+        action: Lavar
+        time: "3 min"
+        text: "Lavar el arroz y el dal moong en varias aguas hasta que salga clara. Escurrir bien para eliminar el exceso de almidón."
+      - icon: temper
+        action: Templar
+        time: "2 min"
+        text: "Calentar el ghee en una olla pesada. Agregar comino, hoja de laurel y clavos hasta que el comino chisporrotee y suelte su aroma."
+      - icon: sauté
+        action: Sofreír
+        time: "3 min"
+        text: "Agregar la cebolla picada y sofreír 3 minutos hasta que esté translúcida y suave."
+      - icon: mix
+        action: Especias
+        time: "2 min"
+        text: "Incorporar jengibre rallado, tomate picado y cúrcuma. Revolver 2 minutos a fuego medio hasta que el tomate se ablande."
+      - icon: mix
+        action: Combinar
+        time: "1 min"
+        text: "Agregar el arroz escurrido, el dal y los chícharos. Revolver para cubrir todos los granos con especias y ghee."
+      - icon: simmer
+        action: Hervir
+        time: "2 min"
+        text: "Verter 2.5 tazas de agua. Sazonar con sal y llevar a ebullición a fuego fuerte, revolviendo una vez."
+      - icon: cook
+        action: Cocinar
+        time: "15–18 min"
+        text: "Reducir fuego al mínimo, tapar la olla y cocinar 15–18 minutos hasta que el arroz y dal absorban casi todo el líquido."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Finalizar con una cucharada de ghee y cilantro picado. Servir con una cucharada de yogur frío al lado."
+    tip: "Si queda muy espeso (debe ser como risotto suave), agregar 1/4 taza de agua caliente y mezclar suavemente."
+
+  - id: chana
+    name: Chana Masala
+    subtitle: Garbanzos en salsa especiada con tomate y cebolla
+    phase: "Fase 1–3"
+    meal: Almuerzo
+    type: Vegetariano
+    prep: "10 min"
+    prep_note: ""
+    cook: "30 min"
+    servings: "2 porciones"
+    nutrition:
+      kcal: 320
+      protein: 15
+      carbs: 48
+      fat: 7
+    image:
+      src: "imag_references/istockphoto-1249754738-2048x2048.jpg"
+      css_class: img-chana
+    highlight_ingredients:
+      - Garbanzos
+      - Tomate
+      - Cebolla
+      - Comino
+      - Cilantro
+    ingredients:
+      - "1.5 tazas garbanzos cocidos (o 1 lata)"
+      - "1 cebolla grande muy finamente picada"
+      - "2 tomates maduros triturados"
+      - "1 cdta pasta de jengibre-ajo"
+      - "1 chile verde picado"
+      - "1 cdta comino molido"
+      - "1 cdta coriandro molido"
+      - "1 cdta garam masala"
+      - "1/2 cdta amchur (polvo de mango seco)"
+      - "1/2 cdta cúrcuma"
+      - "1 cdta aceite"
+      - "Cilantro fresco y lima"
+    steps:
+      - icon: soak
+        action: Preparar
+        time: "2 min"
+        text: "Escurrir y enjuagar los garbanzos. Reservar 1/4 taza del líquido de cocción para después."
+      - icon: sauté
+        action: Caramelizar
+        time: "10 min"
+        text: "Calentar el aceite en una cacerola. Sofreír la cebolla a fuego medio-bajo 10 minutos completos hasta que tome un color ámbar profundo."
+      - icon: temper
+        action: Aromatizar
+        time: "2 min"
+        text: "Agregar la pasta de jengibre-ajo y el chile verde. Cocinar 2 minutos hasta que el olor crudo desaparezca."
+      - icon: mix
+        action: Masala
+        time: "5 min"
+        text: "Incorporar tomates triturados y especias: comino, coriandro, garam masala y cúrcuma. Cocinar 5 min hasta que el aceite se separe en los bordes."
+      - icon: simmer
+        action: Guisar
+        time: "12 min"
+        text: "Agregar garbanzos y 1/2 taza de agua. Mezclar, tapar parcialmente y cocinar a fuego bajo 12 minutos."
+      - icon: mix
+        action: Espesar
+        time: "2 min"
+        text: "Machacar 2–3 cucharadas de garbanzos contra la olla con el dorso de una cuchara para espesar la salsa naturalmente."
+      - icon: mix
+        action: Finalizar
+        time: "1 min"
+        text: "Agregar el amchur y ajustar la sal. El amchur da el toque ácido característico del chana masala auténtico."
+      - icon: serve
+        action: Servir
+        time: ""
+        text: "Decorar con cilantro fresco y rodajas de cebolla morada marinada. Servir con arroz o bhatura."
+    tip: "La caramelización lenta de la cebolla (10 min completos a fuego bajo-medio) es la clave del sabor profundo que define un chana masala excepcional."

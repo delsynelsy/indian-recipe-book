@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="sepia">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recetario Vintage Indio — Ilustrado</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+/* ═══ TEMAS ══════════════════════════════════════════════ */
+:root,[data-theme="sepia"]{
+  --bg:#f0ddb8;--card:#fffaee;--t1:#3a2618;--t2:#6b4530;
+  --a1:#c9a030;--a1r:201,160,48;--bd:rgba(139,101,16,.22);
+  --sh:rgba(58,38,24,.18);--hbg:#2e1e0e;--ht:#e8c468;
+  --img-bg:#f0e8d0;--pill:rgba(120,80,0,.07);
+  --step-bg:rgba(201,160,48,.055);--modal-panel:#fffaee;
+}
+[data-theme="sage"]{
+  --bg:#dde8d8;--card:#f5f2ea;--t1:#263028;--t2:#405848;
+  --a1:#6a9858;--a1r:106,152,88;--bd:rgba(58,96,40,.22);
+  --sh:rgba(38,48,40,.18);--hbg:#1e2e1a;--ht:#98c088;
+  --img-bg:#eaefd8;--pill:rgba(0,70,20,.07);
+  --step-bg:rgba(106,152,88,.06);--modal-panel:#f5f2ea;
+}
+[data-theme="indigo"]{
+  --bg:#16263a;--card:#1d3348;--t1:#ece0c8;--t2:#b09878;
+  --a1:#c09838;--a1r:192,152,56;--bd:rgba(192,152,56,.2);
+  --sh:rgba(0,0,0,.45);--hbg:#0e1820;--ht:#c09838;
+  --img-bg:#ede4cc;--pill:rgba(192,152,56,.08);
+  --step-bg:rgba(192,152,56,.07);--modal-panel:#1d3348;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t1);
+  font-family:'Cormorant Garamond',Georgia,serif;
+  min-height:100vh;transition:background .5s,color .4s;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.74' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+  background-size:350px 350px;}
+body>*{position:relative;z-index:1}
+header{background:var(--hbg);color:var(--ht);text-align:center;
+  padding:2.4rem 1rem 1.6rem;border-bottom:2px solid var(--a1)}
+header h1{font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:.02em}
+.orn{display:block;margin:.5rem 0 .4rem;letter-spacing:.4em;font-size:.85rem;color:var(--a1);opacity:.75}
+.sub{font-size:.8rem;letter-spacing:.14em;opacity:.58;text-transform:uppercase}
+.themes{display:flex;justify-content:center;gap:.75rem;
+  padding:.9rem 1rem;background:var(--hbg);border-bottom:1px solid rgba(255,255,255,.05)}
+.tbtn{padding:.36rem 1.15rem;border:1px solid var(--a1);background:transparent;
+  color:var(--ht);cursor:pointer;font-family:'Cormorant Garamond',serif;
+  font-size:.8rem;letter-spacing:.08em;transition:background .2s,color .2s;border-radius:1px}
+.tbtn:hover,.tbtn.on{background:var(--a1);color:var(--hbg)}
+main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(315px,1fr));gap:2rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:2px;
+  box-shadow:0 5px 28px var(--sh);overflow:hidden;
+  transition:background .5s,border-color .35s,box-shadow .4s,transform .3s;
+  position:relative;cursor:pointer}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 42px var(--sh)}
+.card::before,.card::after{content:'❧';position:absolute;font-size:.78rem;
+  color:var(--a1);opacity:.55;z-index:30;pointer-events:none}
+.card::before{top:6px;left:9px}.card::after{top:6px;right:9px;transform:scaleX(-1)}
+.img-wrap{position:relative;height:242px;overflow:hidden;background:var(--img-bg)}
+.card-img{position:absolute;mix-blend-mode:multiply;transition:filter .4s,transform .5s}
+.card:hover .card-img{transform:scale(1.06)}
+.img-chilla{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:sepia(20%) contrast(108%) saturate(112%) brightness(94%)}
+.img-rajma{width:100%;height:100%;object-fit:none;object-position:-1580px -195px;filter:sepia(12%) contrast(114%) saturate(120%) brightness(92%)}
+.img-dosa{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:sepia(65%) hue-rotate(18deg) contrast(128%) saturate(72%) brightness(68%)}
+.img-tikka{width:100%;height:100%;object-fit:cover;object-position:55% 42%;filter:sepia(22%) contrast(112%) saturate(122%) brightness(90%)}
+.img-khichdi{width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:sepia(30%) contrast(108%) saturate(112%) brightness(87%)}
+.img-chana{width:100%;height:100%;object-fit:none;object-position:-35px -195px;filter:sepia(15%) contrast(112%) saturate(118%) brightness(92%) hue-rotate(5deg)}
+.vignette{position:absolute;inset:0;z-index:10;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 50%,transparent 28%,rgba(12,6,2,.55) 100%)}
+.img-wrap::before{content:'';position:absolute;inset:0;z-index:11;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.70' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='280' height='280' filter='url(%23g)' opacity='.075'/%3E%3C/svg%3E");
+  background-size:200px 200px;mix-blend-mode:overlay}
+.img-frame{position:absolute;inset:8px;z-index:12;pointer-events:none;
+  border:1px solid rgba(200,165,60,.32);border-radius:1px}
+.img-title{position:absolute;bottom:0;left:0;right:0;z-index:15;padding:.6rem 1rem .55rem;
+  background:linear-gradient(transparent,rgba(8,4,1,.75));
+  font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;
+  color:#f2e4c0;letter-spacing:.02em;text-shadow:0 1px 5px rgba(0,0,0,.9)}
+.img-title::before{content:'';display:block;width:44px;height:1px;
+  background:rgba(220,185,80,.55);margin:0 auto .3rem}
+.card-cta{position:absolute;inset:0;z-index:20;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(8,4,1,0);transition:background .3s}
+.card:hover .card-cta{background:rgba(8,4,1,.38)}
+.cta-btn{color:#f2e4c0;border:1px solid rgba(220,185,80,.65);
+  padding:.48rem 1.3rem;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;
+  font-family:'Cormorant Garamond',serif;
+  opacity:0;transform:translateY(10px);transition:opacity .3s .05s,transform .3s .05s;
+  background:rgba(0,0,0,.28);backdrop-filter:blur(3px)}
+.card:hover .cta-btn{opacity:1;transform:translateY(0)}
+.card-body{padding:1.1rem 1.4rem 1.5rem}
+.tags{display:flex;gap:.42rem;margin-bottom:.8rem;flex-wrap:wrap}
+.tag{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.17rem .55rem;border:1px solid var(--a1);color:var(--a1);border-radius:1px}
+.ctitle{font-family:'Playfair Display',serif;font-style:italic;
+  font-size:1.28rem;line-height:1.2;margin-bottom:.58rem}
+.macros{display:flex;gap:1rem;font-size:.74rem;color:var(--t2);
+  margin-bottom:.82rem;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:.42rem 0}
+.macros b{color:var(--t1)}
+.pills{display:flex;flex-wrap:wrap;gap:.36rem}
+.pill{font-size:.69rem;background:var(--pill);border:1px solid var(--bd);
+  padding:.17rem .52rem;border-radius:10px;color:var(--t2)}
+/* ═══ MODAL ══════════════════════════════════════════════ */
+.recipe-modal{position:fixed;inset:0;z-index:1000;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .35s;padding:1rem}
+.recipe-modal.open{opacity:1;pointer-events:all}
+.modal-scrim{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(5px)}
+.modal-panel{position:relative;z-index:2;width:100%;max-width:1080px;
+  background:var(--modal-panel);border:1px solid var(--bd);
+  max-height:92vh;overflow:hidden;display:flex;flex-direction:column;
+  transform:translateY(28px) scale(.98);
+  transition:transform .42s cubic-bezier(.22,.82,.26,1);
+  box-shadow:0 32px 80px rgba(0,0,0,.45)}
+.recipe-modal.open .modal-panel{transform:translateY(0) scale(1)}
+.modal-topbar{display:flex;align-items:center;justify-content:space-between;
+  padding:.6rem 1.4rem;background:var(--hbg);border-bottom:1px solid var(--a1);flex-shrink:0}
+.modal-back{background:none;border:1px solid rgba(var(--a1r),.4);color:var(--ht);
+  font-family:'Cormorant Garamond',serif;font-size:.8rem;letter-spacing:.1em;
+  padding:.28rem .85rem;cursor:pointer;transition:background .2s}
+.modal-back:hover{background:rgba(var(--a1r),.18)}
+.modal-topbar-title{font-family:'Playfair Display',serif;font-style:italic;
+  color:var(--ht);font-size:.95rem;opacity:.75;text-align:center;flex:1;padding:0 1rem}
+.modal-preview-btn{background:var(--a1);border:none;color:var(--hbg);
+  font-family:'Cormorant Garamond',serif;font-size:.8rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;padding:.28rem 1rem;
+  cursor:pointer;transition:opacity .2s;white-space:nowrap}
+.modal-preview-btn:hover{opacity:.82}
+.modal-body{display:flex;flex:1;overflow:hidden;min-height:0}
+.modal-left{width:38%;flex-shrink:0;display:flex;flex-direction:column;overflow:hidden}
+.modal-hero-wrap{position:relative;flex:0 0 260px;background:var(--img-bg);overflow:hidden}
+.modal-hero-img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;transition:transform .5s}
+.modal-hero-img:hover{transform:scale(1.04)}
+.modal-hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,transparent 25%,rgba(8,4,2,.5) 100%)}
+.modal-hero-frame{position:absolute;inset:8px;border:1px solid rgba(200,165,60,.3);pointer-events:none}
+.modal-info{padding:1.2rem 1.4rem;flex:1;overflow-y:auto;background:var(--modal-panel)}
+.modal-recipe-name{font-family:'Playfair Display',serif;font-style:italic;
+  font-size:1.55rem;line-height:1.12;color:var(--t1);margin-bottom:.3rem}
+.modal-recipe-sub{font-size:.95rem;color:var(--t2);font-style:italic;margin-bottom:.75rem}
+.modal-tags{display:flex;gap:.38rem;flex-wrap:wrap;margin-bottom:.85rem}
+.modal-tag{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.15rem .5rem;border:1px solid var(--a1);color:var(--a1);border-radius:1px}
+.modal-meta-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.85rem;
+  padding:.5rem 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.meta-item{display:flex;align-items:center;gap:.28rem;font-size:.8rem;color:var(--t2)}
+.macro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem}
+.macro-cell{text-align:center;padding:.4rem .2rem;
+  background:rgba(var(--a1r),.06);border:1px solid var(--bd);border-radius:1px}
+.macro-val{font-size:1.05rem;font-weight:700;color:var(--t1);
+  font-family:'Playfair Display',serif;display:block}
+.macro-lbl{font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--t2)}
+.modal-right{flex:1;overflow-y:auto;overflow-x:hidden;padding:1.8rem 2rem;
+  scrollbar-width:thin;scrollbar-color:var(--a1) transparent}
+.modal-right::-webkit-scrollbar{width:4px}
+.modal-right::-webkit-scrollbar-thumb{background:var(--a1);border-radius:2px}
+.modal-right::-webkit-scrollbar-track{background:transparent}
+.section-head{display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem}
+.section-head h3{font-family:'Playfair Display',serif;font-size:1.05rem;letter-spacing:.05em;color:var(--t1)}
+.section-head::after{content:'';flex:1;height:1px;background:var(--bd)}
+.ingredients-list{list-style:none;padding:0;margin:0 0 2rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:.35rem .75rem}
+.ingredient-item{display:flex;align-items:flex-start;gap:.4rem;font-size:.92rem;color:var(--t2);line-height:1.35}
+.ingredient-item::before{content:'◆';color:var(--a1);font-size:.4rem;margin-top:.5em;flex-shrink:0}
+/* ═══ STEPS ══════════════════════════════════════════════ */
+.steps-list{list-style:none;padding:0;margin:0 0 1.4rem}
+.step-item{display:flex;gap:.9rem;padding:.9rem 1rem;margin-bottom:.5rem;
+  background:var(--step-bg);border-left:2.5px solid rgba(var(--a1r),.28);
+  border-radius:0 3px 3px 0;transition:background .2s,border-color .2s;align-items:flex-start}
+.step-item:hover{background:rgba(var(--a1r),.1);border-left-color:var(--a1)}
+.step-num{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--a1);
+  color:var(--a1);display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:.75rem;flex-shrink:0;margin-top:.25rem}
+.step-icon-wrap{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.step-icon-wrap svg{width:48px;height:48px}
+.step-text{flex:1;min-width:0}
+.step-action-row{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--a1);font-weight:700;margin-bottom:.2rem;display:flex;align-items:center;gap:.45rem}
+.step-time{font-size:.62rem;letter-spacing:.04em;color:var(--t2);
+  background:rgba(var(--a1r),.1);padding:.08rem .38rem;border-radius:8px;font-weight:400;text-transform:none}
+.step-desc{font-size:.92rem;color:var(--t1);line-height:1.52}
+.tip-box{display:flex;gap:.65rem;padding:.8rem .95rem;
+  background:rgba(var(--a1r),.08);border:1px dashed rgba(var(--a1r),.38);
+  border-radius:2px;margin-bottom:1.4rem}
+.tip-lbl{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--a1);font-weight:700;margin-bottom:.2rem}
+.tip-text{font-size:.88rem;color:var(--t2);font-style:italic;line-height:1.45}
+/* ═══ PREVIEW MODAL ══════════════════════════════════════ */
+.preview-modal{position:fixed;inset:0;z-index:2000;
+  opacity:0;pointer-events:none;transition:opacity .3s;
+  background:rgba(0,0,0,.78);display:flex;align-items:center;justify-content:center;padding:1rem}
+.preview-modal.open{opacity:1;pointer-events:all}
+.preview-panel{position:relative;z-index:2;width:100%;max-width:820px;
+  background:#faf6ed;max-height:95vh;overflow:hidden;display:flex;flex-direction:column;
+  transform:scale(.95);transition:transform .4s cubic-bezier(.22,.82,.26,1);
+  box-shadow:0 36px 90px rgba(0,0,0,.55)}
+.preview-modal.open .preview-panel{transform:scale(1)}
+.preview-toolbar{display:flex;align-items:center;justify-content:space-between;
+  padding:.65rem 1.4rem;background:#2e1e0e;border-bottom:2px solid #c9a030;flex-shrink:0}
+.prev-btn{background:none;border:1px solid rgba(201,160,48,.42);color:#e8c468;
+  font-family:'Cormorant Garamond',serif;font-size:.8rem;letter-spacing:.1em;
+  padding:.28rem .85rem;cursor:pointer;transition:background .2s}
+.prev-btn:hover{background:rgba(201,160,48,.15)}
+.prev-btn.accent{background:#c9a030;color:#2e1e0e;border-color:#c9a030;font-weight:700}
+.prev-btn.accent:hover{opacity:.84}
+.preview-title-bar{font-family:'Playfair Display',serif;font-style:italic;
+  color:#e8c468;font-size:.95rem;text-align:center;flex:1;padding:0 1rem}
+.preview-scroll{overflow-y:auto;flex:1;padding:2.2rem 2.5rem;
+  scrollbar-width:thin;scrollbar-color:#c9a030 transparent}
+.preview-scroll::-webkit-scrollbar{width:4px}
+.preview-scroll::-webkit-scrollbar-thumb{background:#c9a030;border-radius:2px}
+/* ═══ PRINT CARD ═════════════════════════════════════════ */
+.print-card{background:#fff;border:1px solid #ddd0b0;
+  padding:2.4rem 2.8rem;font-family:'Cormorant Garamond',Georgia,serif;
+  color:#2e1e0e;max-width:720px;margin:0 auto;box-shadow:0 4px 18px rgba(0,0,0,.1)}
+.print-header{text-align:center;padding-bottom:1.4rem;
+  border-bottom:2px solid #c9a030;margin-bottom:1.5rem}
+.print-header::before,.print-header::after{content:'✦ · ✦';display:block;
+  font-size:.7rem;letter-spacing:.5em;color:#c9a030;opacity:.65;margin:.3rem 0}
+.print-recipe-name{font-family:'Playfair Display',serif;font-style:italic;
+  font-size:2.2rem;line-height:1.08;color:#2e1e0e;margin:.4rem 0 .3rem}
+.print-sub{font-size:1rem;color:#6b4530;font-style:italic;margin-bottom:.75rem}
+.print-tags{display:flex;justify-content:center;gap:.45rem;flex-wrap:wrap;margin-bottom:.75rem}
+.print-tag{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.14rem .5rem;border:1px solid #c9a030;color:#8b6030}
+.print-meta{display:flex;justify-content:center;gap:2.2rem;font-size:.88rem;color:#6b4530;margin-top:.5rem}
+.print-meta-item{text-align:center}
+.print-meta-val{font-size:1.05rem;font-weight:700;color:#3a2618;display:block;font-family:'Playfair Display',serif}
+.print-body{display:grid;grid-template-columns:1fr 1.8fr;gap:2.2rem;margin-top:1.4rem}
+.print-col-label{font-family:'Playfair Display',serif;font-size:1rem;
+  letter-spacing:.06em;margin-bottom:.7rem;padding-bottom:.35rem;
+  border-bottom:1px solid #ddd0b0;color:#3a2618}
+.print-ingredients ul{list-style:none;padding:0}
+.print-ingredients li{font-size:.87rem;color:#4a3218;padding:.2rem 0;
+  border-bottom:1px dotted rgba(180,150,80,.22);display:flex;gap:.38rem;align-items:flex-start}
+.print-ingredients li::before{content:'◆';color:#c9a030;font-size:.38rem;margin-top:.55em;flex-shrink:0}
+.print-macros{display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;margin-top:.9rem}
+.print-macro-cell{text-align:center;padding:.32rem .15rem;border:1px solid #ddd0b0}
+.print-macro-val{font-size:.95rem;font-weight:700;color:#3a2618;font-family:'Playfair Display',serif}
+.print-macro-lbl{font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:#6b4530}
+.print-step{display:flex;gap:.75rem;margin-bottom:.9rem;align-items:flex-start}
+.print-step-num{width:22px;height:22px;border-radius:50%;border:1px solid #c9a030;
+  color:#8b6030;display:flex;align-items:center;justify-content:center;
+  font-size:.68rem;font-family:'Playfair Display',serif;flex-shrink:0;margin-top:.1rem}
+.print-step-action{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#c9a030;font-weight:700;margin-bottom:.12rem}
+.print-step-desc{font-size:.86rem;color:#3a2618;line-height:1.44}
+.print-tip{margin-top:.9rem;padding:.6rem .85rem;
+  background:rgba(201,160,48,.07);border-left:2px solid #c9a030;
+  font-size:.83rem;color:#5a3a22;font-style:italic;line-height:1.4}
+.print-footer{text-align:center;margin-top:1.4rem;padding-top:.9rem;border-top:1px solid #ddd0b0}
+.print-footer p{font-size:.72rem;color:#9a8068;letter-spacing:.08em}
+.print-orn{display:block;margin:.28rem 0;letter-spacing:.4em;font-size:.72rem;color:#c9a030;opacity:.65}
+@media print{
+  body>*:not(.preview-modal){display:none!important}
+  .preview-modal{position:static;opacity:1;pointer-events:all;background:none;padding:0}
+  .preview-panel{box-shadow:none;max-height:none;transform:none}
+  .preview-toolbar{display:none}
+  .preview-scroll{overflow:visible;padding:0}
+  .print-card{box-shadow:none;border:none;padding:1.5rem}
+}
+@media(max-width:820px){
+  .modal-body{flex-direction:column}
+  .modal-left{width:100%;flex-direction:row;align-items:stretch}
+  .modal-hero-wrap{flex:0 0 180px;height:220px}
+  .modal-info{flex:1;overflow-y:visible;padding:.9rem 1rem}
+  .modal-right{padding:1.2rem 1.3rem}
+  .ingredients-list{grid-template-columns:1fr}
+  .print-body{grid-template-columns:1fr}
+  .preview-scroll{padding:1.2rem 1.4rem}
+  .print-card{padding:1.5rem 1.6rem}
+}
+@media(max-width:560px){
+  .step-icon-wrap{display:none}
+  .modal-left{flex-direction:column}
+  .modal-hero-wrap{flex:0 0 200px;height:200px}
+  .macro-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ SVG: FILTROS + ICONOS ACUARELA ═══════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<defs>
+  <filter id="wc-blur" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="3.5"/>
+  </filter>
+  <filter id="wc-edge" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.025 0.04" numOctaves="3" seed="9" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.8" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs>
+
+<symbol id="ic-soak" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="30" rx="19" ry="15" fill="#4e88b5" fill-opacity="0.18" filter="url(#wc-blur)"/>
+  <path d="M10 26 Q10 40 24 42 Q38 40 38 26" stroke="#4e88b5" stroke-width="2" stroke-linecap="round" fill="#4e88b5" fill-opacity="0.09" filter="url(#wc-edge)"/>
+  <line x1="10" y1="26" x2="38" y2="26" stroke="#4e88b5" stroke-width="2" stroke-linecap="round"/>
+  <path d="M14 34 Q24 37 34 34" stroke="#4e88b5" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.35" fill="none"/>
+  <path d="M16 8 Q13 13 16 17.5 Q19 22 22 17.5 Q25 13 22 8 Z" fill="#4e88b5" fill-opacity="0.72" filter="url(#wc-edge)"/>
+  <path d="M26 4 Q23 9 26 13.5 Q29 18 32 13.5 Q35 9 32 4 Z" fill="#4e88b5" fill-opacity="0.52" filter="url(#wc-edge)"/>
+  <circle cx="12" cy="29" r="1.3" fill="#4e88b5" fill-opacity="0.45"/>
+  <circle cx="36" cy="29" r="1.1" fill="#4e88b5" fill-opacity="0.35"/>
+</symbol>
+
+<symbol id="ic-blend" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="27" rx="18" ry="18" fill="#9b7245" fill-opacity="0.16" filter="url(#wc-blur)"/>
+  <path d="M15 10 L11 40 Q11 44 24 44 Q37 44 37 40 L33 10 Z" fill="#9b7245" fill-opacity="0.12" stroke="#9b7245" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" filter="url(#wc-edge)"/>
+  <path d="M13 10 Q13 6 24 6 Q35 6 35 10" stroke="#9b7245" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+  <line x1="17" y1="32" x2="31" y2="27" stroke="#9b7245" stroke-width="2.1" stroke-linecap="round"/>
+  <line x1="17" y1="27" x2="31" y2="32" stroke="#9b7245" stroke-width="2.1" stroke-linecap="round"/>
+  <circle cx="24" cy="29.5" r="2.8" fill="#9b7245" fill-opacity="0.58"/>
+  <path d="M11 19 Q9 15 11 12" stroke="#9b7245" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.38" fill="none"/>
+  <path d="M37 19 Q39 15 37 12" stroke="#9b7245" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.38" fill="none"/>
+</symbol>
+
+<symbol id="ic-mix" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="30" rx="18" ry="14" fill="#c8922a" fill-opacity="0.16" filter="url(#wc-blur)"/>
+  <path d="M8 24 Q8 40 24 42 Q40 40 40 24 Z" fill="#c8922a" fill-opacity="0.1" stroke="#c8922a" stroke-width="1.9" filter="url(#wc-edge)"/>
+  <ellipse cx="24" cy="24" rx="16" ry="4.5" stroke="#c8922a" stroke-width="1.6" fill="#c8922a" fill-opacity="0.07"/>
+  <ellipse cx="22" cy="10" rx="5" ry="3.8" fill="#c8922a" fill-opacity="0.55" transform="rotate(-18 22 10)"/>
+  <line x1="23" y1="13" x2="27" y2="30" stroke="#c8922a" stroke-width="2.1" stroke-linecap="round"/>
+  <path d="M15 33 Q20 27 29 31 Q33 34 28 37" stroke="#c8922a" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.42" fill="none"/>
+</symbol>
+
+<symbol id="ic-heat" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="28" rx="18" ry="17" fill="#d46830" fill-opacity="0.16" filter="url(#wc-blur)"/>
+  <path d="M13 38 Q7 30 13 20 Q15 29 19 24 Q19 35 24 27 Q29 35 29 24 Q33 29 35 20 Q41 30 35 38 Z" fill="#d46830" fill-opacity="0.52" filter="url(#wc-edge)"/>
+  <ellipse cx="23" cy="20" rx="14" ry="5" fill="#d46830" fill-opacity="0.18" stroke="#d46830" stroke-width="2"/>
+  <path d="M9 20 L9 28 Q9 33 23 33 Q37 33 37 28 L37 20" stroke="#d46830" stroke-width="1.9" fill="none" filter="url(#wc-edge)"/>
+  <path d="M37 24 L45 22" stroke="#d46830" stroke-width="2.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="ic-pour" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="26" rx="18" ry="18" fill="#4e88b5" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <ellipse cx="15" cy="13" rx="9" ry="6.5" fill="#4e88b5" fill-opacity="0.3" stroke="#4e88b5" stroke-width="1.9" transform="rotate(-18 15 13)" filter="url(#wc-edge)"/>
+  <line x1="21" y1="17" x2="38" y2="36" stroke="#4e88b5" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M9 20 Q5 27 7 34 Q9 40 12 35 Q9.5 29 12.5 24 Z" fill="#4e88b5" fill-opacity="0.42" filter="url(#wc-edge)"/>
+  <circle cx="8.5" cy="37" r="2.6" fill="#4e88b5" fill-opacity="0.38"/>
+  <circle cx="11" cy="42" r="1.6" fill="#4e88b5" fill-opacity="0.28"/>
+</symbol>
+
+<symbol id="ic-cook" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="34" rx="16" ry="12" fill="#d46830" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <path d="M13 22 Q11 16 13 10 Q15 4 13 1" stroke="#d46830" stroke-width="1.9" stroke-linecap="round" stroke-opacity="0.44" fill="none"/>
+  <path d="M24 20 Q22 14 24 8 Q26 2 24 0" stroke="#d46830" stroke-width="1.9" stroke-linecap="round" stroke-opacity="0.44" fill="none"/>
+  <path d="M35 22 Q33 16 35 10 Q37 4 35 1" stroke="#d46830" stroke-width="1.9" stroke-linecap="round" stroke-opacity="0.44" fill="none"/>
+  <path d="M8 30 L8 38 Q8 44 24 44 Q40 44 40 38 L40 30" stroke="#d46830" stroke-width="1.9" fill="#d46830" fill-opacity="0.09" filter="url(#wc-edge)"/>
+  <ellipse cx="24" cy="30" rx="16" ry="5" fill="#d46830" fill-opacity="0.14" stroke="#d46830" stroke-width="2.1"/>
+  <path d="M40 34 L47 32" stroke="#d46830" stroke-width="2.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="ic-flip" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="21" cy="27" rx="18" ry="16" fill="#9b7245" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <ellipse cx="18" cy="27" rx="12" ry="5" fill="#9b7245" fill-opacity="0.38" stroke="#9b7245" stroke-width="1.6" filter="url(#wc-edge)"/>
+  <path d="M23 25 L38 11" stroke="#9b7245" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M20 29 L27 24 L32 16 L25 21 Z" fill="#9b7245" fill-opacity="0.52"/>
+  <line x1="38" y1="11" x2="46" y2="5" stroke="#9b7245" stroke-width="2.1" stroke-linecap="round"/>
+  <path d="M13 22 Q15 13 22 11" stroke="#9b7245" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2.5" stroke-opacity="0.45" fill="none"/>
+</symbol>
+
+<symbol id="ic-serve" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="33" rx="19" ry="14" fill="#6a9858" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <ellipse cx="24" cy="40" rx="18" ry="4.5" fill="#6a9858" fill-opacity="0.2" stroke="#6a9858" stroke-width="1.9"/>
+  <path d="M7 40 Q7 20 24 18 Q41 20 41 40" fill="#6a9858" fill-opacity="0.09" stroke="#6a9858" stroke-width="1.9" filter="url(#wc-edge)"/>
+  <circle cx="24" cy="18" r="3.2" fill="#6a9858" fill-opacity="0.52" stroke="#6a9858" stroke-width="1.3"/>
+  <path d="M17 14 Q15 9 17 5" stroke="#6a9858" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.38" fill="none"/>
+  <path d="M27 12 Q25 7 27 3" stroke="#6a9858" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.32" fill="none"/>
+</symbol>
+
+<symbol id="ic-cut" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="26" rx="18" ry="18" fill="#9b7245" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <line x1="5" y1="39" x2="43" y2="39" stroke="#9b7245" stroke-width="1.4" stroke-opacity="0.35" stroke-linecap="round"/>
+  <path d="M7 37 L36 8 Q40 5 43 9 L13 37 Z" fill="#9b7245" fill-opacity="0.42" stroke="#9b7245" stroke-width="1.6" filter="url(#wc-edge)"/>
+  <path d="M4 39 L7 37 L13 37 L9 41 Q5.5 44 4 39 Z" fill="#9b7245" fill-opacity="0.72"/>
+  <line x1="17" y1="31" x2="30" y2="16" stroke="white" stroke-width="1.3" stroke-opacity="0.32"/>
+</symbol>
+
+<symbol id="ic-marinate" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="31" rx="18" ry="15" fill="#5e8c50" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <path d="M8 24 Q8 40 24 42 Q40 40 40 24 Z" fill="#5e8c50" fill-opacity="0.1" stroke="#5e8c50" stroke-width="1.9" filter="url(#wc-edge)"/>
+  <ellipse cx="24" cy="24" rx="16" ry="4.5" stroke="#5e8c50" stroke-width="1.6" fill="#5e8c50" fill-opacity="0.07"/>
+  <path d="M20 14 Q16 7 20 3 Q27 5 20 14 Z" fill="#5e8c50" fill-opacity="0.62" filter="url(#wc-edge)"/>
+  <path d="M25 12 Q25 3 30 3 Q34 7 25 12 Z" fill="#5e8c50" fill-opacity="0.5" filter="url(#wc-edge)"/>
+  <line x1="22" y1="13" x2="22" y2="24" stroke="#5e8c50" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="15" cy="32" r="1.6" fill="#5e8c50" fill-opacity="0.5"/>
+  <circle cx="24" cy="34" r="1.6" fill="#5e8c50" fill-opacity="0.52"/>
+  <circle cx="33" cy="32" r="1.6" fill="#5e8c50" fill-opacity="0.46"/>
+</symbol>
+
+<symbol id="ic-grill" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="26" rx="18" ry="18" fill="#d46830" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <path d="M13 38 Q8 32 13 24 Q15 31 18 26 Q20 35 24 27 Q28 35 30 26 Q33 31 35 24 Q40 32 35 38 Z" fill="#d46830" fill-opacity="0.5" filter="url(#wc-edge)"/>
+  <line x1="9" y1="24" x2="39" y2="24" stroke="#d46830" stroke-width="2.6" stroke-linecap="round"/>
+  <line x1="9" y1="30" x2="39" y2="30" stroke="#d46830" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M13 20 L16 28 M22 20 L25 28 M31 20 L34 28" stroke="#d46830" stroke-width="2" stroke-linecap="round" stroke-opacity="0.38"/>
+</symbol>
+
+<symbol id="ic-rest" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="24" rx="16" ry="21" fill="#7a6898" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <path d="M10 5 L38 5 Q38 7 24 22 Q10 37 10 39 L38 39 Q38 41 24 26 Q10 11 10 5 Z" fill="#7a6898" fill-opacity="0.14" stroke="#7a6898" stroke-width="1.9" stroke-linejoin="round" filter="url(#wc-edge)"/>
+  <path d="M13 37 Q13 35 24 29 Q35 35 35 37 Z" fill="#7a6898" fill-opacity="0.38"/>
+  <path d="M20 7 Q24 9 28 7 Q28 12 24 15 Q20 12 20 7 Z" fill="#7a6898" fill-opacity="0.38"/>
+  <line x1="10" y1="5" x2="38" y2="5" stroke="#7a6898" stroke-width="2.1" stroke-linecap="round"/>
+  <line x1="10" y1="39" x2="38" y2="39" stroke="#7a6898" stroke-width="2.1" stroke-linecap="round"/>
+  <circle cx="24" cy="22" r="2" fill="#7a6898" fill-opacity="0.58"/>
+</symbol>
+
+<symbol id="ic-sauté" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="21" cy="32" rx="18" ry="14" fill="#d46830" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <ellipse cx="19" cy="33" rx="13" ry="5" fill="#d46830" fill-opacity="0.18" stroke="#d46830" stroke-width="2"/>
+  <path d="M6 33 L6 39 Q6 43 19 43 Q32 43 32 39 L32 33" stroke="#d46830" stroke-width="1.9" fill="none" filter="url(#wc-edge)"/>
+  <path d="M32 37 L42 33" stroke="#d46830" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="13" cy="20" r="3.2" fill="#d46830" fill-opacity="0.5" filter="url(#wc-edge)"/>
+  <circle cx="21" cy="14" r="2.6" fill="#d46830" fill-opacity="0.45" filter="url(#wc-edge)"/>
+  <circle cx="30" cy="18" r="3" fill="#d46830" fill-opacity="0.4" filter="url(#wc-edge)"/>
+  <path d="M13 29 Q13 21 21 14 Q27 10 30 17" stroke="#d46830" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2.5" stroke-opacity="0.38" fill="none"/>
+</symbol>
+
+<symbol id="ic-temper" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="30" rx="18" ry="16" fill="#c8922a" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <ellipse cx="24" cy="31" rx="13" ry="4" fill="#c8922a" fill-opacity="0.18" stroke="#c8922a" stroke-width="1.9"/>
+  <path d="M11 31 Q11 42 24 44 Q37 42 37 31" stroke="#c8922a" stroke-width="1.9" fill="#c8922a" fill-opacity="0.09" filter="url(#wc-edge)"/>
+  <g stroke="#c8922a" stroke-width="1.7" stroke-linecap="round" stroke-opacity="0.82">
+    <line x1="18" y1="19" x2="18" y2="12"/><line x1="14.5" y1="15.5" x2="21.5" y2="15.5"/>
+    <line x1="15" y1="12.8" x2="21" y2="18.2"/><line x1="21" y1="12.8" x2="15" y2="18.2"/>
+  </g>
+  <g stroke="#c8922a" stroke-width="1.3" stroke-linecap="round" stroke-opacity="0.6">
+    <line x1="29" y1="15" x2="29" y2="10"/><line x1="26.5" y1="12.5" x2="31.5" y2="12.5"/>
+    <line x1="27" y1="11" x2="31" y2="14"/><line x1="31" y1="11" x2="27" y2="14"/>
+  </g>
+  <circle cx="16" cy="27" r="2.1" fill="#c8922a" fill-opacity="0.62"/>
+  <circle cx="24" cy="25" r="2.1" fill="#c8922a" fill-opacity="0.62"/>
+  <circle cx="32" cy="27" r="2.1" fill="#c8922a" fill-opacity="0.62"/>
+</symbol>
+
+<symbol id="ic-simmer" viewBox="0 0 48 48" fill="none">
+  <ellipse cx="24" cy="32" rx="18" ry="15" fill="#4e88b5" fill-opacity="0.15" filter="url(#wc-blur)"/>
+  <path d="M10 24 L10 39 Q10 45 24 45 Q38 45 38 39 L38 24" stroke="#4e88b5" stroke-width="1.9" fill="#4e88b5" fill-opacity="0.09" filter="url(#wc-edge)"/>
+  <ellipse cx="24" cy="24" rx="14" ry="4.5" fill="#4e88b5" fill-opacity="0.14" stroke="#4e88b5" stroke-width="2.1"/>
+  <path d="M10 28 Q6 26 6 31 Q6 36 10 33" stroke="#4e88b5" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+  <path d="M38 28 Q42 26 42 31 Q42 36 38 33" stroke="#4e88b5" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+  <circle cx="17" cy="17" r="2.6" stroke="#4e88b5" stroke-width="1.6" stroke-opacity="0.5" fill="none"/>
+  <circle cx="26" cy="13" r="2.1" stroke="#4e88b5" stroke-width="1.4" stroke-opacity="0.42" fill="none"/>
+  <circle cx="33" cy="17" r="1.9" stroke="#4e88b5" stroke-width="1.3" stroke-opacity="0.36" fill="none"/>
+</symbol>
+</svg>
+
+<!-- ═══ HEADER ════════════════════════════════════════════════════ -->
+<header>
+  <h1>Recetario Vintage Indio</h1>
+  <span class="orn">✦ &nbsp; ✦ &nbsp; ✦</span>
+  <p class="sub">Plan de Alimentación · 8 Semanas · Edición Clásica</p>
+</header>
+<div class="themes">
+  <button class="tbtn on" onclick="setT('sepia',this)">◈ Sepia Dorado</button>
+  <button class="tbtn"    onclick="setT('sage',this)">◈ Verde Salvia</button>
+  <button class="tbtn"    onclick="setT('indigo',this)">◈ Azul Índigo</button>
+</div>
+
+<!-- ═══ GRID ══════════════════════════════════════════════════════ -->
+<main><div class="grid">
+
+{% for recipe in recipes %}
+<div class="card" onclick="openModal('{{ recipe.id }}')">
+  <div class="img-wrap">
+    <img class="card-img {{ recipe.image.css_class }}" src="{{ recipe.image.src }}" alt="{{ recipe.name }}">
+    <div class="vignette"></div><div class="img-frame"></div>
+    <div class="img-title">{{ recipe.name }}</div>
+    <div class="card-cta"><div class="cta-btn">Ver Receta Completa</div></div>
+  </div>
+  <div class="card-body">
+    <div class="tags">{% for tag in recipe.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>
+    <h2 class="ctitle">{{ recipe.name }}</h2>
+    <div class="macros"><div><b>{{ recipe.nutrition.kcal }}</b> kcal</div><div>P: <b>{{ recipe.nutrition.protein }}g</b></div><div>C: <b>{{ recipe.nutrition.carbs }}g</b></div><div>G: <b>{{ recipe.nutrition.fat }}g</b></div></div>
+    <div class="pills">{% for ing in recipe.highlight_ingredients %}<span class="pill">{{ ing }}</span>{% endfor %}</div>
+  </div>
+</div>
+{% endfor %}
+
+</div></main>
+
+<!-- ═══ RECIPE DETAIL MODAL ═══════════════════════════════════════ -->
+<div class="recipe-modal" id="recipeModal" role="dialog" aria-modal="true">
+  <div class="modal-scrim" onclick="closeModal()"></div>
+  <div class="modal-panel">
+    <div class="modal-topbar">
+      <button class="modal-back" onclick="closeModal()">← Recetario</button>
+      <div class="modal-topbar-title" id="modalTopTitle"></div>
+      <button class="modal-preview-btn" onclick="openPreview()">⊕ Previsualizar</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-left">
+        <div class="modal-hero-wrap">
+          <img id="modalHeroImg" class="modal-hero-img" src="" alt="">
+          <div class="modal-hero-vignette"></div>
+          <div class="modal-hero-frame"></div>
+        </div>
+        <div class="modal-info">
+          <h2 class="modal-recipe-name" id="modalName"></h2>
+          <p class="modal-recipe-sub" id="modalSub"></p>
+          <div class="modal-tags" id="modalTags"></div>
+          <div class="modal-meta-row" id="modalMeta"></div>
+          <div class="macro-grid" id="modalMacros"></div>
+        </div>
+      </div>
+      <div class="modal-right" id="modalRight"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PRINT PREVIEW MODAL ══════════════════════════════════════ -->
+<div class="preview-modal" id="previewModal" role="dialog" aria-modal="true">
+  <div class="preview-panel">
+    <div class="preview-toolbar">
+      <button class="prev-btn" onclick="closePreview()">← Volver</button>
+      <div class="preview-title-bar">Vista Previa · Receta Completa</div>
+      <button class="prev-btn accent" onclick="window.print()">⊕ Imprimir</button>
+    </div>
+    <div class="preview-scroll" id="previewScroll"></div>
+  </div>
+</div>
+
+<script>
+const R = {{ recipes_json | safe }};
+
+/* ── DOM helpers ─────────────────────────────────────────────── */
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+function append(parent, ...children) {
+  children.forEach(c => parent.appendChild(c));
+  return parent;
+}
+
+/* ── Build icon <svg> via DOM ────────────────────────────────── */
+function buildIcon(ic) {
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', '0 0 48 48');
+  const use = document.createElementNS(ns, 'use');
+  use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#ic-' + ic);
+  svg.appendChild(use);
+  return svg;
+}
+
+/* ── Build tag span ──────────────────────────────────────────── */
+function buildTag(text, cls) {
+  return el('span', cls || 'modal-tag', text);
+}
+
+/* ── Build macro cell ────────────────────────────────────────── */
+function buildMacroCell(val, lbl) {
+  const cell = el('div', 'macro-cell');
+  append(cell, el('span', 'macro-val', String(val)), el('span', 'macro-lbl', lbl));
+  return cell;
+}
+
+/* ── Build step item ─────────────────────────────────────────── */
+function buildStep(s, i) {
+  const li = el('li', 'step-item');
+  const num = el('div', 'step-num', String(i + 1).padStart(2, '0'));
+  const iconWrap = el('div', 'step-icon-wrap');
+  iconWrap.appendChild(buildIcon(s.ic));
+  const textDiv = el('div', 'step-text');
+  const actionRow = el('div', 'step-action-row', s.act);
+  if (s.t) {
+    const timeSpan = el('span', 'step-time', s.t);
+    actionRow.appendChild(timeSpan);
+  }
+  const desc = el('p', 'step-desc', s.txt);
+  append(textDiv, actionRow, desc);
+  append(li, num, iconWrap, textDiv);
+  return li;
+}
+
+/* ── Build ingredient item ───────────────────────────────────── */
+function buildIngredient(text) {
+  return append(el('li', 'ingredient-item'), el('span', null, text));
+}
+
+/* ═══ OPEN MODAL ════════════════════════════════════════════════ */
+let currentId = null;
+
+function openModal(id) {
+  currentId = id;
+  const r = R[id];
+
+  document.getElementById('modalTopTitle').textContent = r.name;
+  document.getElementById('modalName').textContent = r.name;
+  document.getElementById('modalSub').textContent = r.sub;
+
+  const img = document.getElementById('modalHeroImg');
+  img.src = r.img;
+  img.className = 'modal-hero-img ' + r.imgCls;
+  img.alt = r.name;
+
+  /* tags */
+  const tagsEl = document.getElementById('modalTags');
+  tagsEl.innerHTML = '';
+  [r.phase, r.meal, r.type].forEach(t => tagsEl.appendChild(buildTag(t)));
+
+  /* meta */
+  const metaEl = document.getElementById('modalMeta');
+  metaEl.innerHTML = '';
+  const metaData = [
+    { ic: '⏱', txt: r.prep + (r.prepNote ? ' ' + r.prepNote : '') },
+    { ic: '🍳', txt: r.cook + ' cocción' },
+    { ic: '🍽', txt: r.servings },
+  ];
+  metaData.forEach(m => {
+    const item = el('div', 'meta-item');
+    append(item, el('span', null, m.ic + ' '), el('span', null, m.txt));
+    metaEl.appendChild(item);
+  });
+
+  /* macros */
+  const macroEl = document.getElementById('modalMacros');
+  macroEl.innerHTML = '';
+  [
+    [r.kcal, 'kcal'], [r.p + 'g', 'proteína'],
+    [r.c + 'g', 'carbos'], [r.g + 'g', 'grasas']
+  ].forEach(([v, l]) => macroEl.appendChild(buildMacroCell(v, l)));
+
+  /* right panel */
+  const right = document.getElementById('modalRight');
+  right.innerHTML = '';
+
+  /* ingredients section */
+  const ingHead = el('div', 'section-head');
+  ingHead.appendChild(el('h3', null, 'Ingredientes'));
+  const ingList = el('ul', 'ingredients-list');
+  r.ingredients.forEach(i => ingList.appendChild(buildIngredient(i)));
+  append(right, ingHead, ingList);
+
+  /* steps section */
+  const stepsHead = el('div', 'section-head');
+  stepsHead.appendChild(el('h3', null, 'Procedimiento'));
+  const stepsList = el('ol', 'steps-list');
+  r.steps.forEach((s, i) => stepsList.appendChild(buildStep(s, i)));
+  append(right, stepsHead, stepsList);
+
+  /* tip */
+  if (r.tip) {
+    const tipBox = el('div', 'tip-box');
+    const tipContent = el('div');
+    const tipLabel = el('div', 'tip-lbl', 'Consejo del chef');
+    const tipText = el('p', 'tip-text', r.tip);
+    append(tipContent, tipLabel, tipText);
+    append(tipBox, el('span', null, '💡'), tipContent);
+    right.appendChild(tipBox);
+  }
+
+  document.getElementById('recipeModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('recipeModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ═══ PREVIEW / PRINT ═══════════════════════════════════════════ */
+function openPreview() {
+  if (!currentId) return;
+  const r = R[currentId];
+  const scroll = document.getElementById('previewScroll');
+  scroll.innerHTML = '';
+
+  const card = el('div', 'print-card');
+
+  /* header */
+  const hdr = el('div', 'print-header');
+  append(hdr,
+    el('h1', 'print-recipe-name', r.name),
+    el('p', 'print-sub', r.sub)
+  );
+  const tagsDiv = el('div', 'print-tags');
+  [r.phase, r.meal, r.type].forEach(t => tagsDiv.appendChild(el('span', 'print-tag', t)));
+  hdr.appendChild(tagsDiv);
+  const metaDiv = el('div', 'print-meta');
+  [
+    [r.prep + (r.prepNote ? ' ' + r.prepNote : ''), 'Preparación'],
+    [r.cook, 'Cocción'],
+    [r.servings, 'Porciones']
+  ].forEach(([v, l]) => {
+    const item = el('div', 'print-meta-item');
+    append(item, el('span', 'print-meta-val', v), el('span', null, l));
+    metaDiv.appendChild(item);
+  });
+  hdr.appendChild(metaDiv);
+  card.appendChild(hdr);
+
+  /* body: 2 columns */
+  const body = el('div', 'print-body');
+
+  /* left: ingredients + macros */
+  const ingCol = el('div', 'print-ingredients');
+  ingCol.appendChild(el('h4', 'print-col-label', 'Ingredientes'));
+  const ingUl = el('ul');
+  r.ingredients.forEach(i => {
+    const li = el('li');
+    li.textContent = i;
+    ingUl.appendChild(li);
+  });
+  ingCol.appendChild(ingUl);
+  const macroGrid = el('div', 'print-macros');
+  [
+    [r.kcal, 'kcal'], [r.p + 'g', 'proteína'],
+    [r.c + 'g', 'carbos'], [r.g + 'g', 'grasas']
+  ].forEach(([v, l]) => {
+    const cell = el('div', 'print-macro-cell');
+    append(cell, el('div', 'print-macro-val', String(v)), el('div', 'print-macro-lbl', l));
+    macroGrid.appendChild(cell);
+  });
+  ingCol.appendChild(macroGrid);
+
+  /* right: steps */
+  const stepsCol = el('div', 'print-steps');
+  stepsCol.appendChild(el('h4', 'print-col-label', 'Procedimiento'));
+  r.steps.forEach((s, i) => {
+    const stepDiv = el('div', 'print-step');
+    const numDiv = el('div', 'print-step-num', String(i + 1));
+    const bodyDiv = el('div');
+    const actDiv = el('div', 'print-step-action', s.act + (s.t ? ' · ' + s.t : ''));
+    const descP = el('p', 'print-step-desc', s.txt);
+    append(bodyDiv, actDiv, descP);
+    append(stepDiv, numDiv, bodyDiv);
+    stepsCol.appendChild(stepDiv);
+  });
+  if (r.tip) {
+    const tipDiv = el('div', 'print-tip');
+    const bold = el('strong', null, '💡 Consejo: ');
+    tipDiv.appendChild(bold);
+    tipDiv.appendChild(document.createTextNode(r.tip));
+    stepsCol.appendChild(tipDiv);
+  }
+
+  append(body, ingCol, stepsCol);
+  card.appendChild(body);
+
+  /* footer */
+  const ftr = el('div', 'print-footer');
+  append(ftr,
+    el('span', 'print-orn', '✶ · ✶ · ✶'),
+    el('p', null, 'Recetario Vintage Indio · Plan de Alimentación 8 Semanas')
+  );
+  card.appendChild(ftr);
+
+  scroll.appendChild(card);
+  document.getElementById('previewModal').classList.add('open');
+}
+
+function closePreview() {
+  document.getElementById('previewModal').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('previewModal').classList.contains('open')) closePreview();
+    else closeModal();
+  }
+});
+
+function setT(name, btn) {
+  document.documentElement.setAttribute('data-theme', name);
+  document.querySelectorAll('.tbtn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+}
+</script>
+</body>
+</html>
