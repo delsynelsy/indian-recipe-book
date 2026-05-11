@@ -1,0 +1,33 @@
+# Static asset server for recipe-book illustrations.
+#
+# Deploy to NAS:
+#   1. scp this repo dir to nas-bitcorp:/volume1/docker/recipe-assets/
+#   2. Ensure /volume1/recipe-book/assets exists and is populated by image_gen
+#      + ingredient_gen (writes via /mnt/nas mount from the dev box).
+#   3. ssh nas-bitcorp 'cd /volume1/docker/recipe-assets && docker compose up -d'
+#   4. From dev box: cloudflared tunnel route added in ~/.cloudflared/config.yml
+#      then SIGHUP cloudflared.
+#
+# Serves on internal port 8182 (NAS LAN only). Cloudflare tunnel terminates
+# TLS publicly at https://images.mohammadasjad.com.
+
+services:
+  recipe-assets:
+    image: nginx:1.27-alpine
+    container_name: recipe-assets
+    restart: unless-stopped
+    ports:
+      - "8182:80"
+    volumes:
+      - /volume1/projects/recipe-book/assets:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget --spider -q http://localhost/healthz || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
