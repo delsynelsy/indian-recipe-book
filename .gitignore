@@ -20,3 +20,10 @@ Thumbs.db
 
 # Superpowers
 .superpowers/
+
+# Generated image assets (regenerable via `python generate.py regen-images`)
+images/
+*.png
+
+# Local secrets
+.env
