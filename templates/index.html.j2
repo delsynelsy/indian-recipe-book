@@ -101,7 +101,10 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
 .macros b{color:var(--t1)}
 .pills{display:flex;flex-wrap:wrap;gap:.36rem}
 .pill{font-size:.69rem;background:var(--pill);border:1px solid var(--bd);
-  padding:.17rem .52rem;border-radius:10px;color:var(--t2)}
+  padding:.17rem .52rem;border-radius:10px;color:var(--t2);
+  display:inline-flex;align-items:center;gap:.3rem}
+.pill-icon{width:18px;height:18px;border-radius:50%;object-fit:cover;
+  background:var(--card);flex-shrink:0;display:inline-block}
 /* ═══ MODAL ══════════════════════════════════════════════ */
 .recipe-modal{position:fixed;inset:0;z-index:1000;
   display:flex;align-items:center;justify-content:center;
@@ -161,8 +164,10 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
 .section-head::after{content:'';flex:1;height:1px;background:var(--bd)}
 .ingredients-list{list-style:none;padding:0;margin:0 0 2rem;
   display:grid;grid-template-columns:1fr 1fr;gap:.35rem .75rem}
-.ingredient-item{display:flex;align-items:flex-start;gap:.4rem;font-size:.92rem;color:var(--t2);line-height:1.35}
-.ingredient-item::before{content:'◆';color:var(--a1);font-size:.4rem;margin-top:.5em;flex-shrink:0}
+.ingredient-item{display:flex;align-items:center;gap:.55rem;font-size:.92rem;color:var(--t2);line-height:1.35}
+.ingredient-item:not(:has(> .ingredient-icon))::before{content:'◆';color:var(--a1);font-size:.4rem;flex-shrink:0}
+.ingredient-icon{width:34px;height:34px;border-radius:50%;object-fit:cover;
+  background:var(--card);flex-shrink:0;border:1px solid var(--bd)}
 /* ═══ STEPS ══════════════════════════════════════════════ */
 .steps-list{list-style:none;padding:0;margin:0 0 1.4rem}
 .step-item{display:flex;gap:.9rem;padding:.9rem 1rem;margin-bottom:.5rem;
@@ -473,7 +478,7 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
     <div class="tags">{% for tag in recipe.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>
     <h2 class="ctitle">{{ recipe.name }}</h2>
     <div class="macros"><div><b>{{ recipe.nutrition.kcal }}</b> kcal</div><div>P: <b>{{ recipe.nutrition.protein }}g</b></div><div>C: <b>{{ recipe.nutrition.carbs }}g</b></div><div>G: <b>{{ recipe.nutrition.fat }}g</b></div></div>
-    <div class="pills">{% for ing in recipe.highlight_ingredients %}<span class="pill">{{ ing }}</span>{% endfor %}</div>
+    <div class="pills">{% for ing in recipe.highlight_ingredients %}<span class="pill">{% set _slug = ing | ing_slug %}{% if ingredient_icons.get(_slug) %}<img class="pill-icon" src="{{ ingredient_icons[_slug] }}" alt="" loading="lazy">{% endif %}{{ ing }}</span>{% endfor %}</div>
   </div>
 </div>
 {% endfor %}
@@ -578,8 +583,33 @@ function buildStep(s, i) {
 }
 
 /* ── Build ingredient item ───────────────────────────────────── */
+const INGREDIENT_ICONS = {{ ingredient_icons_json | default('{}') }};
+const INGREDIENT_SLUGS = Object.keys(INGREDIENT_ICONS);
+
+function _ingSlug(s) {
+  return s.normalize('NFKD').replace(/[̀-ͯ]/g, '')
+          .toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '_').slice(0, 60);
+}
+
+function _matchIcon(text) {
+  /* Fuzzy match: any known slug appearing as substring of slugified ingredient line. */
+  const haystack = _ingSlug(text);
+  for (const slug of INGREDIENT_SLUGS) {
+    if (haystack.includes(slug)) return INGREDIENT_ICONS[slug];
+  }
+  return null;
+}
+
 function buildIngredient(text) {
-  return append(el('li', 'ingredient-item'), el('span', null, text));
+  const li = el('li', 'ingredient-item');
+  const url = _matchIcon(text);
+  if (url) {
+    const img = el('img', 'ingredient-icon');
+    img.src = url; img.alt = ''; img.loading = 'lazy';
+    append(li, img);
+  }
+  append(li, el('span', null, text));
+  return li;
 }
 
 /* ═══ OPEN MODAL ════════════════════════════════════════════════ */

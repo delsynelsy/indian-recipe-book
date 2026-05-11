@@ -4,11 +4,31 @@ using the loaded recipe data.
 """
 
 import json
+import re
+import unicodedata
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
 from .models import Recipe
+
+
+_ROOT = Path(__file__).resolve().parent.parent
+_INGREDIENT_MAP_FILE = _ROOT / "data" / "ingredient_image_map.json"
+
+
+def _slugify(s: str) -> str:
+    norm = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
+    norm = re.sub(r"[^\w\s-]", "", norm.lower())
+    return re.sub(r"\s+", "_", norm.strip())[:60]
+
+
+def _load_ingredient_icons() -> dict[str, str]:
+    """slug -> public URL. Empty when map file is missing (icons disabled)."""
+    if not _INGREDIENT_MAP_FILE.exists():
+        return {}
+    raw = json.loads(_INGREDIENT_MAP_FILE.read_text(encoding="utf-8"))
+    return {slug: entry["url"] for slug, entry in raw.items()}
 
 
 def _recipe_to_js(recipe: Recipe) -> dict:
@@ -48,12 +68,21 @@ def generate_html(
         autoescape=False,        # data comes from controlled YAML, not user input
         keep_trailing_newline=True,
     )
+    env.filters["ing_slug"] = _slugify
     template = env.get_template("index.html.j2")
+
+    icons = _load_ingredient_icons()
 
     recipes_js_dict = {r.id: _recipe_to_js(r) for r in recipes}
     recipes_json = json.dumps(recipes_js_dict, ensure_ascii=False, indent=2)
+    icons_json = json.dumps(icons, ensure_ascii=False, indent=2)
 
-    html = template.render(recipes=recipes, recipes_json=recipes_json)
+    html = template.render(
+        recipes=recipes,
+        recipes_json=recipes_json,
+        ingredient_icons=icons,
+        ingredient_icons_json=icons_json,
+    )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(html, encoding="utf-8")

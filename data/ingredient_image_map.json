@@ -1,0 +1,170 @@
+{
+  "arroz": {
+    "label": "Arroz",
+    "url": "https://images.mohammadasjad.com/ingredients/arroz.webp",
+    "recipes": [
+      "khichdi"
+    ]
+  },
+  "arroz_basmati": {
+    "label": "Arroz basmati",
+    "url": "https://images.mohammadasjad.com/ingredients/arroz_basmati.webp",
+    "recipes": [
+      "rajma"
+    ]
+  },
+  "cebolla": {
+    "label": "Cebolla",
+    "url": "https://images.mohammadasjad.com/ingredients/cebolla.webp",
+    "recipes": [
+      "rajma",
+      "chana"
+    ]
+  },
+  "chicharos": {
+    "label": "Chícharos",
+    "url": "https://images.mohammadasjad.com/ingredients/chicharos.webp",
+    "recipes": [
+      "khichdi"
+    ]
+  },
+  "chutney_coco": {
+    "label": "Chutney coco",
+    "url": "https://images.mohammadasjad.com/ingredients/chutney_coco.webp",
+    "recipes": [
+      "dosa"
+    ]
+  },
+  "chutney_verde": {
+    "label": "Chutney verde",
+    "url": "https://images.mohammadasjad.com/ingredients/chutney_verde.webp",
+    "recipes": [
+      "chilla"
+    ]
+  },
+  "cilantro": {
+    "label": "Cilantro",
+    "url": "https://images.mohammadasjad.com/ingredients/cilantro.webp",
+    "recipes": [
+      "chilla",
+      "chana"
+    ]
+  },
+  "comino": {
+    "label": "Comino",
+    "url": "https://images.mohammadasjad.com/ingredients/comino.webp",
+    "recipes": [
+      "chilla",
+      "khichdi",
+      "chana"
+    ]
+  },
+  "dal_moong": {
+    "label": "Dal moong",
+    "url": "https://images.mohammadasjad.com/ingredients/dal_moong.webp",
+    "recipes": [
+      "chilla",
+      "khichdi"
+    ]
+  },
+  "dal_urad": {
+    "label": "Dal urad",
+    "url": "https://images.mohammadasjad.com/ingredients/dal_urad.webp",
+    "recipes": [
+      "dosa"
+    ]
+  },
+  "frijoles_rojos": {
+    "label": "Frijoles rojos",
+    "url": "https://images.mohammadasjad.com/ingredients/frijoles_rojos.webp",
+    "recipes": [
+      "rajma"
+    ]
+  },
+  "garam_masala": {
+    "label": "Garam masala",
+    "url": "https://images.mohammadasjad.com/ingredients/garam_masala.webp",
+    "recipes": [
+      "rajma"
+    ]
+  },
+  "garbanzos": {
+    "label": "Garbanzos",
+    "url": "https://images.mohammadasjad.com/ingredients/garbanzos.webp",
+    "recipes": [
+      "chana"
+    ]
+  },
+  "ghee": {
+    "label": "Ghee",
+    "url": "https://images.mohammadasjad.com/ingredients/ghee.webp",
+    "recipes": [
+      "khichdi"
+    ]
+  },
+  "harina_ragi": {
+    "label": "Harina ragi",
+    "url": "https://images.mohammadasjad.com/ingredients/harina_ragi.webp",
+    "recipes": [
+      "dosa"
+    ]
+  },
+  "jengibre": {
+    "label": "Jengibre",
+    "url": "https://images.mohammadasjad.com/ingredients/jengibre.webp",
+    "recipes": [
+      "chilla",
+      "tikka"
+    ]
+  },
+  "lima": {
+    "label": "Lima",
+    "url": "https://images.mohammadasjad.com/ingredients/lima.webp",
+    "recipes": [
+      "tikka"
+    ]
+  },
+  "mostaza": {
+    "label": "Mostaza",
+    "url": "https://images.mohammadasjad.com/ingredients/mostaza.webp",
+    "recipes": [
+      "dosa"
+    ]
+  },
+  "pechuga_pollo": {
+    "label": "Pechuga pollo",
+    "url": "https://images.mohammadasjad.com/ingredients/pechuga_pollo.webp",
+    "recipes": [
+      "tikka"
+    ]
+  },
+  "sambar": {
+    "label": "Sambar",
+    "url": "https://images.mohammadasjad.com/ingredients/sambar.webp",
+    "recipes": [
+      "dosa"
+    ]
+  },
+  "tikka_masala": {
+    "label": "Tikka masala",
+    "url": "https://images.mohammadasjad.com/ingredients/tikka_masala.webp",
+    "recipes": [
+      "tikka"
+    ]
+  },
+  "tomate": {
+    "label": "Tomate",
+    "url": "https://images.mohammadasjad.com/ingredients/tomate.webp",
+    "recipes": [
+      "rajma",
+      "chana"
+    ]
+  },
+  "yogur": {
+    "label": "Yogur",
+    "url": "https://images.mohammadasjad.com/ingredients/yogur.webp",
+    "recipes": [
+      "tikka"
+    ]
+  }
+}
