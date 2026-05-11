@@ -41,8 +41,20 @@ def cli(ctx, output):
         _build(Path(output))
 
 
+IMAGES_DIR = ROOT / "images"
+
+
+def _swap_generated_images(recipes: list) -> None:
+    """If images/<id>.webp exists, point Recipe.image.src at it."""
+    for r in recipes:
+        webp = IMAGES_DIR / f"{r.id}.webp"
+        if webp.exists() and webp.stat().st_size > 4096:
+            r.image.src = f"images/{r.id}.webp"
+
+
 def _build(output: Path):
     recipes = load_recipes(DATA_FILE)
+    _swap_generated_images(recipes)
     generate_html(recipes, TEMPLATES_DIR, output)
     console.print(f"[bold green]✓[/] Generated [cyan]{len(recipes)}[/] recipes → [bold]{output}[/]")
 
@@ -86,6 +98,46 @@ def macros():
             f"C[yellow]{r.nutrition.carbs:>3}g[/]  "
             f"F[magenta]{r.nutrition.fat:>3}g[/]"
         )
+
+
+@cli.command("regen-images")
+@click.option("--backend", type=click.Choice(["flux2", "z-image"]), default=None,
+              help="Override IMG_BACKEND env (default flux2).")
+@click.option("--override", is_flag=True, help="Regenerate even if webp exists.")
+@click.option("--refresh-prompts", is_flag=True, help="Re-run Gemini prompt rewriter.")
+@click.option("--id", "recipe_id", default=None, help="Just one recipe id (smoke test).")
+def regen_images(backend, override, recipe_id, refresh_prompts):
+    """Run Gemini prompt rewriter + ComfyUI image generation."""
+    from src.image_gen import generate_for, generate_all, _comfy_health, BACKEND, COMFY_URL
+    from src.prompt_rewriter import rewrite
+
+    if not _comfy_health():
+        console.print(
+            f"[red]ComfyUI not reachable at {COMFY_URL}.[/] Start with:\n"
+            f"  [dim]cd ~/ComfyUI/ComfyUI && python main.py --listen 127.0.0.1 --port 8188 --lowvram[/]"
+        )
+        sys.exit(2)
+
+    chosen = backend or BACKEND
+    recipes = load_recipes(DATA_FILE)
+
+    if recipe_id:
+        target = next((r for r in recipes if r.id == recipe_id), None)
+        if not target:
+            console.print(f"[red]recipe id '{recipe_id}' not found.[/] Available: {[r.id for r in recipes]}")
+            sys.exit(1)
+        rewritten = rewrite(target, refresh=refresh_prompts)
+        path = generate_for(target, rewritten, backend=chosen)
+        console.print(f"[bold green]✓[/] [cyan]{recipe_id}[/] → [bold]{path}[/]")
+        return
+
+    paths = generate_all(
+        recipes,
+        backend=chosen,
+        override=override,
+        refresh_prompts=refresh_prompts,
+    )
+    console.print(f"[bold green]✓[/] generated [cyan]{len(paths)}[/]/{len(recipes)} images (backend={chosen})")
 
 
 @cli.command()
