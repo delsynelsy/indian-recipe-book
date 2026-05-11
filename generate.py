@@ -42,19 +42,30 @@ def cli(ctx, output):
 
 
 IMAGES_DIR = ROOT / "images"
+HERO_URL_MAP = ROOT / "data" / "hero_image_map.json"
 
 
-def _swap_generated_images(recipes: list) -> None:
-    """If images/<id>.webp exists, point Recipe.image.src at it."""
+def _apply_hero_urls(recipes: list) -> None:
+    """Point Recipe.image.src at the CDN URL when available, else local mirror,
+    else leave the YAML default (istockphoto path).
+    """
+    import json
+    url_map: dict[str, dict] = {}
+    if HERO_URL_MAP.exists():
+        url_map = json.loads(HERO_URL_MAP.read_text(encoding="utf-8"))
     for r in recipes:
-        webp = IMAGES_DIR / f"{r.id}.webp"
-        if webp.exists() and webp.stat().st_size > 4096:
+        entry = url_map.get(r.id)
+        if entry and "url" in entry:
+            r.image.src = entry["url"]
+            continue
+        local = IMAGES_DIR / f"{r.id}.webp"
+        if local.exists() and local.stat().st_size > 4096:
             r.image.src = f"images/{r.id}.webp"
 
 
 def _build(output: Path):
     recipes = load_recipes(DATA_FILE)
-    _swap_generated_images(recipes)
+    _apply_hero_urls(recipes)
     generate_html(recipes, TEMPLATES_DIR, output)
     console.print(f"[bold green]✓[/] Generated [cyan]{len(recipes)}[/] recipes → [bold]{output}[/]")
 

@@ -1,0 +1,26 @@
+{
+  "chilla": {
+    "label": "Moong Dal Chilla",
+    "url": "https://images.mohammadasjad.com/hero/chilla.webp"
+  },
+  "rajma": {
+    "label": "Rajma Chawal",
+    "url": "https://images.mohammadasjad.com/hero/rajma.webp"
+  },
+  "dosa": {
+    "label": "Ragi Dosa con Sambar",
+    "url": "https://images.mohammadasjad.com/hero/dosa.webp"
+  },
+  "tikka": {
+    "label": "Chicken Tikka",
+    "url": "https://images.mohammadasjad.com/hero/tikka.webp"
+  },
+  "khichdi": {
+    "label": "Dal Khichdi",
+    "url": "https://images.mohammadasjad.com/hero/khichdi.webp"
+  },
+  "chana": {
+    "label": "Chana Masala",
+    "url": "https://images.mohammadasjad.com/hero/chana.webp"
+  }
+}

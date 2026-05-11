@@ -38,7 +38,16 @@ from src.prompt_rewriter import RewrittenPrompt, rewrite, _load_cache, _client a
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "recipes.yaml"
-OUT_DIR = ROOT / "images"
+
+# Single asset model: heroes go to NAS, served at images.mohammadasjad.com/hero/
+NAS_HERO = Path("/mnt/nas/recipe-book/assets/hero")
+LOCAL_MIRROR_HERO = ROOT / "images"  # offline fallback when NAS is unreachable
+PUBLIC_BASE_HERO = "https://images.mohammadasjad.com/hero"
+HERO_URL_MAP = ROOT / "data" / "hero_image_map.json"
+
+# Back-compat alias: callers using OUT_DIR get the NAS path so any future
+# direct writes still land on the CDN.
+OUT_DIR = NAS_HERO
 
 COMFY_URL = os.environ.get("COMFY_URL", "http://127.0.0.1:8188")
 BACKEND = os.environ.get("IMG_BACKEND", "flux2")
@@ -254,23 +263,46 @@ def generate_for(
     recipe: Recipe,
     rewritten: RewrittenPrompt,
     *,
-    out_dir: Path = OUT_DIR,
+    out_dir: Path = NAS_HERO,
     backend: str = BACKEND,
 ) -> Path:
+    """Render hero webp to NAS (CDN-served), plus local mirror copy."""
+    import shutil
     out_dir.mkdir(parents=True, exist_ok=True)
-    png_path = out_dir / f"{recipe.id}.png"
+    LOCAL_MIRROR_HERO.mkdir(parents=True, exist_ok=True)
+    # PNG temp lives in local mirror so a partial render never ends up on the
+    # CDN under a half-written webp filename.
+    png_path = LOCAL_MIRROR_HERO / f"{recipe.id}.png"
     webp_path = out_dir / f"{recipe.id}.webp"
     seed = _seed_for_recipe(recipe.id)
     print(f"  [{backend}] {recipe.id} seed={seed} :: {rewritten.scene_summary[:80]}")
     asyncio.run(_generate(rewritten.positive, rewritten.negative, seed, png_path, backend))
     _to_webp(png_path, webp_path)
+    # Local mirror for offline render fallback.
+    shutil.copyfile(webp_path, LOCAL_MIRROR_HERO / f"{recipe.id}.webp")
     return webp_path
+
+
+def _write_hero_url_map(recipes: list[Recipe], out_dir: Path) -> None:
+    """slug -> public URL map for the renderer to embed."""
+    entries: dict[str, dict] = {}
+    for r in recipes:
+        webp = out_dir / f"{r.id}.webp"
+        if webp.exists() and webp.stat().st_size > 4096:
+            entries[r.id] = {
+                "label": r.name,
+                "url": f"{PUBLIC_BASE_HERO}/{r.id}.webp",
+            }
+    HERO_URL_MAP.parent.mkdir(parents=True, exist_ok=True)
+    import json as _json
+    HERO_URL_MAP.write_text(_json.dumps(entries, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"hero url map -> {HERO_URL_MAP}")
 
 
 def generate_all(
     recipes: list[Recipe],
     *,
-    out_dir: Path = OUT_DIR,
+    out_dir: Path = NAS_HERO,
     backend: str = BACKEND,
     override: bool = False,
     refresh_prompts: bool = False,
@@ -291,6 +323,7 @@ def generate_all(
             done.append(generate_for(r, rewritten, out_dir=out_dir, backend=backend))
         except Exception as e:
             print(f"  FAIL {r.id}: {str(e)[:160]}", file=sys.stderr)
+    _write_hero_url_map(recipes, out_dir)
     return done
 
 
