@@ -10,6 +10,7 @@ Usage:
   python generate.py plan             # analyse meal plan feasibility
 """
 
+import shutil
 import sys
 from pathlib import Path
 
@@ -53,6 +54,21 @@ def _swap_generated_images(recipes: list) -> None:
             r.image.src = f"images/{r.id}.webp"
 
 
+IMAG_REF_DIR = ROOT / "imag_references"
+
+
+def _sync_assets(output_dir: Path) -> None:
+    """Copy imag_references/ and images/ into the output directory so the
+    HTML bundle is self-contained when opened as a file or deployed."""
+    for src_dir in (IMAG_REF_DIR, IMAGES_DIR):
+        if not src_dir.exists():
+            continue
+        dst = output_dir / src_dir.name
+        if dst.exists():
+            shutil.rmtree(dst)
+        shutil.copytree(src_dir, dst)
+
+
 def _build(output: Path):
     recipes = load_recipes(DATA_FILE)
     _swap_generated_images(recipes)
@@ -64,6 +80,7 @@ def _build(output: Path):
             extensions=["tables", "nl2br", "sane_lists"],
         )
     generate_html(recipes, TEMPLATES_DIR, output, meal_plan_html)
+    _sync_assets(output.parent)
     console.print(f"[bold green]✓[/] Generated [cyan]{len(recipes)}[/] recipes → [bold]{output}[/]")
 
 
