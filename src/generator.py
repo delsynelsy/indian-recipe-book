@@ -62,10 +62,11 @@ def generate_html(
     recipes: list,
     template_dir: Path,
     output_path: Path,
+    meal_plan_html: str = "",
 ) -> None:
     env = Environment(
         loader=FileSystemLoader(str(template_dir)),
-        autoescape=False,        # data comes from controlled YAML, not user input
+        autoescape=False,
         keep_trailing_newline=True,
     )
     env.filters["ing_slug"] = _slugify
@@ -82,6 +83,7 @@ def generate_html(
         recipes_json=recipes_json,
         ingredient_icons=icons,
         ingredient_icons_json=icons_json,
+        meal_plan_html=meal_plan_html,
     )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)

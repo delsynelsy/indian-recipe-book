@@ -14,6 +14,7 @@ import sys
 from pathlib import Path
 
 import click
+import markdown as md_lib
 from rich.console import Console
 from rich.table import Table
 from rich import box
@@ -55,7 +56,14 @@ def _swap_generated_images(recipes: list) -> None:
 def _build(output: Path):
     recipes = load_recipes(DATA_FILE)
     _swap_generated_images(recipes)
-    generate_html(recipes, TEMPLATES_DIR, output)
+    meal_plan_html = ""
+    if MEAL_PLAN_FILE.exists():
+        raw_md = MEAL_PLAN_FILE.read_text(encoding="utf-8")
+        meal_plan_html = md_lib.markdown(
+            raw_md,
+            extensions=["tables", "nl2br", "sane_lists"],
+        )
+    generate_html(recipes, TEMPLATES_DIR, output, meal_plan_html)
     console.print(f"[bold green]✓[/] Generated [cyan]{len(recipes)}[/] recipes → [bold]{output}[/]")
 
 

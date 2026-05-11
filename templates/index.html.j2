@@ -281,6 +281,53 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
   .modal-hero-wrap{flex:0 0 200px;height:200px}
   .macro-grid{grid-template-columns:repeat(2,1fr)}
 }
+/* ═══ SECTION NAV ════════════════════════════════════════ */
+.section-nav{display:flex;justify-content:center;gap:.75rem;
+  padding:.8rem 1rem;background:var(--hbg);border-bottom:2px solid rgba(var(--a1r),.3)}
+.snav-btn{padding:.38rem 1.4rem;border:1px solid rgba(var(--a1r),.4);background:transparent;
+  color:var(--ht);cursor:pointer;font-family:'Cormorant Garamond',serif;
+  font-size:.85rem;letter-spacing:.1em;transition:background .2s,color .2s,border-color .2s;
+  border-radius:1px}
+.snav-btn:hover,.snav-btn.on{background:var(--a1);color:var(--hbg);border-color:var(--a1)}
+/* ═══ PLAN DE ALIMENTACIÓN ═══════════════════════════════ */
+#sec-plan{max-width:960px;margin:2.5rem auto;padding:0 1.5rem 3rem}
+.plan-container{font-family:'Cormorant Garamond',Georgia,serif;color:var(--t1)}
+.plan-container h1{font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--t1);margin:0 0 .4rem;
+  border-bottom:2px solid var(--a1);padding-bottom:.6rem;letter-spacing:.02em}
+.plan-container h2{font-family:'Playfair Display',serif;font-style:italic;
+  font-size:1.45rem;color:var(--t1);margin:2.2rem 0 .7rem;
+  padding-bottom:.3rem;border-bottom:1px solid var(--bd);letter-spacing:.02em}
+.plan-container h3{font-family:'Playfair Display',serif;
+  font-size:1.1rem;color:var(--a1);margin:1.6rem 0 .5rem;letter-spacing:.06em}
+.plan-container h4{font-size:.95rem;color:var(--t2);font-style:italic;
+  margin:.9rem 0 .35rem;font-family:'Playfair Display',serif}
+.plan-container p{font-size:.97rem;line-height:1.68;color:var(--t2);margin:.45rem 0 .65rem}
+.plan-container strong{color:var(--t1);font-weight:700}
+.plan-container em{color:var(--t2);font-style:italic}
+.plan-container blockquote{border-left:3px solid var(--a1);
+  background:rgba(var(--a1r),.06);padding:.7rem 1.1rem;margin:1rem 0;
+  border-radius:0 3px 3px 0}
+.plan-container blockquote p{margin:0;font-style:italic;font-size:.94rem}
+.plan-container ul,.plan-container ol{padding-left:1.4rem;margin:.4rem 0 .8rem}
+.plan-container li{font-size:.93rem;line-height:1.6;color:var(--t2);margin:.18rem 0}
+.plan-container ul li::marker{color:var(--a1)}
+.plan-container ol li::marker{color:var(--a1);font-family:'Playfair Display',serif}
+.plan-container hr{border:none;border-top:1px solid var(--bd);margin:1.8rem 0}
+.plan-container table{width:100%;border-collapse:collapse;margin:1rem 0 1.4rem;
+  font-size:.88rem}
+.plan-container thead{background:var(--hbg);color:var(--ht)}
+.plan-container thead th{padding:.45rem .7rem;text-align:left;font-family:'Cormorant Garamond',serif;
+  font-weight:700;letter-spacing:.06em;font-size:.78rem;text-transform:uppercase}
+.plan-container tbody tr:nth-child(even){background:rgba(var(--a1r),.04)}
+.plan-container tbody tr:hover{background:rgba(var(--a1r),.09)}
+.plan-container td{padding:.4rem .7rem;border-bottom:1px solid var(--bd);
+  color:var(--t2);vertical-align:top;line-height:1.45}
+.plan-container td:first-child{color:var(--t1);font-weight:600}
+@media(max-width:600px){
+  .plan-container table{font-size:.78rem}
+  .plan-container thead th,.plan-container td{padding:.3rem .4rem}
+}
 </style>
 </head>
 <body>
@@ -462,8 +509,13 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
   <button class="tbtn"    onclick="setT('sage',this)">◈ Verde Salvia</button>
   <button class="tbtn"    onclick="setT('indigo',this)">◈ Azul Índigo</button>
 </div>
+<nav class="section-nav">
+  <button class="snav-btn on" onclick="showSection('recipes',this)">◈ Recetario</button>
+  <button class="snav-btn"   onclick="showSection('plan',this)">◈ Plan 8 Semanas</button>
+</nav>
 
 <!-- ═══ GRID ══════════════════════════════════════════════════════ -->
+<section id="sec-recipes">
 <main><div class="grid">
 
 {% for recipe in recipes %}
@@ -484,6 +536,16 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
 {% endfor %}
 
 </div></main>
+</section>
+
+<!-- ═══ PLAN DE ALIMENTACIÓN ════════════════════════════════════════ -->
+<section id="sec-plan" style="display:none">
+  <div id="sec-plan-inner">
+    <div class="plan-container">
+      {{ meal_plan_html | safe }}
+    </div>
+  </div>
+</section>
 
 <!-- ═══ RECIPE DETAIL MODAL ═══════════════════════════════════════ -->
 <div class="recipe-modal" id="recipeModal" role="dialog" aria-modal="true">
@@ -798,6 +860,13 @@ document.addEventListener('keydown', e => {
 function setT(name, btn) {
   document.documentElement.setAttribute('data-theme', name);
   document.querySelectorAll('.tbtn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+}
+
+function showSection(name, btn) {
+  document.querySelectorAll('#sec-recipes, #sec-plan').forEach(s => s.style.display = 'none');
+  document.getElementById('sec-' + name).style.display = '';
+  document.querySelectorAll('.snav-btn').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
 }
 </script>
