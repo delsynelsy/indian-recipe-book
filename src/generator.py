@@ -66,6 +66,7 @@ def _recipe_to_js(recipe: Recipe) -> dict:
             for s in recipe.steps
         ],
         "tip": recipe.tip,
+        "hi": recipe.highlight_ingredients,
     }
 
 
