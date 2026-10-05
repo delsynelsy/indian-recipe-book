@@ -1,1107 +1,1107 @@
-# 2-Month Indian Weight Loss Meal Plan
+# Plan de alimentación indio de 2 meses para bajar de peso
 <!-- private -->
-**From 60 kg to 52 kg | Age: 26 | Height: 157 cm | Timeline: 8 Weeks**
+**De 60 kg a 52 kg | Edad: 26 | Altura: 157 cm | Duración: 8 semanas**
 <!-- /private -->
 
 ---
 
-## Caloric Strategy
+## Estrategia calórica
 
 <!-- private -->
-| Detail | Value |
+| Detalle | Valor |
 |--------|-------|
-| Current Weight | 60 kg |
-| Goal Weight | 52 kg |
-| Height | 157 cm |
-| Age | 26 |
-| BMI (current) | 24.3 |
-| Goal BMI | 21.1 |
-| Weight to Lose | 8 kg |
-| Timeline | 8 weeks |
+| Peso actual | 60 kg |
+| Peso objetivo | 52 kg |
+| Altura | 157 cm |
+| Edad | 26 |
+| IMC (actual) | 24.3 |
+| IMC objetivo | 21.1 |
+| Peso a perder | 8 kg |
+| Duración | 8 semanas |
 <!-- /private -->
 
-### Estimated Caloric Needs
-- **Basal Metabolic Rate (BMR):** ~1,290 kcal/day
-- **TDEE (Lightly Active):** ~1,550–1,700 kcal/day
-- **Daily Calorie Target from Food:** 1,200–1,400 kcal/day
-- **Deficit from Diet:** 300–500 kcal/day
-- **Exercise Goal:** Burn an additional 300–500 kcal through daily movement
+### Necesidades calóricas estimadas
+- **Metabolismo basal (BMR):** ~1,290 kcal/día
+- **TDEE (actividad ligera):** ~1,550–1,700 kcal/día
+- **Objetivo calórico diario (comida):** 1,200–1,400 kcal/día
+- **Déficit por dieta:** 300–500 kcal/día
+- **Objetivo de ejercicio:** Quema 300–500 kcal adicionales con movimiento diario
 
-> **Important:** Losing 8 kg in 8 weeks requires a combined daily deficit of ~1,000 kcal. To achieve this safely, pair this meal plan with **45–60 minutes of daily exercise** (walking, yoga, cycling, or light cardio). Never drop below 1,200 kcal/day without medical guidance.
+> **Importante:** Perder 8 kg en 8 semanas requiere un déficit diario combinado de ~1,000 kcal. Para lograrlo de forma segura, combina este plan de alimentación con **45–60 minutos de ejercicio diario** (caminar, yoga, ciclismo o cardio ligero). Nunca bajes de 1,200 kcal/día sin supervisión médica.
 
-### Daily Macro Targets
+### Objetivos diarios de macronutrientes
 
-| Macro | Target |
+| Macronutriente | Objetivo |
 |-------|--------|
-| Protein | 90–100g (preserves muscle while losing fat) |
-| Carbohydrates | 120–150g (low GI sources only) |
-| Fat | 35–45g (healthy fats) |
-| Fiber | 25–35g |
-| Water | 2.5–3 liters/day |
+| Proteína | 90–100g (preserva el músculo mientras pierdes grasa) |
+| Carbohidratos | 120–150g (solo fuentes de bajo índice glucémico) |
+| Grasa | 35–45g (grasas saludables) |
+| Fibra | 25–35g |
+| Agua | 2.5–3 litros/día |
 
 ---
 
-## Phase Overview
+## Resumen de las fases
 
-| Phase | Weeks | Daily Calories | Focus |
+| Fase | Semanas | Calorías diarias | Enfoque |
 |-------|-------|----------------|-------|
-| Foundation | 1–2 | ~1,400 kcal | Detox, clean eating, establish routine |
-| Fat Burning | 3–4 | ~1,300 kcal | Reduce refined carbs, boost protein |
-| Acceleration | 5–6 | ~1,250 kcal | Increase protein, optimize fat burn |
-| Final Push | 7–8 | ~1,200 kcal | Maximum deficit, light dinners |
+| Base | 1–2 | ~1,400 kcal | Desintoxicación, alimentación limpia, establecer una rutina |
+| Quema de grasa | 3–4 | ~1,300 kcal | Reducir los carbohidratos refinados, aumentar la proteína |
+| Aceleración | 5–6 | ~1,250 kcal | Aumentar la proteína, optimizar la quema de grasa |
+| Recta final | 7–8 | ~1,200 kcal | Déficit máximo, cenas ligeras |
 
 ---
 
-## PHASE 1: Foundation (Weeks 1–2) | ~1,400 kcal/day
+## FASE 1: Base (Semanas 1–2) | ~1,400 kcal/día
 
-**Goals this phase:**
-- Eliminate processed foods, refined sugar, fried items, and maida
-- Establish a consistent meal timing routine
-- Increase fiber and protein intake gradually
-- Drink minimum 2.5 liters of water daily
+**Objetivos de esta fase:**
+- Elimina los alimentos procesados, el azúcar refinado, los fritos y la harina refinada (maida)
+- Establece una rutina constante de horarios de comida
+- Aumenta gradualmente la ingesta de fibra y proteína
+- Bebe un mínimo de 2.5 litros de agua al día
 
-> **Repeat this 7-day sample for both Week 1 and Week 2**, swapping proteins or vegetables for variety using the snack bank and substitution list at the end.
-
----
-
-### MONDAY | ~1,380 kcal
-
-**Breakfast (7:00–8:00 AM) | ~330 kcal**
-- 2 Moong Dal Chilla (green moong pancakes, non-stick, 1/2 tsp oil) with mint-coriander chutney
-- 1 cup plain low-fat yogurt (dahi)
-- 1 cup unsweetened green tea or warm lemon water
-- *Prep tip: Soak 1/4 cup moong dal overnight, blend with green chili, ginger, coriander. Cook on a non-stick pan.*
-
-**Mid-Morning Snack (10:30 AM) | ~100 kcal**
-- 1 medium apple or guava
-- 10–12 almonds
-
-**Lunch (1:00 PM) | ~420 kcal**
-- 1 cup Masoor Dal (red lentil, cooked with tomatoes, turmeric, cumin)
-- 1 small whole wheat roti (25–30g dough)
-- 1 cup Lauki (bottle gourd) sabzi with 1/2 tsp oil
-- Large kachumber salad (cucumber, tomato, onion, lemon)
-- 1 glass chaas (plain buttermilk with jeera and mint)
-
-**Evening Snack (4:30 PM) | ~120 kcal**
-- 1/2 cup roasted chana (Bengal gram, unsalted)
-- 1 cup masala green tea or herbal tea (no sugar)
-
-**Dinner (7:30–8:00 PM) | ~370 kcal**
-- 1 cup Palak Dal (spinach + yellow moong lentils)
-- 1 small whole wheat roti
-- Stir-fried vegetables (broccoli, bell peppers, zucchini) with garlic and cumin in 1/2 tsp oil
-- Small bowl salad
-- *End the day: 1 glass warm water with 1/2 tsp turmeric + pinch of black pepper*
+> **Repite este ejemplo de 7 días tanto en la semana 1 como en la semana 2**, intercambiando proteínas o verduras para variar, con ayuda del banco de snacks y de la lista de sustituciones del final.
 
 ---
 
-### TUESDAY | ~1,390 kcal
+### LUNES | ~1,380 kcal
 
-**Breakfast | ~320 kcal**
-- 2–3 small steamed Idli
-- 1/2 cup vegetable sambar (no potato/yam)
-- 1 tbsp coconut chutney (small portion)
-- 1 cup green tea
+**Desayuno (7:00–8:00 AM) | ~330 kcal**
+- 2 Moong Dal Chilla (tortitas de moong verde, sartén antiadherente, 1/2 cdta de aceite) con chutney de menta y cilantro
+- 1 taza de yogur natural bajo en grasa (dahi)
+- 1 taza de té verde sin azúcar o agua tibia con limón
+- *Consejo de preparación: Deja en remojo 1/4 taza de moong dal toda la noche, licúa con chile verde, jengibre y cilantro. Cocina en una sartén antiadherente.*
 
-**Mid-Morning Snack | ~110 kcal**
-- 1/2 cup Moong Sprouts Chaat (with lemon, chaat masala, diced tomato)
+**Media mañana (10:30 AM) | ~100 kcal**
+- 1 manzana mediana o guayaba
+- 10–12 almendras
 
-**Lunch | ~430 kcal**
-- 3/4 cup Rajma (kidney bean curry, tomato-based, minimal oil)
-- 1/3 cup cooked brown rice OR 1 small roti
-- 1 cup mixed vegetable raita (low-fat dahi, cucumber, grated carrot)
-- Green salad
+**Almuerzo (1:00 PM) | ~420 kcal**
+- 1 taza de Masoor Dal (lentejas rojas, cocidas con tomates, cúrcuma y comino)
+- 1 roti integral pequeño (25–30g de masa)
+- 1 taza de sabzi de Lauki (calabaza de botella) con 1/2 cdta de aceite
+- Ensalada kachumber grande (pepino, tomate, cebolla, limón)
+- 1 vaso de chaas (suero de mantequilla natural con comino y menta)
 
-**Evening Snack | ~100 kcal**
-- 1 cup fresh coconut water
-- Handful of cucumber sticks with 1 tbsp hummus
+**Merienda (4:30 PM) | ~120 kcal**
+- 1/2 taza de chana tostada (garbanzo bengalí, sin sal)
+- 1 taza de té verde masala o infusión de hierbas (sin azúcar)
 
-**Dinner | ~390 kcal**
-- 1 cup Tofu Bhurji (scrambled firm tofu with onion, tomato, turmeric, garam masala)
-- 1 small whole wheat roti
-- Stir-fried spinach with garlic
-- 1 cup tomato soup (homemade, no cream)
-
----
-
-### WEDNESDAY | ~1,370 kcal
-
-**Breakfast | ~340 kcal**
-- 1 cup Vegetable Upma (1/4 cup rava with lots of vegetables — mustard seeds, curry leaves, peas, carrot)
-- 1 cup low-fat yogurt
-- Green tea
-
-**Mid-Morning Snack | ~100 kcal**
-- 1 medium pear or 1 small banana (max 100g)
-
-**Lunch | ~410 kcal**
-- 1 cup Soya Chunk Masala (masala-based, low oil)
-- 1 small roti + 1/3 cup brown rice
-- Kachumber salad
-- 1 glass chaas
-
-**Evening Snack | ~120 kcal**
-- 2 plain rice cakes with 1 tbsp peanut butter (thin spread)
-
-**Dinner | ~360 kcal**
-- Quinoa Khichdi (1/3 cup quinoa + 1/4 cup moong dal + mixed vegetables — peas, carrots, beans)
-- 1 cup clear vegetable soup
-- Cucumber salad on the side
+**Cena (7:30–8:00 PM) | ~370 kcal**
+- 1 taza de Palak Dal (espinacas + lentejas moong amarillas)
+- 1 roti integral pequeño
+- Verduras salteadas (brócoli, pimientos, calabacín) con ajo y comino en 1/2 cdta de aceite
+- Bol pequeño de ensalada
+- *Para terminar el día: 1 vaso de agua tibia con 1/2 cdta de cúrcuma + una pizca de pimienta negra*
 
 ---
 
-### THURSDAY | ~1,400 kcal
+### MARTES | ~1,390 kcal
 
-**Breakfast | ~350 kcal**
-- Quinoa Vegetable Porridge (1/3 cup quinoa cooked with grated vegetables, cumin, turmeric, ginger)
-- 2 boiled egg whites (optional) OR 2 tbsp roasted peanuts
-- 1 cup green tea
+**Desayuno | ~320 kcal**
+- 2–3 idlis pequeños al vapor
+- 1/2 taza de sambar de verduras (sin patata ni ñame)
+- 1 cda de chutney de coco (porción pequeña)
+- 1 taza de té verde
 
-**Mid-Morning Snack | ~100 kcal**
-- 1 cup plain chaas with roasted jeera and mint
+**Media mañana | ~110 kcal**
+- 1/2 taza de chaat de germinados de moong (con limón, chaat masala y tomate en cubitos)
 
-**Lunch | ~420 kcal**
-- 3/4 cup Chana Masala (chickpeas, tomato-onion based, dry or semi-dry)
-- 1 small whole wheat roti
-- 1 cup low-fat vegetable raita
-- Large green salad with lemon dressing
+**Almuerzo | ~430 kcal**
+- 3/4 taza de Rajma (curry de frijoles rojos, a base de tomate, aceite mínimo)
+- 1/3 taza de arroz integral cocido O 1 roti pequeño
+- 1 taza de raita de verduras variadas (yogur bajo en grasa, pepino, zanahoria rallada)
+- Ensalada verde
 
-**Evening Snack | ~130 kcal**
-- 1 cup Greek yogurt (plain, low-fat) with a pinch of cardamom and 1 tsp honey
-- 5–6 walnuts
+**Merienda | ~100 kcal**
+- 1 taza de agua de coco fresca
+- Un puñado de bastones de pepino con 1 cda de hummus
 
-**Dinner | ~370 kcal**
-- 2 Besan Chilla (gram flour pancakes stuffed with mixed vegetables)
-- Mint-coriander chutney
-- 1 cup spinach or tomato soup (homemade, no cream)
-- Sliced cucumber on the side
-
----
-
-### FRIDAY | ~1,380 kcal
-
-**Breakfast | ~330 kcal**
-- 2 small Oats Dosa (rolled oats blended with yogurt, green chili, ginger, coriander)
-- Tomato chutney
-- 1 cup green tea
-
-**Mid-Morning Snack | ~110 kcal**
-- 1 orange or a small slice of papaya (1/2 cup)
-
-**Lunch | ~420 kcal**
-- Moong Dal Khichdi (1/4 cup moong dal + 1/4 cup brown rice, 1/2 tsp ghee)
-- 1 cup mixed vegetable sabzi (potato-free — use peas, capsicum, beans)
-- Low-fat raita (1/2 cup)
-- Salad
-
-**Evening Snack | ~100 kcal**
-- 1/2 cup roasted makhana (fox nuts, seasoned with turmeric and black pepper)
-- 1 cup masala chai (1/2 cup low-fat milk, no sugar OR 1/2 tsp jaggery max)
-
-**Dinner | ~390 kcal**
-- Grilled/Baked Chicken Breast (100g, marinated in low-fat yogurt, lemon, spices — no butter)
-- 1 cup dal tadka
-- Large green salad with olive oil-lemon dressing
-- 1 small roti
+**Cena | ~390 kcal**
+- 1 taza de Bhurji de tofu (tofu firme revuelto con cebolla, tomate, cúrcuma y garam masala)
+- 1 roti integral pequeño
+- Espinacas salteadas con ajo
+- 1 taza de sopa de tomate (casera, sin crema)
 
 ---
 
-### SATURDAY | ~1,410 kcal
+### MIÉRCOLES | ~1,370 kcal
 
-**Breakfast | ~360 kcal**
-- 2 small Ragi (finger millet) Dosa
-- 1/2 cup sambar
-- 1 cup low-fat yogurt with 1 tsp each sunflower and flaxseeds
+**Desayuno | ~340 kcal**
+- 1 taza de Upma de verduras (1/4 taza de rava con muchas verduras: semillas de mostaza, hojas de curry, guisantes, zanahoria)
+- 1 taza de yogur bajo en grasa
+- Té verde
 
-**Mid-Morning Snack | ~100 kcal**
-- 1 guava or 1 small apple
+**Media mañana | ~100 kcal**
+- 1 pera mediana o 1 plátano pequeño (máx. 100g)
 
-**Lunch | ~420 kcal**
-- Grilled/Baked Fish Tikka (120g Rohu or Tilapia, Indian spice marinade)
-- 1/2 cup cooked brown rice
-- 1 cup Bhindi (okra) sabzi (dry, minimal oil)
-- Salad + lemon
+**Almuerzo | ~410 kcal**
+- 1 taza de Soya Chunk Masala (a base de masala, poco aceite)
+- 1 roti pequeño + 1/3 taza de arroz integral
+- Ensalada kachumber
+- 1 vaso de chaas
 
-**Evening Snack | ~130 kcal**
-- 1 cup fresh coconut water
-- 2–3 dates + 8–10 almonds
+**Merienda | ~120 kcal**
+- 2 tortitas de arroz natural con 1 cda de mantequilla de cacahuete (capa fina)
 
-**Dinner | ~370 kcal**
-- 1 bowl Mixed Vegetable Soup (thick, no cream, dal-based)
+**Cena | ~360 kcal**
+- Khichdi de quinoa (1/3 taza de quinoa + 1/4 taza de moong dal + verduras variadas: guisantes, zanahorias, judías verdes)
+- 1 taza de sopa clara de verduras
+- Ensalada de pepino como guarnición
+
+---
+
+### JUEVES | ~1,400 kcal
+
+**Desayuno | ~350 kcal**
+- Gachas de quinoa con verduras (1/3 taza de quinoa cocida con verduras ralladas, comino, cúrcuma y jengibre)
+- 2 claras de huevo cocidas (opcional) O 2 cdas de cacahuetes tostados
+- 1 taza de té verde
+
+**Media mañana | ~100 kcal**
+- 1 taza de chaas natural con comino tostado y menta
+
+**Almuerzo | ~420 kcal**
+- 3/4 taza de Chana Masala (garbanzos, a base de tomate y cebolla, seco o semiseco)
+- 1 roti integral pequeño
+- 1 taza de raita de verduras baja en grasa
+- Ensalada verde grande con aderezo de limón
+
+**Merienda | ~130 kcal**
+- 1 taza de yogur griego (natural, bajo en grasa) con una pizca de cardamomo y 1 cdta de miel
+- 5–6 nueces
+
+**Cena | ~370 kcal**
+- 2 Besan Chilla (tortitas de harina de garbanzo rellenas de verduras variadas)
+- Chutney de menta y cilantro
+- 1 taza de sopa de espinacas o de tomate (casera, sin crema)
+- Pepino en rodajas como guarnición
+
+---
+
+### VIERNES | ~1,380 kcal
+
+**Desayuno | ~330 kcal**
+- 2 dosas de avena pequeñas (avena en hojuelas licuada con yogur, chile verde, jengibre y cilantro)
+- Chutney de tomate
+- 1 taza de té verde
+
+**Media mañana | ~110 kcal**
+- 1 naranja o un trozo pequeño de papaya (1/2 taza)
+
+**Almuerzo | ~420 kcal**
+- Moong Dal Khichdi (1/4 taza de moong dal + 1/4 taza de arroz integral, 1/2 cdta de ghee)
+- 1 taza de sabzi de verduras variadas (sin patata: usa guisantes, pimiento y judías verdes)
+- Raita baja en grasa (1/2 taza)
+- Ensalada
+
+**Merienda | ~100 kcal**
+- 1/2 taza de makhana tostada (semillas de loto, sazonadas con cúrcuma y pimienta negra)
+- 1 taza de chai masala (1/2 taza de leche baja en grasa, sin azúcar O máx. 1/2 cdta de panela)
+
+**Cena | ~390 kcal**
+- Pechuga de pollo a la parrilla/al horno (100g, marinada en yogur bajo en grasa, limón y especias, sin mantequilla)
+- 1 taza de dal tadka
+- Ensalada verde grande con aderezo de aceite de oliva y limón
+- 1 roti pequeño
+
+---
+
+### SÁBADO | ~1,410 kcal
+
+**Desayuno | ~360 kcal**
+- 2 dosas de ragi (mijo rojo) pequeñas
+- 1/2 taza de sambar
+- 1 taza de yogur bajo en grasa con 1 cdta de cada una: semillas de girasol y de lino
+
+**Media mañana | ~100 kcal**
+- 1 guayaba o 1 manzana pequeña
+
+**Almuerzo | ~420 kcal**
+- Tikka de pescado a la parrilla/al horno (120g de rohu o tilapia, marinada de especias indias)
+- 1/2 taza de arroz integral cocido
+- 1 taza de sabzi de Bhindi (okra), seco y con aceite mínimo
+- Ensalada + limón
+
+**Merienda | ~130 kcal**
+- 1 taza de agua de coco fresca
+- 2–3 dátiles + 8–10 almendras
+
+**Cena | ~370 kcal**
+- 1 bol de sopa de verduras variadas (espesa, sin crema, a base de dal)
 - 2 Moong Dal Chilla
-- 1 cup steamed broccoli and cauliflower with turmeric seasoning
+- 1 taza de brócoli y coliflor al vapor sazonados con cúrcuma
 
 ---
 
-### SUNDAY | ~1,380 kcal (Slightly relaxed — stay on plan)
+### DOMINGO | ~1,380 kcal (un poco más relajado: sigue con el plan)
 
-**Breakfast | ~350 kcal**
-- 1 medium Whole Wheat Vegetable Paratha (stuffed with mooli, carrot, or mixed veg — no aloo)
-- 1 cup low-fat yogurt (no butter or ghee on paratha — use yogurt as dip)
-- Green tea
+**Desayuno | ~350 kcal**
+- 1 paratha integral de verduras mediano (relleno de rábano blanco, zanahoria o verduras variadas, sin patata)
+- 1 taza de yogur bajo en grasa (sin mantequilla ni ghee en el paratha: usa el yogur para mojar)
+- Té verde
 
-**Mid-Morning Snack | ~100 kcal**
-- Fresh fruit bowl (1 cup: watermelon, papaya, or mixed berries)
+**Media mañana | ~100 kcal**
+- Bol de fruta fresca (1 taza: sandía, papaya o frutos rojos variados)
 
-**Lunch | ~430 kcal**
-- 3/4 cup Dal Makhani (light version — very minimal cream/butter, mostly kidney bean-based)
-- 1 small roti + 1/3 cup brown rice
-- Salad + raita
-- *This is your one slightly indulgent meal of the week. Enjoy it mindfully.*
+**Almuerzo | ~430 kcal**
+- 3/4 taza de Dal Makhani (versión ligera, con muy poca crema/mantequilla, a base sobre todo de frijoles rojos)
+- 1 roti pequeño + 1/3 taza de arroz integral
+- Ensalada + raita
+- *Esta es tu única comida un poco más permisiva de la semana. Disfrútala conscientemente.*
 
-**Evening Snack | ~100 kcal**
-- 1 cup herbal tea (tulsi, ginger, or green tea)
-- 5 almonds + 2 walnuts
+**Merienda | ~100 kcal**
+- 1 taza de infusión de hierbas (tulsi, jengibre o té verde)
+- 5 almendras + 2 nueces
 
-**Dinner | ~370 kcal**
-- Tofu Tikka (150g, marinated in yogurt and spices, baked or grilled)
-- 1 cup dal soup
-- Stir-fried vegetables (broccoli, capsicum, mushrooms)
-- Cucumber raita
-
----
-
-## PHASE 2: Fat Burning (Weeks 3–4) | ~1,300 kcal/day
-
-**Changes from Phase 1:**
-- Reduce roti to maximum 1 per meal (down from 2 in Phase 1)
-- Replace white rice completely with brown rice, quinoa, or millets
-- Increase protein at every meal
-- Drink 1 extra glass of water before each meal (natural appetite suppressant)
-- Add more raw vegetables and salads to every meal
-- Cut out all added sugar — switch to 1 tsp honey max per day if needed
+**Cena | ~370 kcal**
+- Tikka de tofu (150g, marinado en yogur y especias, al horno o a la parrilla)
+- 1 taza de sopa de dal
+- Verduras salteadas (brócoli, pimiento, champiñones)
+- Raita de pepino
 
 ---
 
-### MONDAY | ~1,290 kcal
+## FASE 2: Quema de grasa (Semanas 3–4) | ~1,300 kcal/día
 
-**Breakfast | ~300 kcal**
-- 1 cup Sprouts Salad (mixed moong + chana sprouts, onion, tomato, lemon, chaat masala)
-- 2 boiled egg whites (optional) OR 1/4 cup roasted chana
-- 1 glass warm lemon water (no honey — or max 1/2 tsp)
-- Green tea
-
-**Mid-Morning Snack | ~90 kcal**
-- 1 small apple or 1 cup diced watermelon
-
-**Lunch | ~400 kcal**
-- 1 cup Chana Dal (split chickpeas) with spinach
-- 1 small whole wheat roti
-- 1 cup Lauki or Tinda (bottle gourd or Indian round gourd) sabzi — low-calorie options
-- Large salad
-
-**Evening Snack | ~110 kcal**
-- 1 cup plain chaas
-- 1/2 cup roasted makhana
-
-**Dinner | ~360 kcal**
-- 3/4 cup Paneer Bhurji (50g low-fat paneer, crumbled with onion, tomato, spices)
-- 1 small roti
-- 1 cup palak soup
-- Large salad
+**Cambios respecto a la Fase 1:**
+- Reduce los rotis a un máximo de 1 por comida (antes eran 2 en la Fase 1)
+- Sustituye por completo el arroz blanco por arroz integral, quinoa o mijos
+- Aumenta la proteína en cada comida
+- Bebe 1 vaso extra de agua antes de cada comida (supresor natural del apetito)
+- Añade más verduras crudas y ensaladas a cada comida
+- Elimina todo el azúcar añadido: cambia a un máximo de 1 cdta de miel al día si lo necesitas
 
 ---
 
-### TUESDAY | ~1,300 kcal
+### LUNES | ~1,290 kcal
 
-**Breakfast | ~310 kcal**
-- Quinoa Upma (1/3 cup cooked quinoa with mustard seeds, curry leaves, green chili, mixed vegetables)
-- 1 cup low-fat yogurt
-- Green tea
+**Desayuno | ~300 kcal**
+- 1 taza de ensalada de germinados (germinados mixtos de moong y chana, cebolla, tomate, limón, chaat masala)
+- 2 claras de huevo cocidas (opcional) O 1/4 taza de chana tostada
+- 1 vaso de agua tibia con limón (sin miel, o máx. 1/2 cdta)
+- Té verde
 
-**Mid-Morning Snack | ~90 kcal**
-- 1 small pear
-- 5 almonds
+**Media mañana | ~90 kcal**
+- 1 manzana pequeña o 1 taza de sandía en cubos
 
-**Lunch | ~400 kcal**
-- Tofu & Vegetable Stir-Fry in Indian spices (150g firm tofu, cubed)
-- 1/3 cup brown rice
-- 1 cup moong dal soup (thin)
-- Salad
+**Almuerzo | ~400 kcal**
+- 1 taza de Chana Dal (garbanzos partidos) con espinacas
+- 1 roti integral pequeño
+- 1 taza de sabzi de Lauki o Tinda (calabaza de botella o calabaza redonda india): opciones bajas en calorías
+- Ensalada grande
 
-**Evening Snack | ~100 kcal**
-- 1 cup green tea
-- 2 tbsp roasted pumpkin seeds or sunflower seeds
+**Merienda | ~110 kcal**
+- 1 taza de chaas natural
+- 1/2 taza de makhana tostada
 
-**Dinner | ~360 kcal**
-- 2 Besan Chilla (stuffed with spinach and grated carrot)
-- 1 cup tomato soup (no cream)
-- Mixed vegetable salad with lemon-cumin dressing
-
----
-
-### WEDNESDAY | ~1,280 kcal
-
-**Breakfast | ~290 kcal**
-- 2–3 small steamed Idli
-- 1/2 cup sambar (no potato)
-- Green tea
-
-**Mid-Morning Snack | ~100 kcal**
-- 1 cup plain Greek yogurt with 1/4 tsp cinnamon (no sugar)
-
-**Lunch | ~390 kcal**
-- 3/4 cup Rajma (kidney bean curry, minimal oil, no cream)
-- 1/3 cup cooked quinoa (replacing rice)
-- Kachumber salad
-- 1 cup chaas
-
-**Evening Snack | ~100 kcal**
-- 1/2 cup boiled sweet corn with lemon and chaat masala
-
-**Dinner | ~350 kcal**
-- 1 cup Moong Dal (yellow, tempered with mustard, hing, curry leaves)
-- Large plate of stir-fried vegetables (cabbage, carrots, French beans, capsicum)
-- 1 small roti
+**Cena | ~360 kcal**
+- 3/4 taza de Bhurji de paneer (50g de paneer bajo en grasa, desmenuzado con cebolla, tomate y especias)
+- 1 roti pequeño
+- 1 taza de sopa de palak
+- Ensalada grande
 
 ---
 
-### THURSDAY | ~1,300 kcal
+### MARTES | ~1,300 kcal
 
-**Breakfast | ~310 kcal**
-- 2 Moong Dal Chilla with homemade green chutney
-- 1/2 cup low-fat yogurt
-- Green tea
+**Desayuno | ~310 kcal**
+- Upma de quinoa (1/3 taza de quinoa cocida con semillas de mostaza, hojas de curry, chile verde y verduras variadas)
+- 1 taza de yogur bajo en grasa
+- Té verde
 
-**Mid-Morning Snack | ~90 kcal**
-- 1/2 cup papaya
-- 8 almonds
+**Media mañana | ~90 kcal**
+- 1 pera pequeña
+- 5 almendras
 
-**Lunch | ~400 kcal**
-- Baked Chicken Tikka (100g, marinated in low-fat yogurt, lemon, spices — not fried)
-- 1 cup dal soup
-- Large salad with olive oil-lemon dressing
-- 1 small roti (skip if not very hungry — replace with extra salad)
+**Almuerzo | ~400 kcal**
+- Salteado de tofu y verduras con especias indias (150g de tofu firme, en cubos)
+- 1/3 taza de arroz integral
+- 1 taza de sopa de moong dal (ligera)
+- Ensalada
 
-**Evening Snack | ~100 kcal**
-- 1 cup masala green tea
-- Small handful roasted chana
+**Merienda | ~100 kcal**
+- 1 taza de té verde
+- 2 cdas de semillas de calabaza o de girasol tostadas
 
-**Dinner | ~360 kcal**
-- 1 cup Soya Chunk Masala
-- 1 small roti
-- 1 cup palak (spinach) stir-fry with garlic
-- Cucumber raita
-
----
-
-### FRIDAY | ~1,290 kcal
-
-**Breakfast | ~300 kcal**
-- Oats Porridge Indian Style (1/2 cup rolled oats, cooked with water or low-fat milk, topped with 1 tsp flaxseeds, a few berries, pinch of cardamom)
-- 1 cup green tea or black coffee (no sugar, minimal milk)
-
-**Mid-Morning Snack | ~90 kcal**
-- 1 small guava or orange
-
-**Lunch | ~400 kcal**
-- 1 cup Moong Dal Khichdi (with lots of vegetables — peas, carrot, beans)
-- 1 cup low-fat raita
-- Salad
-
-**Evening Snack | ~100 kcal**
-- 1/2 cup roasted makhana
-- 1 cup coconut water
-
-**Dinner | ~360 kcal**
-- Grilled Fish Tikka (100g tilapia or rohu, marinated in Indian spices, baked)
-- 1 cup potato-free vegetable curry
-- Large green salad
-- 1/2 cup brown rice OR 1 small roti
+**Cena | ~360 kcal**
+- 2 Besan Chilla (rellenas de espinacas y zanahoria rallada)
+- 1 taza de sopa de tomate (sin crema)
+- Ensalada de verduras variadas con aderezo de limón y comino
 
 ---
 
-### SATURDAY | ~1,310 kcal
+### MIÉRCOLES | ~1,280 kcal
 
-**Breakfast | ~320 kcal**
-- Ragi Porridge (1/3 cup ragi flour cooked in low-fat milk or water)
-- Add 1/4 small banana, 1 tsp honey, cardamom
-- Green tea
+**Desayuno | ~290 kcal**
+- 2–3 idlis pequeños al vapor
+- 1/2 taza de sambar (sin patata)
+- Té verde
 
-**Mid-Morning Snack | ~90 kcal**
-- 1 small apple
+**Media mañana | ~100 kcal**
+- 1 taza de yogur griego natural con 1/4 cdta de canela (sin azúcar)
 
-**Lunch | ~400 kcal**
-- 3/4 cup Chole (lighter version, less oil, tomato-based)
-- 1 small whole wheat roti
-- Salad + 1 cup chaas
+**Almuerzo | ~390 kcal**
+- 3/4 taza de Rajma (curry de frijoles rojos, aceite mínimo, sin crema)
+- 1/3 taza de quinoa cocida (en lugar del arroz)
+- Ensalada kachumber
+- 1 taza de chaas
 
-**Evening Snack | ~100 kcal**
-- 2 dates + 10 almonds
+**Merienda | ~100 kcal**
+- 1/2 taza de maíz dulce cocido con limón y chaat masala
 
-**Dinner | ~360 kcal**
-- Tofu Tikka (150g, baked)
-- 1 cup spinach soup
-- Mixed vegetable sabzi (broccoli, bell peppers, mushrooms)
-- Small salad
+**Cena | ~350 kcal**
+- 1 taza de Moong Dal (amarillo, con tempering de mostaza, hing y hojas de curry)
+- Plato grande de verduras salteadas (repollo, zanahorias, judías verdes, pimiento)
+- 1 roti pequeño
 
 ---
 
-### SUNDAY | ~1,300 kcal
+### JUEVES | ~1,300 kcal
 
-**Breakfast | ~310 kcal**
-- 1 medium Whole Wheat Vegetable Paratha (mixed veg filling — no aloo)
-- 1/2 cup yogurt
-- Green tea
+**Desayuno | ~310 kcal**
+- 2 Moong Dal Chilla con chutney verde casero
+- 1/2 taza de yogur bajo en grasa
+- Té verde
 
-**Mid-Morning Snack | ~90 kcal**
-- Fresh fruit (watermelon or papaya, 1/2 cup)
+**Media mañana | ~90 kcal**
+- 1/2 taza de papaya
+- 8 almendras
 
-**Lunch | ~400 kcal**
-- Quinoa Pulao (1/2 cup cooked) with mixed vegetables and 30g paneer cubes
-- 1 cup dal soup
-- Raita + salad
+**Almuerzo | ~400 kcal**
+- Tikka de pollo al horno (100g, marinado en yogur bajo en grasa, limón y especias, no frito)
+- 1 taza de sopa de dal
+- Ensalada grande con aderezo de aceite de oliva y limón
+- 1 roti pequeño (omítelo si no tienes mucha hambre: reemplázalo por más ensalada)
 
-**Evening Snack | ~100 kcal**
-- Herbal tea
-- 2 tbsp roasted seeds (pumpkin or sunflower)
+**Merienda | ~100 kcal**
+- 1 taza de té verde masala
+- Un pequeño puñado de chana tostada
 
-**Dinner | ~350 kcal**
-- 1 cup thick masoor or toor dal soup
+**Cena | ~360 kcal**
+- 1 taza de Soya Chunk Masala
+- 1 roti pequeño
+- 1 taza de salteado de palak (espinacas) con ajo
+- Raita de pepino
+
+---
+
+### VIERNES | ~1,290 kcal
+
+**Desayuno | ~300 kcal**
+- Gachas de avena estilo indio (1/2 taza de avena en hojuelas, cocida con agua o leche baja en grasa, con 1 cdta de semillas de lino, unos pocos frutos rojos y una pizca de cardamomo por encima)
+- 1 taza de té verde o café negro (sin azúcar, con un mínimo de leche)
+
+**Media mañana | ~90 kcal**
+- 1 guayaba pequeña o naranja
+
+**Almuerzo | ~400 kcal**
+- 1 taza de Moong Dal Khichdi (con muchas verduras: guisantes, zanahoria, judías verdes)
+- 1 taza de raita baja en grasa
+- Ensalada
+
+**Merienda | ~100 kcal**
+- 1/2 taza de makhana tostada
+- 1 taza de agua de coco
+
+**Cena | ~360 kcal**
+- Tikka de pescado a la parrilla (100g de tilapia o rohu, marinado en especias indias, al horno)
+- 1 taza de curry de verduras sin patata
+- Ensalada verde grande
+- 1/2 taza de arroz integral O 1 roti pequeño
+
+---
+
+### SÁBADO | ~1,310 kcal
+
+**Desayuno | ~320 kcal**
+- Gachas de ragi (1/3 taza de harina de ragi cocida en leche baja en grasa o agua)
+- Añade 1/4 de plátano pequeño, 1 cdta de miel y cardamomo
+- Té verde
+
+**Media mañana | ~90 kcal**
+- 1 manzana pequeña
+
+**Almuerzo | ~400 kcal**
+- 3/4 taza de Chole (versión más ligera, menos aceite, a base de tomate)
+- 1 roti integral pequeño
+- Ensalada + 1 taza de chaas
+
+**Merienda | ~100 kcal**
+- 2 dátiles + 10 almendras
+
+**Cena | ~360 kcal**
+- Tikka de tofu (150g, al horno)
+- 1 taza de sopa de espinacas
+- Sabzi de verduras variadas (brócoli, pimientos, champiñones)
+- Ensalada pequeña
+
+---
+
+### DOMINGO | ~1,300 kcal
+
+**Desayuno | ~310 kcal**
+- 1 paratha integral de verduras mediano (relleno de verduras variadas, sin patata)
+- 1/2 taza de yogur
+- Té verde
+
+**Media mañana | ~90 kcal**
+- Fruta fresca (sandía o papaya, 1/2 taza)
+
+**Almuerzo | ~400 kcal**
+- Pulao de quinoa (1/2 taza cocida) con verduras variadas y 30g de paneer en cubos
+- 1 taza de sopa de dal
+- Raita + ensalada
+
+**Merienda | ~100 kcal**
+- Infusión de hierbas
+- 2 cdas de semillas tostadas (de calabaza o de girasol)
+
+**Cena | ~350 kcal**
+- 1 taza de sopa espesa de masoor o toor dal
 - 2 Besan Chilla
-- Stir-fried vegetables (no roti)
+- Verduras salteadas (sin roti)
 
 ---
 
-## PHASE 3: Acceleration (Weeks 5–6) | ~1,250 kcal/day
+## FASE 3: Aceleración (Semanas 5–6) | ~1,250 kcal/día
 
-**Changes from Phase 2:**
-- Maximum 1 roti per day total (shift to roti at lunch; skip at dinner)
-- Dinner = protein + vegetables + soup ONLY (no roti or rice at night)
-- Make breakfast the largest meal of the day
-- Eliminate all added sugar, including honey (except 1 tsp max on oats)
-- Increase leafy greens at every meal
-- Add 10–15 min of post-meal walking after lunch and dinner
-
----
-
-### MONDAY | ~1,240 kcal
-
-**Breakfast (Largest meal) | ~370 kcal**
-- 3/4 cup Quinoa Porridge (cooked with 1/4 cup chickpeas, spinach, Indian spices)
-- 1 boiled egg OR 3 scrambled egg whites with spices
-- 1 cup green tea
-
-**Mid-Morning Snack | ~80 kcal**
-- 1 small apple or 1/2 cup mixed berries
-
-**Lunch | ~380 kcal**
-- 1 cup Moong Dal Palak (spinach with yellow lentils)
-- 1 small whole wheat roti (your only roti for the day)
-- 1 cup mixed vegetable stir-fry (minimal oil)
-- Large salad with lemon dressing
-
-**Evening Snack | ~90 kcal**
-- 1 cup plain chaas
-- 2 tbsp roasted chana
-
-**Dinner (Lightest meal) | ~320 kcal**
-- 1 cup clear vegetable soup
-- Tofu Bhurji or Paneer Bhurji (100g tofu or 50g low-fat paneer)
-- Large plate of steamed or stir-fried vegetables (broccoli, spinach, zucchini)
-- Cucumber slices
+**Cambios respecto a la Fase 2:**
+- Máximo 1 roti al día en total (déjalo para el almuerzo; omítelo en la cena)
+- Cena = SOLO proteína + verduras + sopa (sin roti ni arroz por la noche)
+- Haz del desayuno la comida más abundante del día
+- Elimina todo el azúcar añadido, incluida la miel (salvo un máximo de 1 cdta en la avena)
+- Aumenta las verduras de hoja verde en cada comida
+- Añade 10–15 min de caminata después del almuerzo y de la cena
 
 ---
 
-### TUESDAY | ~1,250 kcal
+### LUNES | ~1,240 kcal
 
-**Breakfast | ~360 kcal**
-- 2 Moong Dal Chilla stuffed with mixed vegetables and 30g low-fat paneer
-- 1/2 cup low-fat yogurt
-- Green tea
+**Desayuno (comida más abundante) | ~370 kcal**
+- 3/4 taza de gachas de quinoa (cocidas con 1/4 taza de garbanzos, espinacas y especias indias)
+- 1 huevo cocido O 3 claras de huevo revueltas con especias
+- 1 taza de té verde
 
-**Mid-Morning Snack | ~80 kcal**
-- 1 cup herbal tea
-- 10 almonds
+**Media mañana | ~80 kcal**
+- 1 manzana pequeña o 1/2 taza de frutos rojos variados
 
-**Lunch | ~390 kcal**
-- Chicken Curry (light, 100g chicken, tomato-based, 1 tsp oil max)
-- 1/3 cup brown rice
-- Large salad
-- 1 cup dal soup
+**Almuerzo | ~380 kcal**
+- 1 taza de Moong Dal Palak (espinacas con lentejas amarillas)
+- 1 roti integral pequeño (tu único roti del día)
+- 1 taza de salteado de verduras variadas (aceite mínimo)
+- Ensalada grande con aderezo de limón
 
-**Evening Snack | ~90 kcal**
-- 1/2 cup roasted makhana
+**Merienda | ~90 kcal**
+- 1 taza de chaas natural
+- 2 cdas de chana tostada
 
-**Dinner | ~310 kcal**
-- 1 cup masoor dal soup (thin, no tempering with butter)
-- 1 cup stir-fried mixed vegetables (no roti)
-- Cucumber-tomato salad with lemon
-
----
-
-### WEDNESDAY | ~1,240 kcal
-
-**Breakfast | ~360 kcal**
-- Soya Chunk Bhurji (75g soya chunks) with onion, capsicum, tomato, spices
-- 1 small whole wheat roti
-- Green tea
-
-**Mid-Morning Snack | ~80 kcal**
-- 1/2 cup moong sprouts with lemon
-
-**Lunch | ~380 kcal**
-- 1/2 cup Chole with lots of onion and tomato
-- 1/4 cup brown rice
-- Kachumber salad
-- Low-fat raita (1/2 cup)
-
-**Evening Snack | ~90 kcal**
-- 1 cup green tea
-- 2 tbsp roasted pumpkin seeds
-
-**Dinner | ~310 kcal**
-- Grilled Fish (100g, Indian spice rub)
-- 1 cup stir-fried spinach with garlic
-- Large vegetable salad
-- 1 cup clear soup
+**Cena (comida más ligera) | ~320 kcal**
+- 1 taza de sopa clara de verduras
+- Bhurji de tofu o de paneer (100g de tofu o 50g de paneer bajo en grasa)
+- Plato grande de verduras al vapor o salteadas (brócoli, espinacas, calabacín)
+- Rodajas de pepino
 
 ---
 
-### THURSDAY | ~1,250 kcal
+### MARTES | ~1,250 kcal
 
-**Breakfast | ~370 kcal**
-- 2 small Ragi Dosa
-- 1/2 cup sambar (no potato)
-- 1/2 cup Greek yogurt
-- Green tea
+**Desayuno | ~360 kcal**
+- 2 Moong Dal Chilla rellenas de verduras variadas y 30g de paneer bajo en grasa
+- 1/2 taza de yogur bajo en grasa
+- Té verde
 
-**Mid-Morning Snack | ~80 kcal**
-- 1 small fruit
+**Media mañana | ~80 kcal**
+- 1 taza de infusión de hierbas
+- 10 almendras
 
-**Lunch | ~380 kcal**
-- Quinoa Khichdi (1/3 cup quinoa + 1/4 cup moong dal + mixed vegetables)
-- 1 cup low-fat raita
-- Salad
+**Almuerzo | ~390 kcal**
+- Curry de pollo (ligero, 100g de pollo, a base de tomate, máx. 1 cdta de aceite)
+- 1/3 taza de arroz integral
+- Ensalada grande
+- 1 taza de sopa de dal
 
-**Evening Snack | ~90 kcal**
-- 1 cup coconut water
-- Cucumber sticks (unlimited)
+**Merienda | ~90 kcal**
+- 1/2 taza de makhana tostada
 
-**Dinner | ~320 kcal**
-- 1 cup thick dal soup
-- 100g Tofu Tikka (baked, spiced)
-- Stir-fried cabbage and carrots with mustard seeds
-- Tomato slices with chaat masala
-
----
-
-### FRIDAY | ~1,240 kcal
-
-**Breakfast | ~360 kcal**
-- 2 Besan Chilla with spinach and tomato filling
-- 1/2 cup yogurt
-- Green tea
-
-**Mid-Morning Snack | ~80 kcal**
-- 8 almonds + 1 date
-
-**Lunch | ~380 kcal**
-- 1/2 cup Rajma + 1/4 cup quinoa
-- Large mixed salad
-- 1 cup dal soup (thin)
-
-**Evening Snack | ~90 kcal**
-- 1 cup masala chai (low-fat milk, no sugar)
-- Small handful roasted chana
-
-**Dinner | ~310 kcal**
-- 2 Moong Dal Chilla (small)
-- 1 cup vegetable broth or soup
-- Plate of steamed broccoli, capsicum, zucchini
+**Cena | ~310 kcal**
+- 1 taza de sopa de masoor dal (ligera, sin tempering con mantequilla)
+- 1 taza de verduras variadas salteadas (sin roti)
+- Ensalada de pepino y tomate con limón
 
 ---
 
-### SATURDAY | ~1,260 kcal
+### MIÉRCOLES | ~1,240 kcal
 
-**Breakfast | ~370 kcal**
-- 2 small Oats Dosa with mint chutney
-- 1/2 cup sambar
-- Green tea
+**Desayuno | ~360 kcal**
+- Soya Chunk Bhurji (75g de soya chunks) con cebolla, pimiento, tomate y especias
+- 1 roti integral pequeño
+- Té verde
 
-**Mid-Morning Snack | ~80 kcal**
-- 1/2 cup papaya
+**Media mañana | ~80 kcal**
+- 1/2 taza de germinados de moong con limón
 
-**Lunch | ~390 kcal**
-- Baked Chicken Tikka (120g, marinated in low-fat yogurt + spices)
-- Large Indian salad (cucumber, tomato, onion, pomegranate seeds, chaat masala, lemon)
-- 1/3 cup brown rice
-- 1/2 cup dal soup
+**Almuerzo | ~380 kcal**
+- 1/2 taza de Chole con mucha cebolla y tomate
+- 1/4 taza de arroz integral
+- Ensalada kachumber
+- Raita baja en grasa (1/2 taza)
 
-**Evening Snack | ~90 kcal**
-- 1/2 cup roasted makhana
-- Herbal tea
+**Merienda | ~90 kcal**
+- 1 taza de té verde
+- 2 cdas de semillas de calabaza tostadas
 
-**Dinner | ~300 kcal**
-- 1 large bowl clear vegetable + lentil soup
-- Stir-fried paneer (50g) with bell peppers and onion
-- Cucumber salad
-
----
-
-### SUNDAY | ~1,250 kcal
-
-**Breakfast | ~370 kcal**
-- Quinoa Poha (1/2 cup quinoa, made poha-style with peas, peanuts, turmeric, mustard seeds)
-- 1 cup green tea
-
-**Mid-Morning Snack | ~80 kcal**
-- 1/2 cup mixed fresh fruit
-
-**Lunch | ~380 kcal**
-- Mixed Dal (masoor + moong) 1 cup
-- 1 small roti
-- Lauki, tinda, or ash gourd sabzi (lowest calorie vegetables)
-- Salad + chaas
-
-**Evening Snack | ~90 kcal**
-- Herbal tea + 2 tbsp seeds
-
-**Dinner | ~310 kcal**
-- Tofu Bhurji (100g)
-- 1 cup thick vegetable soup
-- Large green salad (no dressing — lemon only)
+**Cena | ~310 kcal**
+- Pescado a la parrilla (100g, con adobo de especias indias)
+- 1 taza de espinacas salteadas con ajo
+- Ensalada grande de verduras
+- 1 taza de sopa clara
 
 ---
 
-## PHASE 4: Final Push (Weeks 7–8) | ~1,200 kcal/day
+### JUEVES | ~1,250 kcal
 
-**Changes from Phase 3:**
-- No roti or rice at dinner — protein and vegetables only
-- Dinner eaten before 7:30 PM
-- No added sugar of any kind (no honey, jaggery, dates)
-- Water intake raised to 3+ liters/day
-- Introduce light intermittent fasting: first meal at 8–9 AM, last meal before 7:30 PM
-- Prioritize sleep (7–8 hours) — poor sleep sabotages fat loss
+**Desayuno | ~370 kcal**
+- 2 dosas de ragi pequeñas
+- 1/2 taza de sambar (sin patata)
+- 1/2 taza de yogur griego
+- Té verde
 
----
+**Media mañana | ~80 kcal**
+- 1 fruta pequeña
 
-### MONDAY | ~1,200 kcal
+**Almuerzo | ~380 kcal**
+- Khichdi de quinoa (1/3 taza de quinoa + 1/4 taza de moong dal + verduras variadas)
+- 1 taza de raita baja en grasa
+- Ensalada
 
-**Breakfast (Still your largest meal) | ~380 kcal**
-- 2 Moong Dal Chilla stuffed with 50g low-fat paneer + spinach
-- 1 small apple on the side
-- Green tea
+**Merienda | ~90 kcal**
+- 1 taza de agua de coco
+- Bastones de pepino (sin límite)
 
-**Mid-Morning Snack | ~70 kcal**
-- 8 almonds
-
-**Lunch | ~380 kcal**
-- 1 cup Soya Chunk Curry (tomato-based, 1 tsp oil)
-- 1 small whole wheat roti
-- 1 cup moong dal
-- Large salad
-
-**Evening Snack | ~70 kcal**
-- 1 cup plain chaas OR herbal tea
-
-**Dinner | ~280 kcal**
-- 1 large bowl vegetable + dal soup
-- 100g grilled/baked protein (tofu, chicken, or fish)
-- Stir-fried greens (spinach, methi, kale)
-- Cucumber-tomato salad
+**Cena | ~320 kcal**
+- 1 taza de sopa espesa de dal
+- 100g de tikka de tofu (al horno, con especias)
+- Repollo y zanahorias salteados con semillas de mostaza
+- Rodajas de tomate con chaat masala
 
 ---
 
-### TUESDAY | ~1,195 kcal
+### VIERNES | ~1,240 kcal
 
-**Breakfast | ~380 kcal**
-- Quinoa Bowl (1/3 cup cooked) with stir-fried vegetables, 2 boiled egg whites, 1 tsp olive oil, spices
-- Green tea
+**Desayuno | ~360 kcal**
+- 2 Besan Chilla con relleno de espinacas y tomate
+- 1/2 taza de yogur
+- Té verde
 
-**Mid-Morning Snack | ~70 kcal**
-- 1 small guava
+**Media mañana | ~80 kcal**
+- 8 almendras + 1 dátil
 
-**Lunch | ~370 kcal**
-- 1 cup Chole (chickpea masala, minimal oil)
-- 1/3 cup brown rice
-- Large kachumber salad
-- 1 cup chaas
+**Almuerzo | ~380 kcal**
+- 1/2 taza de Rajma + 1/4 taza de quinoa
+- Ensalada mixta grande
+- 1 taza de sopa de dal (ligera)
 
-**Evening Snack | ~70 kcal**
-- 1/3 cup roasted makhana
-- 1 cup green tea
+**Merienda | ~90 kcal**
+- 1 taza de chai masala (leche baja en grasa, sin azúcar)
+- Un pequeño puñado de chana tostada
 
-**Dinner | ~280 kcal**
-- 1 cup moong dal soup
-- Sauteed spinach with garlic and cumin
-- 2 small Besan Chilla (no roti)
-
----
-
-### WEDNESDAY | ~1,200 kcal
-
-**Breakfast | ~380 kcal**
-- 2 small Ragi Pancakes (ragi flour + low-fat yogurt, green chili, coriander)
-- 1/2 cup sprouts
-- Green tea
-
-**Mid-Morning Snack | ~70 kcal**
-- 1 cup coconut water
-
-**Lunch | ~380 kcal**
-- Tofu Curry (150g firm tofu) with tomato-onion base, low oil
-- 1/3 cup brown rice OR 1 small roti
-- Vegetable sabzi (potato-free)
-- Salad
-
-**Evening Snack | ~70 kcal**
-- Herbal tea
-- 5 almonds
-
-**Dinner | ~280 kcal**
-- 100g baked fish tikka
-- 1 cup mixed vegetable soup
-- Stir-fried broccoli + capsicum (no rice, no roti)
+**Cena | ~310 kcal**
+- 2 Moong Dal Chilla (pequeñas)
+- 1 taza de caldo o sopa de verduras
+- Plato de brócoli, pimiento y calabacín al vapor
 
 ---
 
-### THURSDAY | ~1,190 kcal
+### SÁBADO | ~1,260 kcal
 
-**Breakfast | ~380 kcal**
-- 3 small steamed Idli
-- 1/2 cup vegetable sambar (no potato)
-- Green tea
+**Desayuno | ~370 kcal**
+- 2 dosas de avena pequeñas con chutney de menta
+- 1/2 taza de sambar
+- Té verde
 
-**Mid-Morning Snack | ~70 kcal**
-- 1/2 cup papaya
+**Media mañana | ~80 kcal**
+- 1/2 taza de papaya
 
-**Lunch | ~370 kcal**
-- Chickpea Salad Bowl (1/2 cup chickpeas, tomatoes, cucumber, onion, olive oil + lemon + chaat masala)
-- 1 cup dal soup
-- 1 small roti (optional — skip if not hungry)
+**Almuerzo | ~390 kcal**
+- Tikka de pollo al horno (120g, marinado en yogur bajo en grasa + especias)
+- Ensalada india grande (pepino, tomate, cebolla, granos de granada, chaat masala, limón)
+- 1/3 taza de arroz integral
+- 1/2 taza de sopa de dal
 
-**Evening Snack | ~70 kcal**
-- 1 cup chaas
+**Merienda | ~90 kcal**
+- 1/2 taza de makhana tostada
+- Infusión de hierbas
 
-**Dinner | ~280 kcal**
-- 1 cup blended palak (spinach) soup (no cream)
-- 100g Tofu or Paneer Tikka (baked)
-- Stir-fried mixed vegetables (no rice, no roti)
-
----
-
-### FRIDAY | ~1,200 kcal
-
-**Breakfast | ~390 kcal**
-- Soya Chunk Bhurji (75g) + 1 small roti
-- 1/2 cup yogurt
-- Green tea
-
-**Mid-Morning Snack | ~70 kcal**
-- 10 almonds
-
-**Lunch | ~370 kcal**
-- Moong Dal + mixed vegetable khichdi (1/2 cup total)
-- Large salad
-- 1 cup chaas
-
-**Evening Snack | ~70 kcal**
-- 1 cup herbal tea
-- 2 walnuts + 3 almonds
-
-**Dinner | ~270 kcal**
-- 1 large bowl clear vegetable soup
-- 1 large Moong Dal Chilla (no roti)
-- Stir-fried greens (methi, spinach, or cabbage)
+**Cena | ~300 kcal**
+- 1 bol grande de sopa clara de verduras y lentejas
+- Paneer salteado (50g) con pimientos y cebolla
+- Ensalada de pepino
 
 ---
 
-### SATURDAY | ~1,210 kcal
+### DOMINGO | ~1,250 kcal
 
-**Breakfast | ~390 kcal**
-- 2 Oats Chilla (rolled oats ground + besan, mixed with vegetables and green chili)
-- 1/2 cup yogurt
-- Green tea
+**Desayuno | ~370 kcal**
+- Poha de quinoa (1/2 taza de quinoa, preparada al estilo poha con guisantes, cacahuetes, cúrcuma y semillas de mostaza)
+- 1 taza de té verde
 
-**Mid-Morning Snack | ~70 kcal**
-- 1/2 cup fresh pomegranate or berries
+**Media mañana | ~80 kcal**
+- 1/2 taza de fruta fresca variada
 
-**Lunch | ~380 kcal**
-- Grilled/Baked Chicken (120g, tandoori masala)
-- Large green salad with olive oil-lemon dressing
-- 1/3 cup brown rice
-- 1/2 cup dal soup
+**Almuerzo | ~380 kcal**
+- 1 taza de dal mixto (masoor + moong)
+- 1 roti pequeño
+- Sabzi de lauki, tinda o calabaza de cera (las verduras con menos calorías)
+- Ensalada + chaas
 
-**Evening Snack | ~70 kcal**
-- 1/3 cup roasted makhana
+**Merienda | ~90 kcal**
+- Infusión de hierbas + 2 cdas de semillas
 
-**Dinner | ~280 kcal**
-- 1 cup thick lentil soup
-- Stir-fried paneer (40g) with capsicum and mushrooms
-- Cucumber and carrot sticks (unlimited)
-
----
-
-### SUNDAY | ~1,200 kcal
-
-**Breakfast | ~390 kcal**
-- Quinoa Upma (1/3 cup cooked quinoa, mustard seeds, curry leaves, mixed veg)
-- 1 boiled egg (optional)
-- Green tea
-
-**Mid-Morning Snack | ~70 kcal**
-- 1 small fruit
-
-**Lunch | ~370 kcal**
-- Mixed Dal (1 cup) with vegetables
-- 1 small roti
-- Raita (1/2 cup)
-- Salad
-
-**Evening Snack | ~70 kcal**
-- Herbal tea + 2 tbsp seeds
-
-**Dinner | ~280 kcal**
-- 1 large bowl of soup
-- 100g tofu or fish (grilled)
-- Stir-fried green vegetables
-- Large salad
+**Cena | ~310 kcal**
+- Bhurji de tofu (100g)
+- 1 taza de sopa espesa de verduras
+- Ensalada verde grande (sin aderezo: solo limón)
 
 ---
 
-## Low-Calorie Indian Drinks
+## FASE 4: Recta final (Semanas 7–8) | ~1,200 kcal/día
 
-| Drink | Approx. Calories | Benefits |
+**Cambios respecto a la Fase 3:**
+- Sin roti ni arroz en la cena: solo proteína y verduras
+- Cena antes de las 7:30 PM
+- Nada de azúcar añadido de ningún tipo (ni miel, ni panela, ni dátiles)
+- Aumenta la ingesta de agua a 3+ litros al día
+- Incorpora un ayuno intermitente suave: primera comida a las 8–9 AM, última comida antes de las 7:30 PM
+- Prioriza el sueño (7–8 horas): dormir mal sabotea la pérdida de grasa
+
+---
+
+### LUNES | ~1,200 kcal
+
+**Desayuno (sigue siendo tu comida más abundante) | ~380 kcal**
+- 2 Moong Dal Chilla rellenas de 50g de paneer bajo en grasa + espinacas
+- 1 manzana pequeña como acompañamiento
+- Té verde
+
+**Media mañana | ~70 kcal**
+- 8 almendras
+
+**Almuerzo | ~380 kcal**
+- 1 taza de Soya Chunk Curry (a base de tomate, 1 cdta de aceite)
+- 1 roti integral pequeño
+- 1 taza de moong dal
+- Ensalada grande
+
+**Merienda | ~70 kcal**
+- 1 taza de chaas natural O infusión de hierbas
+
+**Cena | ~280 kcal**
+- 1 bol grande de sopa de verduras y dal
+- 100g de proteína a la parrilla/al horno (tofu, pollo o pescado)
+- Verduras de hoja verde salteadas (espinacas, methi, kale)
+- Ensalada de pepino y tomate
+
+---
+
+### MARTES | ~1,195 kcal
+
+**Desayuno | ~380 kcal**
+- Bol de quinoa (1/3 taza cocida) con verduras salteadas, 2 claras de huevo cocidas, 1 cdta de aceite de oliva y especias
+- Té verde
+
+**Media mañana | ~70 kcal**
+- 1 guayaba pequeña
+
+**Almuerzo | ~370 kcal**
+- 1 taza de Chole (masala de garbanzos, aceite mínimo)
+- 1/3 taza de arroz integral
+- Ensalada kachumber grande
+- 1 taza de chaas
+
+**Merienda | ~70 kcal**
+- 1/3 taza de makhana tostada
+- 1 taza de té verde
+
+**Cena | ~280 kcal**
+- 1 taza de sopa de moong dal
+- Espinacas salteadas con ajo y comino
+- 2 Besan Chilla pequeñas (sin roti)
+
+---
+
+### MIÉRCOLES | ~1,200 kcal
+
+**Desayuno | ~380 kcal**
+- 2 tortitas de ragi pequeñas (harina de ragi + yogur bajo en grasa, chile verde, cilantro)
+- 1/2 taza de germinados
+- Té verde
+
+**Media mañana | ~70 kcal**
+- 1 taza de agua de coco
+
+**Almuerzo | ~380 kcal**
+- Curry de tofu (150g de tofu firme) con base de tomate y cebolla, poco aceite
+- 1/3 taza de arroz integral O 1 roti pequeño
+- Sabzi de verduras (sin patata)
+- Ensalada
+
+**Merienda | ~70 kcal**
+- Infusión de hierbas
+- 5 almendras
+
+**Cena | ~280 kcal**
+- 100g de tikka de pescado al horno
+- 1 taza de sopa de verduras variadas
+- Brócoli + pimiento salteados (sin arroz ni roti)
+
+---
+
+### JUEVES | ~1,190 kcal
+
+**Desayuno | ~380 kcal**
+- 3 idlis pequeños al vapor
+- 1/2 taza de sambar de verduras (sin patata)
+- Té verde
+
+**Media mañana | ~70 kcal**
+- 1/2 taza de papaya
+
+**Almuerzo | ~370 kcal**
+- Bol de ensalada de garbanzos (1/2 taza de garbanzos, tomates, pepino, cebolla, aceite de oliva + limón + chaat masala)
+- 1 taza de sopa de dal
+- 1 roti pequeño (opcional: omítelo si no tienes hambre)
+
+**Merienda | ~70 kcal**
+- 1 taza de chaas
+
+**Cena | ~280 kcal**
+- 1 taza de sopa de palak (espinacas) licuada (sin crema)
+- 100g de tikka de tofu o de paneer (al horno)
+- Verduras variadas salteadas (sin arroz ni roti)
+
+---
+
+### VIERNES | ~1,200 kcal
+
+**Desayuno | ~390 kcal**
+- Soya Chunk Bhurji (75g) + 1 roti pequeño
+- 1/2 taza de yogur
+- Té verde
+
+**Media mañana | ~70 kcal**
+- 10 almendras
+
+**Almuerzo | ~370 kcal**
+- Khichdi de moong dal y verduras variadas (1/2 taza en total)
+- Ensalada grande
+- 1 taza de chaas
+
+**Merienda | ~70 kcal**
+- 1 taza de infusión de hierbas
+- 2 nueces + 3 almendras
+
+**Cena | ~270 kcal**
+- 1 bol grande de sopa clara de verduras
+- 1 Moong Dal Chilla grande (sin roti)
+- Verduras de hoja verde salteadas (methi, espinacas o repollo)
+
+---
+
+### SÁBADO | ~1,210 kcal
+
+**Desayuno | ~390 kcal**
+- 2 chillas de avena (avena en hojuelas molida + besan, mezclada con verduras y chile verde)
+- 1/2 taza de yogur
+- Té verde
+
+**Media mañana | ~70 kcal**
+- 1/2 taza de granada fresca o frutos rojos
+
+**Almuerzo | ~380 kcal**
+- Pollo a la parrilla/al horno (120g, masala tandoori)
+- Ensalada verde grande con aderezo de aceite de oliva y limón
+- 1/3 taza de arroz integral
+- 1/2 taza de sopa de dal
+
+**Merienda | ~70 kcal**
+- 1/3 taza de makhana tostada
+
+**Cena | ~280 kcal**
+- 1 taza de sopa espesa de lentejas
+- Paneer salteado (40g) con pimiento y champiñones
+- Bastones de pepino y zanahoria (sin límite)
+
+---
+
+### DOMINGO | ~1,200 kcal
+
+**Desayuno | ~390 kcal**
+- Upma de quinoa (1/3 taza de quinoa cocida, semillas de mostaza, hojas de curry, verduras variadas)
+- 1 huevo cocido (opcional)
+- Té verde
+
+**Media mañana | ~70 kcal**
+- 1 fruta pequeña
+
+**Almuerzo | ~370 kcal**
+- Dal mixto (1 taza) con verduras
+- 1 roti pequeño
+- Raita (1/2 taza)
+- Ensalada
+
+**Merienda | ~70 kcal**
+- Infusión de hierbas + 2 cdas de semillas
+
+**Cena | ~280 kcal**
+- 1 bol grande de sopa
+- 100g de tofu o pescado (a la parrilla)
+- Verduras verdes salteadas
+- Ensalada grande
+
+---
+
+## Bebidas indias bajas en calorías
+
+| Bebida | Calorías aprox. | Beneficios |
 |-------|-----------------|----------|
-| Lemon water (no sugar) | 5 kcal | Digestion, vitamin C, morning detox |
-| Chaas / Buttermilk (plain) | 35–40 kcal | Probiotics, fills you up, gut health |
-| Coconut water (1 cup) | 45 kcal | Natural electrolytes, reduces bloating |
-| Green tea | 0–5 kcal | Boosts metabolism, antioxidants |
-| Jeera water (cumin boiled in water) | 5 kcal | Reduces bloating, improves digestion |
-| Ajwain water (carom seeds in water) | 5 kcal | Anti-bloating, aids fat digestion |
-| Turmeric milk (low-fat, no sugar) | 80–90 kcal | Anti-inflammatory, promotes sleep |
-| Aam Panna (raw mango, minimal sugar) | 30–40 kcal | Electrolytes, cooling, vitamin C |
-| Coriander-mint cooler (blended + water) | 10 kcal | Refreshing, digestive, zero sugar |
-| Watermelon juice (no added sugar) | 40–50 kcal | Hydration, low calorie, filling |
-| Black coffee (no sugar) | 5 kcal | Boosts metabolism before exercise |
-| Ginger-tulsi herbal tea | 5 kcal | Immunity, anti-bloating |
+| Agua con limón (sin azúcar) | 5 kcal | Digestión, vitamina C, desintoxicación matutina |
+| Chaas / suero de mantequilla (natural) | 35–40 kcal | Probióticos, sacia, salud intestinal |
+| Agua de coco (1 taza) | 45 kcal | Electrolitos naturales, reduce la hinchazón |
+| Té verde | 0–5 kcal | Activa el metabolismo, antioxidantes |
+| Agua de jeera (comino hervido en agua) | 5 kcal | Reduce la hinchazón, mejora la digestión |
+| Agua de ajwain (semillas de ajowán en agua) | 5 kcal | Contra la hinchazón, ayuda a digerir las grasas |
+| Leche con cúrcuma (baja en grasa, sin azúcar) | 80–90 kcal | Antiinflamatoria, favorece el sueño |
+| Aam Panna (mango verde, azúcar mínimo) | 30–40 kcal | Electrolitos, refrescante, vitamina C |
+| Refresco de cilantro y menta (licuado con agua) | 10 kcal | Refrescante, digestivo, cero azúcar |
+| Jugo de sandía (sin azúcar añadida) | 40–50 kcal | Hidratación, bajo en calorías, sacia |
+| Café negro (sin azúcar) | 5 kcal | Activa el metabolismo antes del ejercicio |
+| Infusión de jengibre y tulsi | 5 kcal | Inmunidad, contra la hinchazón |
 
-**Drinks to AVOID:**
-- Regular chai with 2+ tsp sugar (150+ kcal per cup — adds up fast)
-- Packaged fruit juices (high fructose, no fiber)
-- Cold drinks and sodas
-- Sweetened lassi or milkshakes
-- Energy drinks
-- Alcohol (empty calories, increases appetite, disrupts sleep)
+**Bebidas que debes EVITAR:**
+- Chai normal con 2+ cdtas de azúcar (150+ kcal por taza: suman rápido)
+- Jugos de fruta envasados (mucha fructosa, sin fibra)
+- Refrescos y bebidas gaseosas
+- Lassi azucarado o batidos
+- Bebidas energéticas
+- Alcohol (calorías vacías, aumenta el apetito, altera el sueño)
 
 ---
 
-## Healthy Snack Bank
+## Banco de snacks saludables
 
-| Snack | Portion | Approx. Kcal |
+| Snack | Porción | Kcal aprox. |
 |-------|---------|-------------|
-| Roasted Chana (Bengal gram) | 30g (2 tbsp) | 100 |
-| Roasted Makhana (fox nuts) | 30g (1/2 cup) | 110 |
-| Mixed Nuts (almonds, walnuts) | 15g (~10–12 pieces) | 90 |
-| Plain Greek Yogurt | 100g | 90 |
-| Moong Sprouts Chaat | 1/2 cup | 80 |
-| Fresh Fruit (apple, guava, pear) | 1 medium | 80–100 |
-| Cucumber + Hummus | 1 cup + 1 tbsp | 80 |
-| Coconut water | 1 glass | 45 |
-| Chaas/Buttermilk (plain) | 1 glass | 40 |
-| Dates + Almonds | 2 dates + 8 almonds | 130 |
-| Boiled Corn | 1/2 cup | 70 |
-| Moong Dal Chilla (mini) | 1 small | 80 |
-| Dark Chocolate (85%+) | 1 square (10g) | 55 |
-| Plain rice cakes | 2 cakes | 70 |
-| Roasted pumpkin or sunflower seeds | 2 tbsp | 90 |
+| Chana tostada (garbanzo bengalí) | 30g (2 cdas) | 100 |
+| Makhana tostada (semillas de loto) | 30g (1/2 taza) | 110 |
+| Frutos secos variados (almendras, nueces) | 15g (~10–12 piezas) | 90 |
+| Yogur griego natural | 100g | 90 |
+| Chaat de germinados de moong | 1/2 taza | 80 |
+| Fruta fresca (manzana, guayaba, pera) | 1 mediana | 80–100 |
+| Pepino + hummus | 1 taza + 1 cda | 80 |
+| Agua de coco | 1 vaso | 45 |
+| Chaas/suero de mantequilla (natural) | 1 vaso | 40 |
+| Dátiles + almendras | 2 dátiles + 8 almendras | 130 |
+| Maíz cocido | 1/2 taza | 70 |
+| Moong Dal Chilla (mini) | 1 pequeña | 80 |
+| Chocolate negro (85%+) | 1 cuadrito (10g) | 55 |
+| Tortitas de arroz natural | 2 tortitas | 70 |
+| Semillas de calabaza o de girasol tostadas | 2 cdas | 90 |
 
 ---
 
-## Managing Cravings & Staying Consistent
+## Cómo manejar los antojos y mantener la constancia
 
-### Beat Specific Cravings
+### Vence antojos específicos
 
-| Craving | Healthy Fix |
+| Antojo | Solución saludable |
 |---------|-------------|
-| Sweet | 1 date + green tea. Natural sugar satisfies without spiking blood sugar. |
-| Salty/Crunchy | Roasted makhana or chana. Keep a jar at your desk. |
-| Chai | Masala green tea (ginger, cardamom, cinnamon — no sugar). Near zero calories, deeply satisfying. |
-| Rice | 1/3 cup brown rice or cauliflower rice. Same texture, far fewer calories. |
-| Roti / Bread | 1 small roti with vegetables is always okay. Don't cut it completely — that leads to binging. |
-| Late-night hunger | 1 cup warm turmeric milk (low-fat, no sugar) or cucumber slices. Genuinely hungry? Half a cup of moong dal soup. |
-| Chocolate | 1 square of 85%+ dark chocolate with green tea. |
+| Dulce | 1 dátil + té verde. El azúcar natural satisface sin disparar la glucosa en sangre. |
+| Salado/Crujiente | Makhana o chana tostada. Ten un frasco en tu escritorio. |
+| Chai | Té verde masala (jengibre, cardamomo, canela, sin azúcar). Casi cero calorías, muy reconfortante. |
+| Arroz | 1/3 taza de arroz integral o arroz de coliflor. Misma textura, muchas menos calorías. |
+| Roti / Pan | 1 roti pequeño con verduras siempre está bien. No lo elimines por completo: eso lleva a los atracones. |
+| Hambre nocturna | 1 taza de leche tibia con cúrcuma (baja en grasa, sin azúcar) o rodajas de pepino. ¿Hambre de verdad? Media taza de sopa de moong dal. |
+| Chocolate | 1 cuadrito de chocolate negro de 85%+ con té verde. |
 
-### Consistency Strategies
-1. **Meal prep on Sundays.** Cook dals, chop vegetables, soak legumes for the week. 60–90 minutes saves daily decisions and protects your willpower.
-2. **Keep a food journal.** Writing down everything you eat increases weight loss success by ~40% in research studies.
-3. **Never skip breakfast.** A protein-rich breakfast prevents afternoon cravings and evening overeating.
-4. **The 10-minute rule.** When you want to eat off-plan, wait 10 minutes and drink a glass of water. Most cravings pass within 10–15 minutes.
-5. **Don't shop hungry.** Plan meals for the week, write a list, stick to it.
-6. **One off-meal per week is fine — not an off-day.** One indulgent meal, then return immediately to the plan. No guilt.
-7. **Prepare your plate last.** Serve everyone else first, then take your portion. Prevents unconscious over-serving.
-8. **Use smaller plates.** Research shows smaller plates reduce calorie intake by ~20% without feeling deprived.
+### Estrategias de constancia
+1. **Prepara las comidas los domingos.** Cocina los dals, corta las verduras y deja en remojo las legumbres para la semana. 60–90 minutos te ahorran decisiones diarias y protegen tu fuerza de voluntad.
+2. **Lleva un diario de comidas.** Anotar todo lo que comes aumenta el éxito en la pérdida de peso en ~40% según estudios de investigación.
+3. **Nunca te saltes el desayuno.** Un desayuno rico en proteína evita los antojos de la tarde y comer en exceso por la noche.
+4. **La regla de los 10 minutos.** Cuando quieras comer fuera del plan, espera 10 minutos y bebe un vaso de agua. La mayoría de los antojos pasan en 10–15 minutos.
+5. **No compres con hambre.** Planifica las comidas de la semana, escribe una lista y cíñete a ella.
+6. **Una comida fuera del plan por semana está bien, pero no un día entero.** Una comida de capricho y vuelve de inmediato al plan. Sin culpa.
+7. **Prepara tu plato al final.** Sirve primero a los demás y después toma tu porción. Evita servirte de más sin darte cuenta.
+8. **Usa platos más pequeños.** Las investigaciones muestran que los platos más pequeños reducen la ingesta de calorías en ~20% sin sensación de privación.
 
-### Psychological Wins
-- Take weekly body measurements (waist, hips, arms) — the scale alone doesn't tell the full story.
-- Take progress photos every 2 weeks. Visual proof is powerfully motivating.
-- Aim for 85% consistency, not perfection. One bad day does not erase a good week.
-- Tell at least one person your goal — accountability significantly improves success rates.
-- Celebrate non-food milestones: a new fitness milestone, clothes fitting better, more energy throughout the day.
+### Victorias psicológicas
+- Toma medidas corporales cada semana (cintura, caderas, brazos): la báscula por sí sola no cuenta toda la historia.
+- Toma fotos de tu progreso cada 2 semanas. La prueba visual es muy motivadora.
+- Apunta a un 85% de constancia, no a la perfección. Un mal día no borra una buena semana.
+- Cuéntale tu objetivo al menos a una persona: rendir cuentas mejora de forma notable las tasas de éxito.
+- Celebra los logros que no tienen que ver con la comida: una nueva marca de condición física, la ropa que te queda mejor, más energía durante todo el día.
 
 ---
 
-## Exercise Recommendations
+## Recomendaciones de ejercicio
 
-Exercise is essential to safely reach 8 kg loss in 8 weeks. Diet alone at 1,200–1,400 kcal creates a ~300–500 kcal daily deficit; you need exercise to close the remaining gap.
+El ejercicio es esencial para alcanzar de forma segura una pérdida de 8 kg en 8 semanas. Solo con la dieta, a 1,200–1,400 kcal, se crea un déficit diario de ~300–500 kcal; necesitas el ejercicio para cerrar la brecha restante.
 
-| Week | Exercise Plan | Approx. Daily Burn |
+| Semana | Plan de ejercicio | Gasto diario aprox. |
 |------|---------------|--------------------|
-| 1–2 | 30–40 min brisk walking + 15 min yoga or stretching | ~200 kcal |
-| 3–4 | 45 min walking/jogging + 20 min bodyweight (squats, lunges, planks) | ~300 kcal |
-| 5–6 | 45 min cardio (cycling, aerobics, Zumba) + 25 min strength training | ~350–400 kcal |
-| 7–8 | 50–60 min (30 min cardio + 30 min strength) 5 days, active rest 2 days | ~400–500 kcal |
+| 1–2 | 30–40 min de caminata rápida + 15 min de yoga o estiramientos | ~200 kcal |
+| 3–4 | 45 min de caminata/trote + 20 min con el peso corporal (sentadillas, zancadas, planchas) | ~300 kcal |
+| 5–6 | 45 min de cardio (ciclismo, aeróbicos, Zumba) + 25 min de entrenamiento de fuerza | ~350–400 kcal |
+| 7–8 | 50–60 min (30 min de cardio + 30 min de fuerza) 5 días, descanso activo 2 días | ~400–500 kcal |
 
-**Best exercises for a busy schedule:**
+**Los mejores ejercicios para una agenda ocupada:**
 
-| Exercise | Duration | Approx. Calories Burned |
+| Ejercicio | Duración | Calorías quemadas aprox. |
 |----------|----------|------------------------|
-| Brisk walking | 30 min | 130–150 kcal |
+| Caminata rápida | 30 min | 130–150 kcal |
 | Yoga (power/flow) | 45 min | 170–200 kcal |
-| Zumba / aerobics | 45 min | 280–320 kcal |
-| Stair climbing | 20 min | 130–150 kcal |
-| Cycling (moderate) | 30 min | 180–220 kcal |
-| Jump rope | 20 min | 200–240 kcal |
-| Swimming | 30 min | 200–250 kcal |
+| Zumba / aeróbicos | 45 min | 280–320 kcal |
+| Subir escaleras | 20 min | 130–150 kcal |
+| Ciclismo (moderado) | 30 min | 180–220 kcal |
+| Saltar la cuerda | 20 min | 200–240 kcal |
+| Natación | 30 min | 200–250 kcal |
 
-**For extremely busy days:** Even 10 minutes of brisk walking after each meal (30 minutes total) aids digestion, lowers blood sugar spikes, and is significantly better than no movement at all.
-
----
-
-## 10 Golden Rules for Success
-
-1. **No refined carbs.** No maida, no white rice in large portions, no packaged biscuits or namkeen, no white bread.
-2. **Cook at home.** Restaurant food has hidden oil, butter, and cream — often 2–3x more calories than it appears.
-3. **Oil limit: 2–3 tsp total per day.** Use olive oil, mustard oil, or a very small amount of cold-pressed coconut oil.
-4. **Protein at every meal.** Dal, legumes, tofu, low-fat paneer, egg whites, chicken, or fish — protein keeps you full and preserves muscle.
-5. **Vegetables first.** Fill half your plate with vegetables or salad first, then protein, then a small portion of carbs.
-6. **Eat slowly and mindfully.** It takes 20 minutes for your brain to register fullness. Put your spoon down between bites.
-7. **Sleep 7–8 hours.** Poor sleep raises cortisol (the stress hormone), which increases belly fat storage and cravings by up to 30%.
-8. **Manage stress actively.** High stress = high cortisol = more fat stored around the abdomen. 10 minutes of deep breathing or meditation daily makes a measurable difference.
-9. **Limit fruit to 1–2 per day.** Fruit has fructose. Best choices: guava, apple, pear, papaya, watermelon. Limit mango, banana, grapes, and chikoo.
-10. **Reduce salt.** Excess sodium causes water retention and bloating. Reduce salt in cooking and avoid achaar (Indian condiment), papad, and packaged foods during this plan.
+**Para los días extremadamente ocupados:** Incluso 10 minutos de caminata rápida después de cada comida (30 minutos en total) favorecen la digestión, reducen los picos de glucosa en sangre y son mucho mejores que no moverse en absoluto.
 
 ---
 
-## Portion Quick-Reference Card
+## 10 reglas de oro para el éxito
 
-| Food | Recommended Portion |
+1. **Sin carbohidratos refinados.** Nada de harina refinada (maida), nada de arroz blanco en porciones grandes, nada de galletas envasadas ni snacks salados (namkeen), nada de pan blanco.
+2. **Cocina en casa.** La comida de restaurante tiene aceite, mantequilla y crema ocultos: a menudo 2–3 veces más calorías de las que parece.
+3. **Límite de aceite: 2–3 cdtas en total al día.** Usa aceite de oliva, aceite de mostaza o una cantidad muy pequeña de aceite de coco prensado en frío.
+4. **Proteína en cada comida.** Dal, legumbres, tofu, paneer bajo en grasa, claras de huevo, pollo o pescado: la proteína te sacia y preserva el músculo.
+5. **Primero las verduras.** Llena primero la mitad del plato con verduras o ensalada, luego con proteína y, al final, con una porción pequeña de carbohidratos.
+6. **Come despacio y con atención.** El cerebro tarda 20 minutos en registrar la saciedad. Deja la cuchara sobre la mesa entre bocado y bocado.
+7. **Duerme 7–8 horas.** Dormir mal eleva el cortisol (la hormona del estrés), lo que aumenta el almacenamiento de grasa abdominal y los antojos hasta en un 30%.
+8. **Gestiona el estrés de forma activa.** Mucho estrés = mucho cortisol = más grasa almacenada alrededor del abdomen. 10 minutos diarios de respiración profunda o meditación marcan una diferencia medible.
+9. **Limita la fruta a 1–2 piezas al día.** La fruta contiene fructosa. Mejores opciones: guayaba, manzana, pera, papaya, sandía. Limita el mango, el plátano, las uvas y el chikoo (chicozapote).
+10. **Reduce la sal.** El exceso de sodio provoca retención de líquidos e hinchazón. Reduce la sal al cocinar y evita el achaar (condimento indio), el papad y los alimentos envasados durante este plan.
+
+---
+
+## Tarjeta de referencia rápida de porciones
+
+| Alimento | Porción recomendada |
 |------|---------------------|
-| Dal / Lentils (cooked) | 3/4 – 1 cup |
-| Brown Rice / Quinoa (cooked) | 1/3 cup |
-| Whole Wheat Roti | 1 small (25–30g dough) |
-| Cooked Vegetables (sabzi) | 1 cup |
-| Raw Salad Vegetables | Unlimited |
-| Low-Fat Paneer | 40–60g |
-| Tofu (firm) | 100–150g |
-| Chicken Breast (cooked) | 80–120g |
-| Fish (cooked) | 100–150g |
-| Low-Fat Yogurt / Dahi | 100–150g |
-| Nuts (almonds, walnuts) | 15g (~10–12 pieces) |
-| Oil per meal | 1/2 – 1 tsp |
-| Fruit | 1 medium or 1/2 cup |
-| Ghee (if used) | 1/2 tsp max per day |
+| Dal / Lentejas (cocidas) | 3/4 – 1 taza |
+| Arroz integral / Quinoa (cocidos) | 1/3 taza |
+| Roti integral | 1 pequeño (25–30g de masa) |
+| Verduras cocidas (sabzi) | 1 taza |
+| Verduras crudas para ensalada | Sin límite |
+| Paneer bajo en grasa | 40–60g |
+| Tofu (firme) | 100–150g |
+| Pechuga de pollo (cocida) | 80–120g |
+| Pescado (cocido) | 100–150g |
+| Yogur bajo en grasa / Dahi | 100–150g |
+| Frutos secos (almendras, nueces) | 15g (~10–12 piezas) |
+| Aceite por comida | 1/2 – 1 cdta |
+| Fruta | 1 mediana o 1/2 taza |
+| Ghee (si se usa) | 1/2 cdta máx. al día |
 
 ---
 
-## Weekly Shopping List Essentials
+## Lo esencial de la lista de compras semanal
 
-### Grains & Legumes
-- Whole wheat flour (atta) — 1 kg/week
-- Brown rice — 500g/week
-- Quinoa — 500g/week
-- Rolled oats — 500g
-- Ragi (finger millet) or bajra flour — 500g
-- Yellow moong dal, masoor dal, toor dal, chana dal — 200–300g each
-- Rajma (kidney beans), chole/chickpeas — 200–300g each
-- Soya chunks — 200g/week
-- Makhana (fox nuts) — 200g/week
-- Roasted chana — 200g/week
+### Cereales y legumbres
+- Harina integral de trigo (atta): 1 kg/semana
+- Arroz integral: 500g/semana
+- Quinoa: 500g/semana
+- Avena en hojuelas: 500g
+- Harina de ragi (mijo rojo) o de bajra: 500g
+- Moong dal amarillo, masoor dal, toor dal, chana dal: 200–300g de cada uno
+- Rajma (frijoles rojos), chole/garbanzos: 200–300g de cada uno
+- Soya chunks: 200g/semana
+- Makhana (semillas de loto): 200g/semana
+- Chana tostada: 200g/semana
 
-### Proteins
-- Low-fat paneer — 100–200g/week
-- Firm tofu — 300–400g/week
-- Chicken breast (optional) — 200–300g/week
-- Fresh fish (optional) — 200–300g/week
-- Low-fat dahi/yogurt — 1 kg/week
-- Greek yogurt — 400g/week
-- Eggs (optional) — 6–12/week
+### Proteínas
+- Paneer bajo en grasa: 100–200g/semana
+- Tofu firme: 300–400g/semana
+- Pechuga de pollo (opcional): 200–300g/semana
+- Pescado fresco (opcional): 200–300g/semana
+- Yogur (dahi) bajo en grasa: 1 kg/semana
+- Yogur griego: 400g/semana
+- Huevos (opcional): 6–12/semana
 
-### Vegetables (Buy Fresh Twice a Week)
-- Spinach (palak), methi (fenugreek leaves), kale
-- Broccoli, cauliflower, cabbage
-- Bottle gourd (lauki), tinda, ash gourd — lowest calorie options
-- Cucumber, tomatoes, onions, capsicum (bell peppers)
-- Mushrooms, zucchini, French beans, peas
-- Carrots, sweet corn
+### Verduras (compra fresco dos veces por semana)
+- Espinacas (palak), methi (hojas de fenogreco), kale
+- Brócoli, coliflor, repollo
+- Calabaza de botella (lauki), tinda, calabaza de cera: las opciones con menos calorías
+- Pepino, tomates, cebollas, pimientos
+- Champiñones, calabacín, judías verdes, guisantes
+- Zanahorias, maíz dulce
 
-### Fruits (2–3 Types per Week)
-- Guava, apple, pear, papaya, watermelon — best choices
-- Limit: mango, banana, grapes (high sugar)
+### Frutas (2–3 tipos por semana)
+- Guayaba, manzana, pera, papaya, sandía: las mejores opciones
+- Limita: mango, plátano, uvas (mucho azúcar)
 
-### Spices & Flavor Essentials
-- Cumin (jeera), coriander (dhania), turmeric, red chili, garam masala
-- Fresh ginger, garlic, green chili
-- Mustard seeds, curry leaves, asafoetida (hing)
-- Chaat masala (for salads and snacks)
-- Fresh coriander and mint
+### Especias y básicos de sabor
+- Comino (jeera), cilantro (dhania), cúrcuma, chile rojo, garam masala
+- Jengibre fresco, ajo, chile verde
+- Semillas de mostaza, hojas de curry, asafétida (hing)
+- Chaat masala (para ensaladas y snacks)
+- Cilantro fresco y menta
 
-### Healthy Fats & Snacks
-- Almonds, walnuts, pumpkin seeds, sunflower seeds, flaxseeds
-- Roasted makhana and roasted chana
-- Olive oil or mustard oil (small quantity)
+### Grasas saludables y snacks
+- Almendras, nueces, semillas de calabaza, semillas de girasol, semillas de lino
+- Makhana tostada y chana tostada
+- Aceite de oliva o aceite de mostaza (cantidad pequeña)
 
-### Beverages
-- Green tea bags (variety: plain, tulsi, ginger, mint)
-- Herbal tea sachets
-- Low-fat milk (small quantity for occasional chai)
-- Coconut water (packaged or fresh)
+### Bebidas
+- Bolsitas de té verde (variedades: natural, tulsi, jengibre, menta)
+- Sobres de infusión de hierbas
+- Leche baja en grasa (cantidad pequeña para algún chai ocasional)
+- Agua de coco (envasada o fresca)
 
 ---
 
 <!-- private -->
-## Expected Progress Tracker
+## Seguimiento del progreso esperado
 
-| Checkpoint | Expected Weight | What to Expect |
+| Punto de control | Peso esperado | Qué esperar |
 |------------|-----------------|----------------|
-| Day 1 (Start) | 60.0 kg | Baseline |
-| End of Week 1 | 58.8–59.2 kg | Mostly water weight + early fat loss |
-| End of Week 2 | 58.0–58.5 kg | Body adjusting to new calorie intake |
-| End of Week 3 | 57.0–57.8 kg | Real fat burning begins |
-| End of Week 4 | 56.2–57.0 kg | Clothes starting to feel noticeably looser |
-| End of Week 5 | 55.5–56.2 kg | Energy levels stabilizing |
-| End of Week 6 | 54.5–55.5 kg | Visible changes in face, waist |
-| End of Week 7 | 53.5–54.5 kg | Strong momentum |
-| End of Week 8 | 52.5–54.0 kg | Goal range approached or reached |
+| Día 1 (inicio) | 60.0 kg | Punto de partida |
+| Final de la semana 1 | 58.8–59.2 kg | Sobre todo pérdida de líquidos + primeras pérdidas de grasa |
+| Final de la semana 2 | 58.0–58.5 kg | El cuerpo se adapta a la nueva ingesta calórica |
+| Final de la semana 3 | 57.0–57.8 kg | Comienza la quema real de grasa |
+| Final de la semana 4 | 56.2–57.0 kg | La ropa empieza a notarse claramente más holgada |
+| Final de la semana 5 | 55.5–56.2 kg | Los niveles de energía se estabilizan |
+| Final de la semana 6 | 54.5–55.5 kg | Cambios visibles en el rostro y la cintura |
+| Final de la semana 7 | 53.5–54.5 kg | Gran impulso |
+| Final de la semana 8 | 52.5–54.0 kg | Rango objetivo cercano o alcanzado |
 
-> **Realistic expectation:** With strict dietary adherence AND daily exercise, reaching 53–54 kg by Week 8 is very achievable. Reaching exactly 52 kg may require an additional 1–2 weeks of maintenance. The habits you build in these 8 weeks will carry you across the finish line.
+> **Expectativa realista:** Con una adherencia estricta a la dieta Y ejercicio diario, llegar a 53–54 kg hacia la semana 8 es totalmente alcanzable. Llegar exactamente a 52 kg puede requerir 1–2 semanas adicionales de mantenimiento. Los hábitos que construyas en estas 8 semanas te llevarán hasta la meta.
 
 ---
 <!-- /private -->
 
-## Understanding the Weight Loss Journey
+## Entender el camino de la pérdida de peso
 
-Weight loss is rarely linear. You will notice:
-- **Weeks 1–2:** Fast loss (~1.5–2 kg) — mostly water weight from cutting refined carbs and sodium
-- **Weeks 3–5:** Slower loss (0.5–0.8 kg/week) — actual fat burning phase
-- **Week 4–5 plateau:** Very common. Your metabolism adapts. Solution: increase exercise intensity by 10–15%, do NOT lower calories further
-- **Weeks 6–8:** Loss resumes with adjusted metabolism
+La pérdida de peso rara vez es lineal. Notarás lo siguiente:
+- **Semanas 1–2:** Pérdida rápida (~1.5–2 kg), sobre todo de líquidos por reducir los carbohidratos refinados y el sodio
+- **Semanas 3–5:** Pérdida más lenta (0.5–0.8 kg/semana): es la fase real de quema de grasa
+- **Estancamiento en las semanas 4–5:** Muy común. Tu metabolismo se adapta. Solución: aumenta la intensidad del ejercicio en un 10–15%, NO reduzcas más las calorías
+- **Semanas 6–8:** La pérdida se reanuda con el metabolismo ya ajustado
 
-**If you hit a plateau for more than 10 days:**
-- Add 15 minutes of strength or resistance training
-- Vary your food choices — the body adapts to repetition
-- Ensure you're sleeping 7–8 hours every night
-- Double-check that you haven't been underestimating portions
+**Si te estancas durante más de 10 días:**
+- Añade 15 minutos de entrenamiento de fuerza o resistencia
+- Varía tus elecciones de alimentos: el cuerpo se adapta a la repetición
+- Asegúrate de dormir 7–8 horas cada noche
+- Comprueba que no estés subestimando las porciones
 
 ---
 
-## Final Reminder
+## Recordatorio final
 
-- **Consistency over perfection.** One bad meal won't derail you. One bad week won't either. Just keep going.
-- **Trust the process.** Early weeks feel fast. Middle weeks feel slow. That slower period is real fat burning.
-- **Listen to your body.** If you feel genuinely weak, dizzy, or unable to exercise, add 100–200 kcal to your daily intake (a glass of chaas + handful of nuts is enough).
-- **This is a lifestyle, not a punishment.** Indian food is full of flavor, spice, and nourishment. You're not giving anything up — you're choosing the best version of it.
+- **Constancia por encima de la perfección.** Una mala comida no te descarrilará. Una mala semana tampoco. Simplemente sigue adelante.
+- **Confía en el proceso.** Las primeras semanas se sienten rápidas. Las semanas intermedias se sienten lentas. Ese periodo más lento es la quema real de grasa.
+- **Escucha a tu cuerpo.** Si te sientes realmente débil, con mareos o incapaz de hacer ejercicio, añade 100–200 kcal a tu ingesta diaria (un vaso de chaas + un puñado de frutos secos es suficiente).
+- **Esto es un estilo de vida, no un castigo.** La comida india está llena de sabor, especias y nutrientes. No estás renunciando a nada: estás eligiendo la mejor versión de ella.
 
-*You've got this. 8 weeks from now, you'll be glad you started today.*
+*Tú puedes. Dentro de 8 semanas, te alegrarás de haber empezado hoy.*

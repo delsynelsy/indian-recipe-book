@@ -71,17 +71,18 @@ def parse_meal_plan(md_path: Path) -> MealPlanProfile:
     def extract_int(pattern: str, default: int = 0) -> int:
         return int(extract_float(pattern, default))
 
+    # Labels match the Spanish meal_plan.md (numbers keep English formatting).
     return MealPlanProfile(
-        current_weight=extract_float(r"Current Weight\s*\|\s*([\d.]+)"),
-        goal_weight=extract_float(r"Goal Weight\s*\|\s*([\d.]+)"),
-        height=extract_float(r"Height\s*\|\s*([\d.]+)"),
-        age=extract_int(r"Age\s*\|\s*(\d+)"),
+        current_weight=extract_float(r"Peso actual\s*\|\s*([\d.]+)"),
+        goal_weight=extract_float(r"Peso objetivo\s*\|\s*([\d.]+)"),
+        height=extract_float(r"Altura\s*\|\s*([\d.]+)"),
+        age=extract_int(r"Edad\s*\|\s*(\d+)"),
         bmr=extract_float(r"BMR[^\d]*([\d,]+)"),
         tdee_min=extract_float(r"TDEE[^\d]*([\d,]+)"),
-        tdee_max=extract_float(r"TDEE[^–\d]*([\d,]+)[^\d]*([\d,]+)", 1700),
-        daily_target_min=extract_int(r"Daily Calorie Target[^\d]*([\d,]+)"),
-        daily_target_max=extract_int(r"Daily Calorie Target[^\d]*[\d,]+[^\d]*([\d,]+)"),
-        deficit_min=extract_int(r"Deficit from Diet[^\d]*([\d,]+)"),
-        deficit_max=extract_int(r"Deficit from Diet[^\d]*[\d,]+[^\d]*([\d,]+)"),
-        weeks=extract_int(r"(\d+)\s*[Ww]eeks?", 8),
+        tdee_max=extract_float(r"TDEE[^\d]*[\d,]+[^\d]*([\d,]+)", 1700),
+        daily_target_min=extract_int(r"Objetivo calórico diario[^\d]*([\d,]+)"),
+        daily_target_max=extract_int(r"Objetivo calórico diario[^\d]*[\d,]+[^\d]*([\d,]+)"),
+        deficit_min=extract_int(r"Déficit por dieta[^\d]*([\d,]+)"),
+        deficit_max=extract_int(r"Déficit por dieta[^\d]*[\d,]+[^\d]*([\d,]+)"),
+        weeks=extract_int(r"(\d+)\s*[Ss]emanas?", 8),
     )
