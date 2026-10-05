@@ -9,7 +9,8 @@ python3 generate.py
 python3 generate.py cards   # the "Tarjetas" tab iframes cards.html
 
 # Trust boundary: no personal meal-plan stats, no third-party reference photos.
-if grep -qE 'Current Weight|Expected Progress Tracker' output/*.html || [ -e output/imag_references ]; then
+# A surviving marker means a malformed/unclosed private block leaked its content.
+if grep -qE 'Current Weight|Expected Progress Tracker|private ?-->' output/*.html || [ -e output/imag_references ]; then
   echo "publish: private stats or reference photos in output/, refusing to ship" >&2
   exit 1
 fi
