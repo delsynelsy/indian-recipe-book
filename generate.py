@@ -10,6 +10,7 @@ Usage:
   python generate.py plan             # analyse meal plan feasibility
 """
 
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -54,19 +55,16 @@ def _swap_generated_images(recipes: list) -> None:
             r.image.src = f"images/{r.id}.webp"
 
 
-IMAG_REF_DIR = ROOT / "imag_references"
-
-
 def _sync_assets(output_dir: Path) -> None:
-    """Copy imag_references/ and images/ into the output directory so the
-    HTML bundle is self-contained when opened as a file or deployed."""
-    for src_dir in (IMAG_REF_DIR, IMAGES_DIR):
-        if not src_dir.exists():
-            continue
-        dst = output_dir / src_dir.name
-        if dst.exists():
-            shutil.rmtree(dst)
-        shutil.copytree(src_dir, dst)
+    """Copy images/ into the output directory so the HTML bundle is
+    self-contained when opened as a file or deployed. imag_references/ holds
+    third-party inspiration photos and must never ship."""
+    if not IMAGES_DIR.exists():
+        return
+    dst = output_dir / IMAGES_DIR.name
+    if dst.exists():
+        shutil.rmtree(dst)
+    shutil.copytree(IMAGES_DIR, dst)
 
 
 def _build(output: Path):
@@ -75,6 +73,8 @@ def _build(output: Path):
     meal_plan_html = ""
     if MEAL_PLAN_FILE.exists():
         raw_md = MEAL_PLAN_FILE.read_text(encoding="utf-8")
+        # Personal stats stay in the .md for `generate.py plan`, never on the site.
+        raw_md = re.sub(r"<!-- private -->.*?<!-- /private -->\n?", "", raw_md, flags=re.S)
         meal_plan_html = md_lib.markdown(
             raw_md,
             extensions=["tables", "nl2br", "sane_lists"],

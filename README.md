@@ -2,7 +2,9 @@
 
 A static site generator for a **28-recipe Indian cookbook** with an 8-week weight-loss meal plan. Produces a single self-contained `index.html` with a vintage aesthetic, AI-generated watercolour images, and infographic-style recipe cards.
 
-![Vintage recipe cards with handwritten fonts and parchment paper background](imag_references/imag_referencia_tarjetas/referencia_2.jpg)
+**Live:** https://recipes.mohammadasjad.com
+
+![Recipe grid of the live site: watercolour hero cards on parchment](docs/screenshot.webp)
 
 ---
 
@@ -17,7 +19,7 @@ A static site generator for a **28-recipe Indian cookbook** with an 8-week weigh
 - **Per-step procedure photos** — CDN watercolour vignettes for each cooking step
 - **8-week meal plan tab** — rendered from `meal_plan.md` alongside the recipe grid
 - **Macro validation** — CLI command to verify P/C/F totals per recipe
-- **Standalone output** — `output/index.html` bundles all assets; open with any browser, no server needed
+- **Static output**: `output/index.html` + `output/cards.html` + local hero images; step and ingredient art load from the image CDN
 
 ---
 
@@ -31,14 +33,14 @@ A static site generator for a **28-recipe Indian cookbook** with an 8-week weigh
 | Average carbs | 32.6 g |
 | Average fat | 7.6 g |
 
-Designed for a **1,200–1,400 kcal/day** target (60 kg → 52 kg, 8 weeks, 157 cm, age 26).
+Designed for a **1,200-1,400 kcal/day** target over 8 weeks. Personal stats in `meal_plan.md` sit inside `<!-- private -->` blocks: `generate.py plan` reads them, the site build strips them.
 
 ---
 
 ## Project Structure
 
 ```
-Food_Plan/
+indian-recipe-book/
 ├── generate.py            # CLI entry point (click)
 ├── meal_plan.md           # 8-week plan rendered as a second tab
 ├── requirements.txt
@@ -58,8 +60,12 @@ Food_Plan/
 ├── templates/
 │   ├── index.html.j2      # Main site template
 │   └── cards.html.j2      # Standalone printable recipe cards
-├── images/                # Local .webp overrides (generated)
-├── imag_references/       # Visual inspiration boards
+├── deploy/
+│   ├── publish.sh             # build + ship to recipes.mohammadasjad.com
+│   └── nas-assets/            # NAS compose + nginx configs, runbook (README.md)
+├── docs/screenshot.webp
+├── images/                # Local .webp overrides (generated, git-ignored)
+├── imag_references/       # Third-party inspiration photos (local only, git-ignored, never shipped)
 └── output/                # Built artefacts (git-ignored)
 ```
 
@@ -177,11 +183,17 @@ Recipes live in `data/recipes.yaml`. Each entry:
 
 ## Deployment
 
-The output is a **single HTML file** with relative image paths. To share it:
+Live at **https://recipes.mohammadasjad.com**: an nginx container (`recipe-site`) on the
+NAS behind the Portfolio Cloudflare tunnel, next to the `images.mohammadasjad.com` CDN.
 
-1. Copy `output/index.html` and the `output/images/` folder to any static host.
-2. Or just open `output/index.html` locally — everything works from `file://`.
+```bash
+deploy/publish.sh   # clean build (index + cards) -> privacy guard -> tar over ssh -> smoke check
+```
 
+One-time infra (compose, nginx, tunnel ingress, DNS) and rollback live in
+[`deploy/nas-assets/README.md`](deploy/nas-assets/README.md).
+
+`output/index.html` also opens locally from `file://` (step and ingredient art need the CDN).
 For automatic Windows deployment during development:
 
 ```bash
