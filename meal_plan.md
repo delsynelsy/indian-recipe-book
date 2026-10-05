@@ -1,10 +1,13 @@
 # 2-Month Indian Weight Loss Meal Plan
+<!-- private -->
 **From 60 kg to 52 kg | Age: 26 | Height: 157 cm | Timeline: 8 Weeks**
+<!-- /private -->
 
 ---
 
-## Your Profile & Caloric Strategy
+## Caloric Strategy
 
+<!-- private -->
 | Detail | Value |
 |--------|-------|
 | Current Weight | 60 kg |
@@ -15,6 +18,7 @@
 | Goal BMI | 21.1 |
 | Weight to Lose | 8 kg |
 | Timeline | 8 weeks |
+<!-- /private -->
 
 ### Estimated Caloric Needs
 - **Basal Metabolic Rate (BMR):** ~1,290 kcal/day
@@ -1057,6 +1061,7 @@ Exercise is essential to safely reach 8 kg loss in 8 weeks. Diet alone at 1,200â
 
 ---
 
+<!-- private -->
 ## Expected Progress Tracker
 
 | Checkpoint | Expected Weight | What to Expect |
@@ -1074,6 +1079,7 @@ Exercise is essential to safely reach 8 kg loss in 8 weeks. Diet alone at 1,200â
 > **Realistic expectation:** With strict dietary adherence AND daily exercise, reaching 53â€“54 kg by Week 8 is very achievable. Reaching exactly 52 kg may require an additional 1â€“2 weeks of maintenance. The habits you build in these 8 weeks will carry you across the finish line.
 
 ---
+<!-- /private -->
 
 ## Understanding the Weight Loss Journey
 

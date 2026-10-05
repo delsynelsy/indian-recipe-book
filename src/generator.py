@@ -43,7 +43,7 @@ def _load_step_icons() -> dict[str, dict]:
 
 
 def _recipe_to_js(recipe: Recipe) -> dict:
-    """Convert a Recipe to the JS-compatible dict that preview.html expects."""
+    """Convert a Recipe to the JS-compatible dict the index template expects."""
     return {
         "name": recipe.name,
         "sub": recipe.subtitle,

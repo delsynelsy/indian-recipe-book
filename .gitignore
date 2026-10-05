@@ -27,3 +27,6 @@ images/
 
 # Local secrets
 .env
+
+# Third-party inspiration photos (stock/licensed): keep local, never commit or ship
+imag_references/
