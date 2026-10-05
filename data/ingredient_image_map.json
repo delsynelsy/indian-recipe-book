@@ -1,9 +1,26 @@
 {
+  "ajo": {
+    "label": "Ajo",
+    "url": "https://images.mohammadasjad.com/ingredients/ajo.webp",
+    "recipes": [
+      "dal_tadka",
+      "palak_soup"
+    ]
+  },
+  "almendras": {
+    "label": "Almendras",
+    "url": "https://images.mohammadasjad.com/ingredients/almendras.webp",
+    "recipes": [
+      "ragi_porridge"
+    ]
+  },
   "arroz": {
     "label": "Arroz",
     "url": "https://images.mohammadasjad.com/ingredients/arroz.webp",
     "recipes": [
-      "khichdi"
+      "khichdi",
+      "idli",
+      "oats_dosa"
     ]
   },
   "arroz_basmati": {
@@ -13,12 +30,44 @@
       "rajma"
     ]
   },
+  "avena": {
+    "label": "Avena",
+    "url": "https://images.mohammadasjad.com/ingredients/avena.webp",
+    "recipes": [
+      "oats_dosa",
+      "oats_chilla"
+    ]
+  },
+  "brocoli": {
+    "label": "Brócoli",
+    "url": "https://images.mohammadasjad.com/ingredients/brocoli.webp",
+    "recipes": [
+      "tofu_stir_fry"
+    ]
+  },
+  "cardamomo": {
+    "label": "Cardamomo",
+    "url": "https://images.mohammadasjad.com/ingredients/cardamomo.webp",
+    "recipes": [
+      "ragi_porridge"
+    ]
+  },
   "cebolla": {
     "label": "Cebolla",
     "url": "https://images.mohammadasjad.com/ingredients/cebolla.webp",
     "recipes": [
       "rajma",
-      "chana"
+      "chana",
+      "besan_chilla",
+      "upma",
+      "oats_dosa",
+      "oats_chilla",
+      "paneer_bhurji",
+      "tofu_bhurji",
+      "masoor_dal",
+      "soya_masala",
+      "paratha",
+      "chicken_curry"
     ]
   },
   "chicharos": {
@@ -47,7 +96,23 @@
     "url": "https://images.mohammadasjad.com/ingredients/cilantro.webp",
     "recipes": [
       "chilla",
-      "chana"
+      "chana",
+      "besan_chilla",
+      "idli",
+      "oats_dosa",
+      "oats_chilla",
+      "paneer_bhurji",
+      "masoor_dal",
+      "dal_tadka",
+      "quinoa_pulao",
+      "moong_soup"
+    ]
+  },
+  "coliflor": {
+    "label": "Coliflor",
+    "url": "https://images.mohammadasjad.com/ingredients/coliflor.webp",
+    "recipes": [
+      "paratha"
     ]
   },
   "comino": {
@@ -56,7 +121,25 @@
     "recipes": [
       "chilla",
       "khichdi",
-      "chana"
+      "chana",
+      "besan_chilla",
+      "masoor_dal",
+      "palak_dal",
+      "dal_tadka",
+      "quinoa_khichdi",
+      "paratha",
+      "quinoa_pulao",
+      "palak_soup",
+      "moong_soup"
+    ]
+  },
+  "curcuma": {
+    "label": "Cúrcuma",
+    "url": "https://images.mohammadasjad.com/ingredients/curcuma.webp",
+    "recipes": [
+      "paneer_bhurji",
+      "tofu_bhurji",
+      "quinoa_khichdi"
     ]
   },
   "dal_moong": {
@@ -64,28 +147,52 @@
     "url": "https://images.mohammadasjad.com/ingredients/dal_moong.webp",
     "recipes": [
       "chilla",
-      "khichdi"
+      "khichdi",
+      "palak_dal",
+      "dal_tadka",
+      "quinoa_khichdi",
+      "moong_soup"
     ]
   },
   "dal_urad": {
     "label": "Dal urad",
     "url": "https://images.mohammadasjad.com/ingredients/dal_urad.webp",
     "recipes": [
-      "dosa"
+      "dosa",
+      "idli"
+    ]
+  },
+  "datiles": {
+    "label": "Dátiles",
+    "url": "https://images.mohammadasjad.com/ingredients/datiles.webp",
+    "recipes": [
+      "ragi_porridge"
+    ]
+  },
+  "espinacas": {
+    "label": "Espinacas",
+    "url": "https://images.mohammadasjad.com/ingredients/espinacas.webp",
+    "recipes": [
+      "palak_dal",
+      "palak_soup"
     ]
   },
   "frijoles_rojos": {
     "label": "Frijoles rojos",
     "url": "https://images.mohammadasjad.com/ingredients/frijoles_rojos.webp",
     "recipes": [
-      "rajma"
+      "rajma",
+      "dal_makhani"
     ]
   },
   "garam_masala": {
     "label": "Garam masala",
     "url": "https://images.mohammadasjad.com/ingredients/garam_masala.webp",
     "recipes": [
-      "rajma"
+      "rajma",
+      "soya_masala",
+      "dal_makhani",
+      "chicken_curry"
     ]
   },
   "garbanzos": {
@@ -99,14 +206,41 @@
     "label": "Ghee",
     "url": "https://images.mohammadasjad.com/ingredients/ghee.webp",
     "recipes": [
-      "khichdi"
+      "khichdi",
+      "upma",
+      "dal_tadka",
+      "quinoa_khichdi",
+      "dal_makhani",
+      "quinoa_pulao"
+    ]
+  },
+  "guisantes": {
+    "label": "Guisantes",
+    "url": "https://images.mohammadasjad.com/ingredients/guisantes.webp",
+    "recipes": [
+      "quinoa_pulao"
+    ]
+  },
+  "harina_garbanzo": {
+    "label": "Harina garbanzo",
+    "url": "https://images.mohammadasjad.com/ingredients/harina_garbanzo.webp",
+    "recipes": [
+      "besan_chilla"
+    ]
+  },
+  "harina_integral": {
+    "label": "Harina integral",
+    "url": "https://images.mohammadasjad.com/ingredients/harina_integral.webp",
+    "recipes": [
+      "paratha"
     ]
   },
   "harina_ragi": {
     "label": "Harina ragi",
     "url": "https://images.mohammadasjad.com/ingredients/harina_ragi.webp",
     "recipes": [
-      "dosa"
+      "dosa",
+      "ragi_porridge"
     ]
   },
   "jengibre": {
@@ -114,42 +248,134 @@
     "url": "https://images.mohammadasjad.com/ingredients/jengibre.webp",
     "recipes": [
       "chilla",
-      "tikka"
+      "tikka",
+      "tofu_bhurji",
+      "palak_dal",
+      "soya_masala",
+      "fish_tikka",
+      "tofu_stir_fry",
+      "palak_soup",
+      "moong_soup"
+    ]
+  },
+  "leche_desnatada": {
+    "label": "Leche desnatada",
+    "url": "https://images.mohammadasjad.com/ingredients/leche_desnatada.webp",
+    "recipes": [
+      "ragi_porridge"
+    ]
+  },
+  "lentejas_rojas": {
+    "label": "Lentejas rojas",
+    "url": "https://images.mohammadasjad.com/ingredients/lentejas_rojas.webp",
+    "recipes": [
+      "masoor_dal"
     ]
   },
   "lima": {
     "label": "Lima",
     "url": "https://images.mohammadasjad.com/ingredients/lima.webp",
     "recipes": [
-      "tikka"
+      "tikka",
+      "fish_tikka",
+      "tofu_tikka",
+      "palak_soup",
+      "moong_soup"
     ]
   },
   "mostaza": {
     "label": "Mostaza",
     "url": "https://images.mohammadasjad.com/ingredients/mostaza.webp",
     "recipes": [
-      "dosa"
+      "dosa",
+      "upma",
+      "idli",
+      "oats_dosa"
+    ]
+  },
+  "paneer": {
+    "label": "Paneer",
+    "url": "https://images.mohammadasjad.com/ingredients/paneer.webp",
+    "recipes": [
+      "paneer_bhurji"
     ]
   },
   "pechuga_pollo": {
     "label": "Pechuga pollo",
     "url": "https://images.mohammadasjad.com/ingredients/pechuga_pollo.webp",
     "recipes": [
-      "tikka"
+      "tikka",
+      "chicken_curry"
+    ]
+  },
+  "pescado_blanco": {
+    "label": "Pescado blanco",
+    "url": "https://images.mohammadasjad.com/ingredients/pescado_blanco.webp",
+    "recipes": [
+      "fish_tikka"
+    ]
+  },
+  "pimiento": {
+    "label": "Pimiento",
+    "url": "https://images.mohammadasjad.com/ingredients/pimiento.webp",
+    "recipes": [
+      "tofu_tikka",
+      "tofu_stir_fry"
+    ]
+  },
+  "quinoa": {
+    "label": "Quinoa",
+    "url": "https://images.mohammadasjad.com/ingredients/quinoa.webp",
+    "recipes": [
+      "quinoa_khichdi",
+      "quinoa_pulao"
+    ]
+  },
+  "salsa_soja": {
+    "label": "Salsa soja",
+    "url": "https://images.mohammadasjad.com/ingredients/salsa_soja.webp",
+    "recipes": [
+      "tofu_stir_fry"
     ]
   },
   "sambar": {
     "label": "Sambar",
     "url": "https://images.mohammadasjad.com/ingredients/sambar.webp",
     "recipes": [
-      "dosa"
+      "dosa",
+      "idli"
+    ]
+  },
+  "semola_trigo": {
+    "label": "Sémola trigo",
+    "url": "https://images.mohammadasjad.com/ingredients/semola_trigo.webp",
+    "recipes": [
+      "upma"
+    ]
+  },
+  "soja_texturizada": {
+    "label": "Soja texturizada",
+    "url": "https://images.mohammadasjad.com/ingredients/soja_texturizada.webp",
+    "recipes": [
+      "soya_masala"
     ]
   },
   "tikka_masala": {
     "label": "Tikka masala",
     "url": "https://images.mohammadasjad.com/ingredients/tikka_masala.webp",
     "recipes": [
-      "tikka"
+      "tikka",
+      "fish_tikka",
+      "tofu_tikka"
+    ]
+  },
+  "tofu_firme": {
+    "label": "Tofu firme",
+    "url": "https://images.mohammadasjad.com/ingredients/tofu_firme.webp",
+    "recipes": [
+      "tofu_bhurji",
+      "tofu_tikka",
+      "tofu_stir_fry"
     ]
   },
   "tomate": {
@@ -157,14 +383,42 @@
     "url": "https://images.mohammadasjad.com/ingredients/tomate.webp",
     "recipes": [
       "rajma",
-      "chana"
+      "chana",
+      "besan_chilla",
+      "paneer_bhurji",
+      "tofu_bhurji",
+      "masoor_dal",
+      "palak_dal",
+      "soya_masala",
+      "dal_makhani",
+      "chicken_curry"
+    ]
+  },
+  "urad_dal_negro": {
+    "label": "Urad dal negro",
+    "url": "https://images.mohammadasjad.com/ingredients/urad_dal_negro.webp",
+    "recipes": [
+      "dal_makhani"
     ]
   },
   "yogur": {
     "label": "Yogur",
     "url": "https://images.mohammadasjad.com/ingredients/yogur.webp",
     "recipes": [
-      "tikka"
+      "tikka",
+      "oats_chilla",
+      "paratha",
+      "fish_tikka",
+      "tofu_tikka",
+      "chicken_curry"
+    ]
+  },
+  "zanahoria": {
+    "label": "Zanahoria",
+    "url": "https://images.mohammadasjad.com/ingredients/zanahoria.webp",
+    "recipes": [
+      "upma",
+      "oats_chilla"
     ]
   }
 }

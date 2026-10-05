@@ -63,8 +63,11 @@ ING_CFG = 1.0
 ING_SAMPLER = "euler"
 ING_SCHEDULER = "simple"
 
-FLUX_UNET = "flux-2-klein-9b-fp8.safetensors"
-FLUX_CLIP = "qwen_3_8b_fp8mixed.safetensors"
+# ponytail: the first 23 icons came from the 9B pair (flux-2-klein-9b-fp8 +
+# qwen_3_8b_fp8mixed), which is no longer on disk or on the NAS. The matched 4B
+# pair is indistinguishable at 32-48px icon size.
+FLUX_UNET = "flux-2-klein-4b-fp8.safetensors"
+FLUX_CLIP = "qwen_3_4b_fp8_mixed.safetensors"
 FLUX_CLIP_TYPE = "flux2"
 FLUX_VAE = "flux2-vae.safetensors"
 
