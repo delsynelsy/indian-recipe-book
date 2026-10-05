@@ -1,7 +1,7 @@
 """ComfyUI image-gen client for Indian recipe cards.
 
 Backends:
-  flux2   - Flux2 Klein 9B fp8 (recommended). Slow on RTX 3070 8GB but produces
+  flux2   - Flux2 Klein 4B fp8 (recommended). Slow on RTX 3070 8GB but produces
             clean watercolor compositions. Run ComfyUI with --lowvram.
   z-image - Z-Image Turbo fp8 fallback (~8 steps, fast). For dev iteration or
             when Flux2 OOMs.
@@ -48,11 +48,13 @@ BACKEND = os.environ.get("IMG_BACKEND", "flux2")
 # height:242px, .card-img object-fit:cover). Generate at 3:2 to minimise crop
 # waste and target ~2x display density so it looks sharp on HiDPI screens.
 # 1152x768 = 3:2, divisible by 64 (Flux2 latent multiple), ~884k pixels.
+# ponytail: heroes up to 2026-05 used the 9B pair (flux-2-klein-9b-fp8 +
+# qwen_3_8b_fp8mixed), no longer on disk or on the NAS; the 4B pair is matched.
 @dataclass(frozen=True)
 class FluxFoodPreset:
-    unet: str = "flux-2-klein-9b-fp8.safetensors"
+    unet: str = "flux-2-klein-4b-fp8.safetensors"
     weight_dtype: str = "default"
-    clip_name: str = "qwen_3_8b_fp8mixed.safetensors"
+    clip_name: str = "qwen_3_4b_fp8_mixed.safetensors"
     clip_type: str = "flux2"
     vae: str = "flux2-vae.safetensors"
     width: int = 1152
@@ -91,7 +93,7 @@ def _seed_for_recipe(recipe_id: str) -> int:
 
 
 def _build_flux_workflow(positive: str, negative: str, seed: int) -> dict[str, Any]:
-    """Flux2 Klein 9B txt2img graph. Negative is zeroed-out conditioning per
+    """Flux2 Klein txt2img graph. Negative is zeroed-out conditioning per
     distilled-flux best practice, then a second pass adds the real negative -
     but Flux2 fp8 distill prefers ConditioningZeroOut, so we mirror inburgeren
     and pass negative as zeroed. The hard negative tokens are added to the

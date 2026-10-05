@@ -10,6 +10,7 @@ Usage:
   python generate.py plan             # analyse meal plan feasibility
 """
 
+import hashlib
 import re
 import shutil
 import sys
@@ -48,11 +49,14 @@ IMAGES_DIR = ROOT / "images"
 
 
 def _swap_generated_images(recipes: list) -> None:
-    """If images/<id>.webp exists, point Recipe.image.src at it."""
+    """If images/<id>.webp exists, point Recipe.image.src at it. The content
+    hash in the query busts browser + Cloudflare caches when a hero is
+    regenerated under the same name."""
     for r in recipes:
         webp = IMAGES_DIR / f"{r.id}.webp"
         if webp.exists() and webp.stat().st_size > 4096:
-            r.image.src = f"images/{r.id}.webp"
+            digest = hashlib.md5(webp.read_bytes()).hexdigest()[:8]
+            r.image.src = f"images/{r.id}.webp?v={digest}"
 
 
 def _sync_assets(output_dir: Path) -> None:
