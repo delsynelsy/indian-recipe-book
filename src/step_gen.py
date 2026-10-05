@@ -10,7 +10,7 @@ Pipeline mirrors src/ingredient_gen.py:
      and emits a JSON {positive, negative, scene_summary} watercolor prompt
      for a single-action vignette (hands/utensils performing the action with
      the actual food in-frame).
-  2. Flux2 Klein 9B fp8 renders 256x256 via ComfyUI HTTP API.
+  2. Flux2 Klein 4B fp8 renders 256x256 via ComfyUI HTTP API.
   3. Output webp lands at /mnt/nas/recipe-book/assets/steps/<slug>.webp where
      the existing nginx + Cloudflare tunnel serves it publicly at
      https://images.mohammadasjad.com/steps/<slug>.webp.
