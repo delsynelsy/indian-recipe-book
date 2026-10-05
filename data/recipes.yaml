@@ -1198,7 +1198,7 @@ recipes:
       carbs: 22
       fat: 8
     image:
-      src: "https://images.mohammadasjad.com/hero/soya_masala.webp"
+      src: "https://images.mohammadasjad.com/hero/soya_masala.webp?v=2"
       css_class: img-soya-masala
     highlight_ingredients:
       - Soja texturizada

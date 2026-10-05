@@ -72,8 +72,10 @@ STEP_CFG = 1.0
 STEP_SAMPLER = "euler"
 STEP_SCHEDULER = "simple"
 
-FLUX_UNET = "flux-2-klein-9b-fp8.safetensors"
-FLUX_CLIP = "qwen_3_8b_fp8mixed.safetensors"
+# ponytail: the 224 existing steps used the 9B pair (flux-2-klein-9b-fp8 +
+# qwen_3_8b_fp8mixed), no longer on disk or on the NAS; the 4B pair is matched.
+FLUX_UNET = "flux-2-klein-4b-fp8.safetensors"
+FLUX_CLIP = "qwen_3_4b_fp8_mixed.safetensors"
 FLUX_CLIP_TYPE = "flux2"
 FLUX_VAE = "flux2-vae.safetensors"
 
