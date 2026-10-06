@@ -3,6 +3,7 @@
 #
 #   recipe-assets :8182 -> https://images.mohammadasjad.com   (image CDN)
 #   recipe-site   :8183 -> https://recipes.mohammadasjad.com  (built output/)
+#   recipe-api    (internal) -> recipes.mohammadasjad.com/api/ via site.conf proxy
 #
 # Both are published through the "Portfolio" Cloudflare tunnel; its cloudflared
 # runs on the NAS with host networking, so ingress targets http://localhost:<port>.
@@ -19,6 +20,28 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     healthcheck:
       test: ["CMD-SHELL", "wget --spider -q http://localhost/healthz || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  recipe-api:
+    build: ./api
+    container_name: recipe-api
+    restart: unless-stopped
+    env_file: .env
+    expose:
+      - "8000"
+    volumes:
+      - /volume1/projects/recipe-book/api-data:/data
+    environment:
+      - DB_PATH=/data/recipes.db
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://localhost:8000/api/healthz')"]
       interval: 30s
       timeout: 5s
       retries: 3

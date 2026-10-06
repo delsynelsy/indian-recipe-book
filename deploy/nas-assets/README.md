@@ -43,6 +43,34 @@ Gotchas:
   see. Cloudflare's edge still honours the origin value (a CDN 404 expires
   after 60s).
 
+## Deploy the API (recipe-api)
+
+The API serves at https://recipes.mohammadasjad.com/api/ through the
+recipe-site nginx `/api/` proxy. No Cloudflare changes: same hostname.
+
+```bash
+# once: data dir as mohammad (root-owned dirs break later) + env file
+ssh nas-bitcorp 'mkdir -p /volume1/projects/recipe-book/api-data'
+ssh -t nas-bitcorp 'cd /volume1/projects/recipe-book/deploy && vim .env'  # RECIPE_EMAIL / RECIPE_PASSWORD, then chmod 600 .env
+
+# ship code + config, validate nginx config, build on the NAS, bring it up
+tar czf - -C deploy/nas-assets docker-compose.yml nginx.conf site.conf api   | ssh nas-bitcorp 'tar xzf - -C /volume1/projects/recipe-book/deploy'
+ssh nas-bitcorp 'cd /volume1/projects/recipe-book/deploy   && /usr/local/bin/docker run --rm -v "$PWD/site.conf:/etc/nginx/conf.d/default.conf:ro" nginx:1.27-alpine nginx -t   && /usr/local/bin/docker compose build recipe-api   && /usr/local/bin/docker compose up -d   && /usr/local/bin/docker compose restart recipe-site'
+
+# verify through the tunnel
+curl -fsS https://recipes.mohammadasjad.com/api/healthz
+```
+
+Notes:
+- `restart recipe-site` is required: site.conf is a single-file bind mount
+  and tar gave it a new inode (same gotcha as above).
+- The account is seeded from `.env` at first boot (empty DB). Rotate the
+  password with:
+  `/usr/local/bin/docker exec -it recipe-api python /app/main.py setpass`
+- API downtime only 502s `/api/`; the static site is unaffected.
+- Local tests: `deploy/nas-assets/api/test_main.py` with fastapi/httpx/
+  argon2-cffi installed (see file docstring).
+
 ## Cloudflare (one-time, done 2026-10-05)
 
 The Portfolio tunnel `ba4ddab0-d60f-4c6b-b243-2789d65c9300` (account
