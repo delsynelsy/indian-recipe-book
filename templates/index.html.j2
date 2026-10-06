@@ -538,6 +538,31 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
 .macro-total{margin-top:.45rem;font-size:.8rem;color:var(--t2);text-align:center}
 .ingredient-unscaled{opacity:.55}
 .adjust-hint{font-size:.72rem;color:var(--t2);margin-top:.45rem;line-height:1.35}
+
+/* ── Login overlay + notes box (WP4) ───────────────────────────── */
+.login-overlay{position:fixed;inset:0;z-index:1200;display:none;align-items:center;
+  justify-content:center;background:rgba(30,20,10,.55)}
+.login-overlay.open{display:flex}
+.login-panel{width:min(92vw,340px);background:var(--modal-panel);border:1px solid var(--bd);
+  border-radius:14px;padding:1.4rem 1.5rem;box-shadow:0 18px 60px var(--sh)}
+.login-panel h3{margin:0 0 1rem;font-size:1.05rem;color:var(--t1)}
+.login-panel input{width:100%;box-sizing:border-box;margin-bottom:.7rem;border:1px solid var(--bd);
+  border-radius:8px;background:var(--card);color:var(--t1);padding:.5rem .7rem;font-size:.9rem}
+.login-err{color:#a33;font-size:.8rem;min-height:1.1em;margin-bottom:.5rem}
+.login-btn,.login-cancel{width:100%;padding:.55rem;border-radius:8px;cursor:pointer;
+  font-size:.9rem;margin-top:.35rem}
+.login-btn{border:1px solid var(--a1);background:var(--a1);color:#fff}
+.login-cancel{border:1px solid var(--bd);background:transparent;color:var(--t2)}
+.notes-box{margin-top:1.6rem;border:1px dashed var(--bd);border-radius:10px;padding:.9rem}
+.notes-box h4{margin:0 0 .5rem;font-size:.85rem;color:var(--t1)}
+.notes-box textarea{width:100%;box-sizing:border-box;min-height:90px;border:1px solid var(--bd);
+  border-radius:8px;background:var(--card);color:var(--t1);padding:.55rem .65rem;
+  font-size:.88rem;font-family:inherit;resize:vertical}
+.notes-actions{display:flex;align-items:center;gap:.6rem;margin-top:.5rem}
+.notes-save{border:1px solid var(--a1);background:var(--a1);color:#fff;border-radius:8px;
+  padding:.35rem .9rem;cursor:pointer;font-size:.82rem}
+.notes-state{font-size:.78rem;color:var(--t2)}
+.login-btn-wrap{display:inline-block}
 </style>
 </head>
 <body>
@@ -718,6 +743,7 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
   <button class="tbtn on" onclick="setT('sepia',this)">◈ Sepia Dorado</button>
   <button class="tbtn"    onclick="setT('sage',this)">◈ Verde Salvia</button>
   <button class="tbtn"    onclick="setT('indigo',this)">◈ Azul Índigo</button>
+  <button class="tbtn login-btn-wrap" id="loginBtn" style="display:none" onclick="openLogin()">◈ Iniciar sesión</button>
 </div>
 <nav class="section-nav">
   <button class="snav-btn on" onclick="showSection('recipes',this)">◈ Recetario</button>
@@ -820,6 +846,18 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
       <button class="rc-tb-btn accent" onclick="printCard()">⊕ Imprimir</button>
     </div>
     <div class="rc-scroll" id="rc-scroll"></div>
+  </div>
+</div>
+
+<!-- ═══ LOGIN OVERLAY ══════════════════════════════════════════ -->
+<div class="login-overlay" id="loginModal" role="dialog" aria-modal="true">
+  <div class="login-panel">
+    <h3>Iniciar sesión</h3>
+    <input id="loginEmail" type="email" placeholder="Correo" autocomplete="username">
+    <input id="loginPass" type="password" placeholder="Contraseña" autocomplete="current-password">
+    <div class="login-err" id="loginErr"></div>
+    <button class="login-btn" onclick="doLogin()">Entrar</button>
+    <button class="login-cancel" onclick="closeLogin()">Cancelar</button>
   </div>
 </div>
 
@@ -1044,7 +1082,7 @@ function buildAdjustPanel(r) {
   const panel = document.getElementById('modalAdjust');
   panel.innerHTML = '';
   const head = el('div', 'adjust-head');
-  append(head, el('span', null, 'Ajustar'), el('span', 'qty-badge', ''));
+  append(head, el('span', null, 'Ajustar' + (_svFromServer ? ' ☁' : '')), el('span', 'qty-badge', ''));
   head.lastChild.id = 'qtyBadge';
   append(panel, head);
 
@@ -1057,7 +1095,9 @@ function buildAdjustPanel(r) {
   const _setTarget = n => {
     n = Math.max(1, Math.min(99, Math.round(n) || r.sBase));
     Scale.target = n; inp.value = String(n);
+    _svFromServer = false;
     _svSave(currentId, n !== r.sBase ? n : null);
+    if (User.email) schedulePutServings(currentId, n);
     renderScaling(r);
   };
   minus.onclick = () => _setTarget((Scale.target || r.sBase) - 1);
@@ -1189,6 +1229,20 @@ function openModal(id) {
 
   buildAdjustPanel(r);
   renderScaling(r);
+  if (User.email) {
+    buildNotesBox(r);
+    _svFromServer = false;
+    personalLoad(id).then(d => {
+      if (currentId !== id || !d) return;
+      const ta = document.getElementById('notesTa');
+      if (ta && d.notes && !ta.value) ta.value = d.notes;
+      if (!d.servings) return;
+      _svFromServer = true;
+      Scale.target = d.servings;
+      buildAdjustPanel(r);
+      renderScaling(r);
+    });
+  }
 
   document.getElementById('recipeModal').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1429,9 +1483,157 @@ function closeCard() {
 
 function printCard() { window.print(); }
 
+
+/* ═══ LOGIN / NOTES / SAVED SERVINGS (WP4) ═════════════════════ */
+const User = { email: null, offline: false };
+const Personal = new Map();      /* id -> {servings, notes} */
+let _svFromServer = false;
+
+async function api(path, opts) {
+  try {
+    const r = await fetch('/api' + path, Object.assign({ credentials: 'same-origin' }, opts));
+    /* 404 = no API behind this origin (static-only serving); 5xx = proxy/app down.
+       Both mean: anonymous site, hide auth UI permanently. */
+    if (r.status === 404 || r.status >= 500) { User.offline = true; return null; }
+    return r;
+  } catch (e) { User.offline = true; return null; }
+}
+
+function renderAuthUI() {
+  const btn = document.getElementById('loginBtn');
+  if (!btn) return;
+  if (User.offline) { btn.style.display = 'none'; return; }
+  btn.style.display = '';
+  btn.textContent = User.email ? '◈ Cerrar sesión' : '◈ Iniciar sesión';
+  btn.title = User.email ? User.email : '';
+  btn.onclick = User.email ? doLogout : openLogin;
+}
+
+function openLogin() {
+  document.getElementById('loginErr').textContent = '';
+  document.getElementById('loginModal').classList.add('open');
+  document.getElementById('loginEmail').focus();
+}
+function closeLogin() {
+  document.getElementById('loginModal').classList.remove('open');
+}
+
+async function doLogin() {
+  const err = document.getElementById('loginErr');
+  err.textContent = '';
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPass').value;
+  if (!email || !password) { err.textContent = 'Introduce correo y contraseña'; return; }
+  const r = await api('/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password }),
+  });
+  if (r && r.ok) {
+    User.email = (await r.json()).email;
+    document.getElementById('loginPass').value = '';
+    closeLogin();
+    renderAuthUI();
+  } else if (r && r.status === 429) {
+    err.textContent = 'Demasiados intentos; espera unos minutos';
+  } else if (r) {
+    err.textContent = 'Credenciales inválidas';
+  } else {
+    err.textContent = 'Servicio no disponible';
+  }
+}
+
+async function doLogout() {
+  await api('/logout', { method: 'POST' });
+  User.email = null;
+  Personal.clear();
+  renderAuthUI();
+  if (document.getElementById('recipeModal').classList.contains('open') && currentId) {
+    const box = document.getElementById('notesBox');
+    if (box) box.style.display = 'none';
+  }
+}
+
+async function personalLoad(id) {
+  if (Personal.has(id)) return Personal.get(id);
+  const r = await api('/recipes/' + id + '/personal');
+  if (r && r.ok) {
+    const d = await r.json();
+    Personal.set(id, d);
+    return d;
+  }
+  return null;
+}
+
+let _putTimer = null;
+function schedulePutServings(id, n) {
+  clearTimeout(_putTimer);
+  _putTimer = setTimeout(async () => {
+    const r = await api('/recipes/' + id + '/personal', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ servings: n }),
+    });
+    if (r && r.ok) {
+      const cur = Personal.get(id) || {};
+      Personal.set(id, Object.assign(cur, { servings: n }));
+    }
+  }, 1000);
+}
+
+function buildNotesBox(r) {
+  const right = document.getElementById('modalRight');
+  const box = el('div', 'notes-box');
+  box.id = 'notesBox';
+  const head = el('h4', null, '✎ Mis notas');
+  const ta = el('textarea');
+  ta.id = 'notesTa';
+  ta.placeholder = 'Tus ajustes personales de esta receta…';
+  const per = Personal.get(currentId);
+  if (per && per.notes) ta.value = per.notes;
+  const actions = el('div', 'notes-actions');
+  const save = el('button', 'notes-save', 'Guardar');
+  const state = el('span', 'notes-state', '');
+  state.id = 'notesState';
+  const _save = async () => {
+    if (!User.email) return;
+    state.textContent = 'Guardando…';
+    const rr = await api('/recipes/' + currentId + '/personal', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ notes: ta.value }),
+    });
+    if (rr && rr.ok) {
+      const cur = Personal.get(currentId) || {};
+      Personal.set(currentId, Object.assign(cur, { notes: ta.value }));
+      state.textContent = 'Guardado ✓';
+    } else {
+      state.textContent = 'Error al guardar';
+    }
+  };
+  save.onclick = _save;
+  ta.onkeydown = e => { if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') _save(); };
+  append(actions, save, state);
+  append(box, head, ta, actions);
+  box.style.display = User.email ? '' : 'none';
+  right.appendChild(box);
+}
+
+/* boot: restore session */
+(async () => {
+  const r = await api('/me');
+  if (r && r.ok) User.email = (await r.json()).email;
+  renderAuthUI();
+})();
+
 document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && document.getElementById('loginModal').classList.contains('open')
+      && document.activeElement && document.activeElement.id === 'loginPass') {
+    doLogin();
+  }
   if (e.key === 'Escape') {
-    if (document.getElementById('previewModal').classList.contains('open')) closePreview();
+    if (document.getElementById('loginModal').classList.contains('open')) closeLogin();
+    else if (document.getElementById('previewModal').classList.contains('open')) closePreview();
     else if (document.getElementById('rc-overlay').classList.contains('open')) closeCard();
     else closeModal();
   }
