@@ -25,6 +25,7 @@ from rich import box
 from src.parser import load_recipes, parse_meal_plan
 from src.generator import generate_html
 from src.macros import validate_all, nutrition_summary, plan_feasibility
+from src.quantities import coverage
 
 ROOT = Path(__file__).parent
 DATA_FILE = ROOT / "data" / "recipes.yaml"
@@ -90,16 +91,46 @@ def _build(output: Path):
 
 @cli.command()
 def validate():
-    """Validate macro totals for all recipes."""
+    """Validate macro totals + ingredient-parse coverage for all recipes."""
     recipes = load_recipes(DATA_FILE)
+    failed = False
+
     issues = validate_all(recipes)
     if issues:
+        failed = True
         console.print("[bold yellow]⚠  Macro warnings:[/]")
         for issue in issues:
             console.print(f"  [yellow]{issue}[/]")
-        sys.exit(1)
     else:
         console.print(f"[bold green]✓[/] All [cyan]{len(recipes)}[/] recipes passed macro validation.")
+
+    cov = coverage(recipes)
+    table = Table(title="Ingredient Parse Coverage", box=box.SIMPLE_HEAVY)
+    table.add_column("Kind", style="bold")
+    table.add_column("Lines", justify="right")
+    for kind in ("unit", "count", "mid", "prose"):
+        table.add_row(kind, str(cov["kinds"].get(kind, 0)))
+    table.add_row("[bold]scalable[/]", f"{cov['scalable']}/{cov['total']}")
+    console.print(table)
+
+    if cov["unmapped"]:
+        failed = True
+        console.print("[bold yellow]⚠  Countable nouns missing from NOUN_PLURAL:[/]")
+        for rid, line in cov["unmapped"]:
+            console.print(f"  [yellow]{rid}: {line}[/]")
+    if cov["bad_servings"]:
+        failed = True
+        for rid in cov["bad_servings"]:
+            console.print(f"  [yellow]⚠  {rid}: unparseable servings base (< 1)[/]")
+    if cov["total"] and cov["scalable"] / cov["total"] < 0.80:
+        failed = True
+        pct = 100 * cov["scalable"] / cov["total"]
+        console.print(f"[yellow]⚠  Scalable coverage {pct:.0f}% below 80% floor[/]")
+    if not failed:
+        console.print("[bold green]✓[/] Ingredient parse coverage OK.")
+
+    if failed:
+        sys.exit(1)
 
 
 @cli.command()
