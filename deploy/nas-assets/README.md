@@ -68,6 +68,10 @@ Notes:
   password with:
   `/usr/local/bin/docker exec -it recipe-api python /app/main.py setpass`
 - API downtime only 502s `/api/`; the static site is unaffected.
+- `.env` stays in the compose env forever (`docker exec recipe-api env`
+  shows it). If that bothers you, blank `RECIPE_PASSWORD` in `.env` after
+  first boot (the seeded hash lives in the DB) and recreate the container.
+- 8-char minimum is enforced by `setpass` only; pick a long seed password.
 - Local tests: `deploy/nas-assets/api/test_main.py` with fastapi/httpx/
   argon2-cffi installed (see file docstring).
 

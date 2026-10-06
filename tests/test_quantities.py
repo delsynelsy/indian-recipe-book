@@ -78,7 +78,7 @@ class TestParseIngredient(unittest.TestCase):
         self.assertEqual(d["kind"], "count")
         self.assertEqual(d["q"], (2, 1))
         self.assertEqual(d["u1"], "")
-        self.assertEqual(d["r1"], "tomate medianos triturados")
+        self.assertEqual(d["r1"], "tomate mediano triturado")
         self.assertEqual(d["rn"], "tomates medianos triturados")
 
     def test_count_fraction_noun(self):
@@ -86,7 +86,7 @@ class TestParseIngredient(unittest.TestCase):
         self.assertEqual(d["kind"], "count")
         self.assertEqual(d["q"], (1, 2))
         self.assertEqual(d["r1"], "cebolla finamente picada")
-        self.assertEqual(d["rn"], "cebollas finamente picada")
+        self.assertEqual(d["rn"], "cebollas finamente picadas")
 
     def test_count_range(self):
         d = parse_ingredient("8–10 hojas de curry")
@@ -190,6 +190,50 @@ class TestRecipeToJs(unittest.TestCase):
         # existing keys unchanged
         self.assertEqual(js["servings"], "2 porciones (4 chillas)")
         self.assertEqual(js["ingredients"], ["1/2 cdta sal"])
+
+
+
+class TestAdjectiveAgreement(unittest.TestCase):
+    """Review fix I1: post-noun adjectives agree with displayed number."""
+
+    def test_singular_source_pluralizes_adjectives(self):
+        d = parse_ingredient("1 cebolla mediana picada")
+        self.assertEqual(d["rn"], "cebollas medianas picadas")
+        self.assertEqual(d["r1"], "cebolla mediana picada")
+
+    def test_plural_source_singularizes_adjectives(self):
+        d = parse_ingredient("2 tomates medianos triturados")
+        self.assertEqual(d["r1"], "tomate mediano triturado")
+        self.assertEqual(d["rn"], "tomates medianos triturados")
+
+    def test_mente_adverbs_pass_through(self):
+        d = parse_ingredient("1/2 cebolla finamente picada")
+        self.assertEqual(d["rn"], "cebollas finamente picadas")
+
+    def test_muy_and_sin_skipped_not_stopped(self):
+        d = parse_ingredient("1 cebolla grande muy finamente picada")
+        self.assertEqual(d["rn"], "cebollas grandes muy finamente picadas")
+        d = parse_ingredient("2 dátiles sin hueso picados (o 1 cdta miel)")
+        self.assertEqual(d["r1"], "dátil sin hueso picado (o 1 cdta miel)")
+        self.assertEqual(d["rn"], "dátiles sin hueso picados (o 1 cdta miel)")
+
+    def test_conjunctions_o_y_never_transformed(self):
+        d = parse_ingredient("1 pimiento verde o rojo en cubos")
+        self.assertEqual(d["rn"], "pimientos verdes o rojos en cubos")
+
+    def test_parens_never_touched(self):
+        d = parse_ingredient("1 chile verde picado (opcional)")
+        self.assertEqual(d["rn"], "chiles verdes picados (opcional)")
+
+    def test_de_en_stop_the_streak(self):
+        d = parse_ingredient("8–10 hojas de curry")
+        self.assertEqual(d["rn"], "hojas de curry")
+        d = parse_ingredient("1 zanahoria pequeña en cubos")
+        self.assertEqual(d["rn"], "zanahorias pequeñas en cubos")
+
+    def test_noun_tail_blocklist_canela(self):
+        d = parse_ingredient("1 rama canela")
+        self.assertEqual(d["rn"], "ramas canela")
 
 
 if __name__ == "__main__":

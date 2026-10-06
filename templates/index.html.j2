@@ -982,9 +982,10 @@ function frLimitDen(f, maxD) {
 }
 function frFmt(f) {
   if (f[1] === 1) return String(f[0]);
-  const w = Math.floor(Math.abs(f[0]) / f[1]) * (f[0] < 0 ? -1 : 1);
+  const sign = f[0] < 0 ? '-' : '';
+  const w = Math.floor(Math.abs(f[0]) / f[1]);
   const r = Math.abs(f[0]) % f[1];
-  return (w !== 0 ? w + ' ' : '') + r + '/' + f[1];
+  return sign + (w !== 0 ? w + ' ' : '') + r + '/' + f[1];
 }
 function parseHave(str) {
   const t = String(str || '').trim();
@@ -993,7 +994,9 @@ function parseHave(str) {
   m = t.match(/^(\d+)[.,](\d+)$/) || t.match(/^(\d+)$/);
   if (!m) return null;
   if (m[2] === undefined) return +m[1] > 0 ? [+m[1], 1] : null;
-  const scaled = frNorm(+(m[1] + '.' + m[2]) * Math.pow(10, m[2].length), Math.pow(10, m[2].length));
+  /* integer string concat keeps decimals exact: 2.05 -> 205/100 -> 41/20 */
+  const den = Math.pow(10, m[2].length);
+  const scaled = frNorm(+(m[1] + m[2]), den);
   return scaled[0] > 0 ? scaled : null;
 }
 function ingLineText(ing, orig, F) {
@@ -1135,7 +1138,9 @@ function buildAdjustPanel(r) {
     const reset = el('button', 'adjust-reset', 'Restablecer');
     reset.onclick = () => {
       Scale.target = r.sBase; Scale.driverIdx = null; Scale.have = null;
+      _svFromServer = false;
       _svSave(currentId, null);
+      if (User.email) schedulePutServings(currentId, r.sBase);
       buildAdjustPanel(r); renderScaling(r);
     };
     append(row2, el('label', null, 'Despensa'), sel, tengo, reset);
@@ -1565,10 +1570,10 @@ async function personalLoad(id) {
   return null;
 }
 
-let _putTimer = null;
+const _putTimers = {};  /* per-recipe: a quick look at two recipes must not cancel (M8) */
 function schedulePutServings(id, n) {
-  clearTimeout(_putTimer);
-  _putTimer = setTimeout(async () => {
+  clearTimeout(_putTimers[id]);
+  _putTimers[id] = setTimeout(async () => {
     const r = await api('/recipes/' + id + '/personal', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },

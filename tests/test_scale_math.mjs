@@ -28,12 +28,16 @@ assert.equal(api.frFmt([1, 2]), '1/2');
 assert.equal(api.frFmt([5, 2]), '2 1/2');
 assert.equal(api.frFmt([4, 1]), '4');
 assert.equal(api.frFmt([0, 1]), '0');
+assert.equal(api.frFmt([-1, 2]), '-1/2');
+assert.equal(api.frFmt([-5, 2]), '-2 1/2');
 
 // parseHave: accepts int, decimal, fraction; rejects junk
 assert.deepEqual(api.parseHave('2'), [2, 1]);
 assert.deepEqual(api.parseHave('1.5'), [3, 2]);
 assert.deepEqual(api.parseHave('1,5'), [3, 2]);
 assert.deepEqual(api.parseHave('1/2'), [1, 2]);
+assert.deepEqual(api.parseHave('2.05'), [41, 20]);  // exact, no float garbage
+assert.deepEqual(api.parseHave('0.25'), [1, 4]);
 assert.equal(api.parseHave(''), null);
 assert.equal(api.parseHave('abc'), null);
 assert.equal(api.parseHave('0'), null);

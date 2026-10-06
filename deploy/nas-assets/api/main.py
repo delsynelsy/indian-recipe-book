@@ -166,15 +166,19 @@ def login(body: LoginIn, response: Response):
 
 
 @app.post("/api/logout")
-def logout(request: Request, response: Response):
+def logout(request: Request):
     token = request.cookies.get(COOKIE)
     if token:
         with closing(_db()) as conn, conn:
             conn.execute("DELETE FROM sessions WHERE token_hash = ?",
                          (hashlib.sha256(token.encode()).hexdigest(),))
-    response.delete_cookie(COOKIE, path="/api", secure=True, httponly=True,
-                           samesite="lax")
-    return Response(status_code=204)
+    # Return THIS response: a separately-constructed Response() would drop
+    # the clearing Set-Cookie header (FastAPI only merges headers from the
+    # declared parameter on normal returns).
+    resp = Response(status_code=204)
+    resp.delete_cookie(COOKIE, path="/api", secure=True, httponly=True,
+                       samesite="lax")
+    return resp
 
 
 @app.get("/api/me")
@@ -227,7 +231,9 @@ def _setpass() -> None:
             sys.exit("password too short (min 8)")
         conn.execute("UPDATE users SET pw_hash = ? WHERE id = ?",
                      (ph.hash(pw), user["id"]))
-    print("password updated")
+        with closing(_db()) as c2, c2:
+            c2.execute("DELETE FROM sessions")
+    print("password updated (sessions invalidated)")
 
 
 if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "setpass":

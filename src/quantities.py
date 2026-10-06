@@ -29,7 +29,7 @@ _LEAD = re.compile(rf"^{_AMT}(?:\s*[–—-]\s*{_AMT})?\s+(\S+)\s*(.*)$")
 _MID = re.compile(rf"^(.*?\s+){_AMT}\s+(\S+)(?:\s+(.*))?$")
 
 # Unit vocabulary as it appears in recipes.yaml (abbreviations included).
-_UNIT_RE = re.compile(r"cdtas?|cdas?|tazas?|kg|g|ml|l|dientes(?:\s+de)?")
+_UNIT_RE = re.compile(r"cdtas?|cdas?|tazas?|kg|g|ml|l|dientes")
 
 # (display singular, display plural) pairs. Bare countable nouns that appear
 # after an amount without a unit word; generate.py validate fails when data
@@ -101,20 +101,77 @@ def _frac(text: str) -> tuple[int, int]:
     return (f.numerator, f.denominator)
 
 
+# Post-noun tail vocabulary: SKIP words pass through untransformed and the
+# adjective scan continues; STOP words end the streak (everything after is
+# verbatim in both numbers). "canela" is stopped, not agreed: in "rama
+# canela" it is a noun, and pluralizing it would be wrong Spanish.
+_TAIL_SKIP = {"muy", "y", "o", "sin"}
+_TAIL_STOP = {"de", "en", "canela", "cardamomo"}
+_AGREE_SING = ("a", "o", "e")     # singular adjective endings
+_AGREE_PLUR = ("as", "os", "es")  # plural adjective endings
+
+
+def _agree_tail(tail: str) -> tuple[str, str]:
+    """(singular-agreed, plural-agreed) tail.
+
+    Adjectives in the streak right after the noun agree with its number;
+    -mente adverbs, muy/y/o and paren segments pass through; "sin" also
+    shields the noun after it; de/en and any non-agreeing word stop the
+    streak (rest verbatim in both numbers).
+    """
+    words = tail.split()
+    sing: list[str] = []
+    plur: list[str] = []
+    depth = 0
+    skip_next = 0
+    n_agreed = 0
+    i = 0
+    while i < len(words):
+        w = words[i]
+        verbatim = depth > 0 or "(" in w or w in _TAIL_SKIP \
+            or w.endswith("mente") or not w.isalpha() or len(w) < 2 \
+            or skip_next > 0
+        if w == "sin":
+            skip_next = 2  # this word + the noun after "sin" stay verbatim
+        skip_next = max(0, skip_next - 1)
+        if w in _TAIL_STOP:
+            # streak ends: this word and everything after is verbatim
+            sing.extend(words[i:])
+            plur.extend(words[i:])
+            break
+        if verbatim or n_agreed >= 4 \
+                or not (w.endswith(_AGREE_PLUR) or w.endswith(_AGREE_SING)):
+            sing.append(w)
+            plur.append(w)
+        elif w.endswith(_AGREE_PLUR):   # source plural -> singular side strips s
+            sing.append(w[:-1])
+            plur.append(w)
+            n_agreed += 1
+        else:                            # source singular -> plural side adds s
+            sing.append(w)
+            plur.append(w + "s")
+            n_agreed += 1
+        depth += w.count("(") - w.count(")")
+        i += 1
+    return (" ".join(sing), " ".join(plur))
+
+
 def _swap_first_word(rest: str) -> tuple[str, str] | None:
-    """(singular-led, plural-led) rest with only the first word swapped."""
+    """(singular-led, plural-led) rest: noun swapped + agreeing adjectives."""
     parts = rest.split(None, 1)
     if not parts:
         return None
     first = parts[0]
-    tail = f" {parts[1]}" if len(parts) > 1 else ""
     other = _noun_other(first)
     if other is None:
         return None
     # Work out which of the two forms is the plural.
     plural = first if NOUN_PLURAL.get(first) == other and first.endswith("s") else other
     singular = other if plural == first else first
-    return (singular + tail, plural + tail)
+    if len(parts) > 1:
+        t_sing, t_plur = _agree_tail(parts[1])
+        return (f"{singular} {t_sing}", f"{plural} {t_plur}")
+    return (singular, plural)
 
 
 def parse_servings(text: str) -> tuple[int, str]:
@@ -124,11 +181,10 @@ def parse_servings(text: str) -> tuple[int, str]:
         return (2, "porciones")
     n = int(m.group(1))
     other = _noun_other(m.group(2))
-    unit = m.group(2) if other is None else (other if m.group(2).endswith("s") or not other.endswith("s") else other)
-    # Normalize to the plural display form when known.
-    if other is not None:
-        unit = m.group(2) if m.group(2).endswith("s") else other
-    return (n, unit)
+    if other is None:
+        return (n, m.group(2))
+    # normalize to the plural display form when known
+    return (n, m.group(2) if m.group(2).endswith("s") else other)
 
 
 def parse_ingredient(line: str) -> dict:
@@ -144,7 +200,7 @@ def parse_ingredient(line: str) -> dict:
         q2 = _frac(a2) if a2 else None
         um = _UNIT_RE.fullmatch(word)
         if um:
-            canon = _UNIT_CANON[word.split()[0]]
+            canon = _UNIT_CANON[word]
             u1, un = _UNIT_FORMS[canon]
             if canon == "dientes" and rest.lower().startswith("de "):
                 rest = rest[3:]  # client rejoins with " de "
@@ -167,7 +223,7 @@ def parse_ingredient(line: str) -> dict:
         tail = tail or ""
         um = _UNIT_RE.fullmatch(word)
         if um:
-            canon = _UNIT_CANON[word.split()[0]]
+            canon = _UNIT_CANON[word]
             u1, un = _UNIT_FORMS[canon]
             if canon == "dientes" and tail.lower().startswith("de "):
                 tail = tail[3:]

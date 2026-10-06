@@ -115,8 +115,13 @@ class ApiTest(unittest.TestCase):
         self.assertEqual(
             self.c.put("/api/recipes/chilla/personal", json={"notes": "x" * 5001}).status_code, 422)
 
-        # logout kills the session
-        self.assertEqual(self.c.post("/api/logout").status_code, 204)
+        # logout kills the session AND clears the cookie (review I2:
+        # the clearing Set-Cookie header must actually be sent)
+        r_out = self.c.post("/api/logout")
+        self.assertEqual(r_out.status_code, 204)
+        sc = r_out.headers.get("set-cookie", "").lower()
+        self.assertIn("rsid=", sc)
+        self.assertIn("max-age=0", sc)
         self.assertEqual(self.c.get("/api/me").status_code, 401)
 
     def test_session_token_stored_hashed(self):
