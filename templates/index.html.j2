@@ -515,6 +515,29 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
   .plan-container table{font-size:.78rem}
   .plan-container thead th,.plan-container td{padding:.3rem .4rem}
 }
+
+/* ── Ajustar panel (servings & pantry scaling) ─────────────────── */
+.adjust-panel{margin:.9rem 0 0;padding:.7rem .85rem;border:1px solid var(--bd);
+  border-radius:10px;background:var(--step-bg)}
+.adjust-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+  font-size:.8rem;font-weight:600;color:var(--t1);letter-spacing:.07em;text-transform:uppercase}
+.qty-badge{font-size:.72rem;color:var(--a1);border:1px solid var(--bd);border-radius:999px;
+  padding:.05rem .5rem;letter-spacing:0;text-transform:none}
+.adjust-row{display:flex;align-items:center;gap:.45rem;margin-top:.55rem;flex-wrap:wrap}
+.adjust-row label{font-size:.8rem;color:var(--t2);min-width:4.6rem}
+.stepper-btn{width:1.7rem;height:1.7rem;border-radius:8px;border:1px solid var(--bd);
+  background:var(--card);color:var(--t1);font-size:1rem;cursor:pointer;line-height:1;padding:0}
+.stepper-btn:hover{border-color:var(--a1)}
+.adjust-input,.tengo-input,.despensa-select{border:1px solid var(--bd);border-radius:8px;
+  background:var(--card);color:var(--t1);padding:.28rem .5rem;font-size:.85rem}
+.adjust-input{width:3.4rem;text-align:center}
+.despensa-select{flex:1;min-width:9rem}
+.tengo-input{width:5.4rem;text-align:center}
+.adjust-reset{margin-left:auto;border:none;background:none;color:var(--t2);cursor:pointer;
+  font-size:.75rem;text-decoration:underline;padding:0}
+.macro-total{margin-top:.45rem;font-size:.8rem;color:var(--t2);text-align:center}
+.ingredient-unscaled{opacity:.55}
+.adjust-hint{font-size:.72rem;color:var(--t2);margin-top:.45rem;line-height:1.35}
 </style>
 </head>
 <body>
@@ -767,6 +790,8 @@ main{max-width:1140px;margin:2.5rem auto;padding:0 1.5rem}
           <div class="modal-tags" id="modalTags"></div>
           <div class="modal-meta-row" id="modalMeta"></div>
           <div class="macro-grid" id="modalMacros"></div>
+          <div class="adjust-panel" id="modalAdjust"></div>
+          <div class="macro-total" id="modalMacroTotal"></div>
         </div>
       </div>
       <div class="modal-right" id="modalRight"></div>
@@ -899,12 +924,198 @@ function buildIngredient(text) {
   return li;
 }
 
+/* ── Fraction helpers (pure, unit-tested via tests/test_scale_math.mjs) ── */
+function _gcd(a, b) { a = Math.abs(a); b = Math.abs(b); while (b) { const t = a % b; a = b; b = t; } return a || 1; }
+function frNorm(n, d) { if (d < 0) { n = -n; d = -d; } const g = _gcd(n, d); return [n / g, d / g]; }
+function frMul(a, b) { return frNorm(a[0] * b[0], a[1] * b[1]); }
+function frNum(a) { return a[0] / a[1]; }
+function frLimitDen(f, maxD) {
+  /* Cooking denominators only: 1,2,3,4,6,8 (halves..eighths, no fifths/sevenths). */
+  const DENS = [1, 2, 3, 4, 6, 8].filter(d => d <= maxD);
+  const x = frNum(f);
+  let bestN = Math.round(x), bestD = 1, bestErr = Math.abs(x - bestN);
+  DENS.forEach(d => {
+    const n = Math.round(x * d);
+    const err = Math.abs(x - n / d);
+    if (err < bestErr - 1e-12) { bestErr = err; bestN = n; bestD = d; }
+  });
+  if (x > 0 && bestN === 0) return frNorm(1, DENS[DENS.length - 1]);  /* clamp tiny, never 0 */
+  return frNorm(bestN, bestD);
+}
+function frFmt(f) {
+  if (f[1] === 1) return String(f[0]);
+  const w = Math.floor(Math.abs(f[0]) / f[1]) * (f[0] < 0 ? -1 : 1);
+  const r = Math.abs(f[0]) % f[1];
+  return (w !== 0 ? w + ' ' : '') + r + '/' + f[1];
+}
+function parseHave(str) {
+  const t = String(str || '').trim();
+  let m = t.match(/^(\d+)\s*\/\s*(\d+)$/);
+  if (m && +m[1] > 0 && +m[2] > 0) return frNorm(+m[1], +m[2]);
+  m = t.match(/^(\d+)[.,](\d+)$/) || t.match(/^(\d+)$/);
+  if (!m) return null;
+  if (m[2] === undefined) return +m[1] > 0 ? [+m[1], 1] : null;
+  const scaled = frNorm(+(m[1] + '.' + m[2]) * Math.pow(10, m[2].length), Math.pow(10, m[2].length));
+  return scaled[0] > 0 ? scaled : null;
+}
+function ingLineText(ing, orig, F) {
+  if (!ing || !ing.q || F[0] === F[1]) return orig;
+  const v = frMul(ing.q, F);
+  const v2 = ing.q2 ? frMul(ing.q2, F) : null;
+  const lv = frLimitDen(v, 8), lv2 = v2 ? frLimitDen(v2, 8) : null;
+  const approx = frNum(lv) !== frNum(v) || (lv2 && frNum(lv2) !== frNum(v2));
+  const one = frNum(lv) === 1;
+  const unit = one ? ing.u1 : ing.un;
+  const rest = one ? ing.r1 : ing.rn;
+  let str = frFmt(lv);
+  if (lv2) str += '–' + frFmt(lv2);
+  if (unit) {
+    str += ' ' + unit;
+    if ((unit === 'diente' || unit === 'dientes') && rest) str += ' de';
+  }
+  if (rest) str += ' ' + rest;
+  return (approx ? '≈ ' : '') + (ing.pre || '') + str;
+}
+/* ── End fraction helpers ── */
+
+/* ═══ AJUSTAR (servings + pantry scaling) ═══════════════════════ */
+const Scale = { target: null, driverIdx: null, have: null };
+
+function _svKey(id) { return 'rs.sv.' + id; }
+function _svLoad(id) {
+  try { const v = parseInt(localStorage.getItem(_svKey(id)), 10); return (v >= 1 && v <= 99) ? v : null; }
+  catch (e) { return null; }
+}
+function _svSave(id, n) { try { n === null ? localStorage.removeItem(_svKey(id)) : localStorage.setItem(_svKey(id), String(n)); } catch (e) {} }
+
+function scalePantryF(r) {
+  if (Scale.driverIdx === null || !Scale.have) return [1, 1];
+  const q = r.ing[Scale.driverIdx] && r.ing[Scale.driverIdx].q;
+  if (!q) return [1, 1];
+  return frNorm(Scale.have[0] * q[1], Scale.have[1] * q[0]);
+}
+function scaleTotalF(r) {
+  return frMul([Scale.target || r.sBase, r.sBase], scalePantryF(r));
+}
+function _macroVals(r) {
+  const pF = scalePantryF(r);
+  const approx = pF[0] !== pF[1];
+  const m = v => Math.round(v * frNum(pF));
+  return {
+    cells: [
+      [(approx ? '≈ ' : '') + m(r.kcal), 'kcal'],
+      [(approx ? '≈ ' : '') + m(r.p) + 'g', 'proteína'],
+      [(approx ? '≈ ' : '') + m(r.c) + 'g', 'carbos'],
+      [(approx ? '≈ ' : '') + m(r.g) + 'g', 'grasas'],
+    ],
+    total: (Scale.target !== r.sBase)
+      ? (approx ? '≈ ' : '') + Math.round(r.kcal * Scale.target * frNum(pF)) + ' kcal en total'
+      : '',
+  };
+}
+
+function renderScaling(r) {
+  const F = scaleTotalF(r);
+  /* ingredients list */
+  document.querySelectorAll('#modalIngList .ingredient-item').forEach(li => {
+    const i = +li.dataset.i;
+    const ing = r.ing[i];
+    const span = li.querySelector('span');
+    if (span) span.textContent = ingLineText(ing, r.ingredients[i], F);
+    const unscalable = !ing || !ing.q;
+    li.classList.toggle('ingredient-unscaled', unscalable);
+    li.title = unscalable ? 'Cantidad al gusto - no se ajusta' : '';
+  });
+  /* macros + total */
+  const macroEl = document.getElementById('modalMacros');
+  macroEl.innerHTML = '';
+  _macroVals(r).cells.forEach(([v, l]) => macroEl.appendChild(buildMacroCell(v, l)));
+  document.getElementById('modalMacroTotal').textContent = _macroVals(r).total;
+  /* meta servings row */
+  const metaEl = document.getElementById('modalMeta');
+  const svItem = metaEl.children[2] && metaEl.children[2].lastChild;
+  if (svItem) svItem.textContent = Scale.target !== r.sBase ? Scale.target + ' ' + r.sUnit : r.servings;
+  /* qty badge */
+  const badge = document.getElementById('qtyBadge');
+  if (badge) badge.textContent = F[0] !== F[1] ? '× ' + frFmt(frLimitDen(F, 8)) : '';
+}
+
+function buildAdjustPanel(r) {
+  const panel = document.getElementById('modalAdjust');
+  panel.innerHTML = '';
+  const head = el('div', 'adjust-head');
+  append(head, el('span', null, 'Ajustar'), el('span', 'qty-badge', ''));
+  head.lastChild.id = 'qtyBadge';
+  append(panel, head);
+
+  /* servings stepper */
+  const row = el('div', 'adjust-row');
+  const minus = el('button', 'stepper-btn', '−');
+  const inp = el('input', 'adjust-input');
+  inp.type = 'number'; inp.min = '1'; inp.max = '99'; inp.value = String(Scale.target || r.sBase);
+  const plus = el('button', 'stepper-btn', '+');
+  const _setTarget = n => {
+    n = Math.max(1, Math.min(99, Math.round(n) || r.sBase));
+    Scale.target = n; inp.value = String(n);
+    _svSave(currentId, n !== r.sBase ? n : null);
+    renderScaling(r);
+  };
+  minus.onclick = () => _setTarget((Scale.target || r.sBase) - 1);
+  plus.onclick = () => _setTarget((Scale.target || r.sBase) + 1);
+  inp.onchange = () => _setTarget(parseInt(inp.value, 10));
+  append(row, el('label', null, 'Porciones'), minus, inp, plus);
+
+  /* despensa: one driver line + tengo amount */
+  const scalable = r.ing.map((g, i) => ({ g, i })).filter(x => x.g && x.g.q);
+  if (scalable.length) {
+    const row2 = el('div', 'adjust-row');
+    const sel = el('select', 'despensa-select');
+    const opt0 = el('option', null, 'Despensa: ingrediente…');
+    opt0.value = '';
+    sel.appendChild(opt0);
+    scalable.forEach(({ g, i }) => {
+      const o = el('option', null, r.ingredients[i].length > 38 ? r.ingredients[i].slice(0, 37) + '…' : r.ingredients[i]);
+      o.value = String(i);
+      sel.appendChild(o);
+    });
+    if (Scale.driverIdx !== null) sel.value = String(Scale.driverIdx);
+    const tengo = el('input', 'tengo-input');
+    tengo.placeholder = 'Tengo';
+    tengo.title = 'Cuánto tienes: 2 · 1.5 · 1/2';
+    if (Scale.have) tengo.value = frFmt(Scale.have);
+    const _apply = () => {
+      const have = parseHave(tengo.value);
+      Scale.driverIdx = sel.value === '' ? null : +sel.value;
+      Scale.have = (Scale.driverIdx !== null && have) ? have : null;
+      if (Scale.driverIdx === null || !Scale.have) { Scale.driverIdx = null; Scale.have = null; }
+      renderScaling(r);
+    };
+    sel.onchange = _apply;
+    tengo.onchange = _apply;
+    const reset = el('button', 'adjust-reset', 'Restablecer');
+    reset.onclick = () => {
+      Scale.target = r.sBase; Scale.driverIdx = null; Scale.have = null;
+      _svSave(currentId, null);
+      buildAdjustPanel(r); renderScaling(r);
+    };
+    append(row2, el('label', null, 'Despensa'), sel, tengo, reset);
+    append(panel, row, row2);
+    panel.appendChild(el('p', 'adjust-hint',
+      'Cambia las porciones, o di cuánto tienes de un ingrediente y toda la receta se ajusta a esa proporción. Las líneas «al gusto» no se escalan.'));
+  } else {
+    append(panel, row);
+  }
+}
+
 /* ═══ OPEN MODAL ════════════════════════════════════════════════ */
 let currentId = null;
 
 function openModal(id) {
   currentId = id;
   const r = R[id];
+  Scale.target = _svLoad(id) || r.sBase || 2;
+  Scale.driverIdx = null;
+  Scale.have = null;
 
   document.getElementById('modalTopTitle').textContent = r.name;
   document.getElementById('modalName').textContent = r.name;
@@ -950,7 +1161,12 @@ function openModal(id) {
   const ingHead = el('div', 'section-head');
   ingHead.appendChild(el('h3', null, 'Ingredientes'));
   const ingList = el('ul', 'ingredients-list');
-  r.ingredients.forEach(i => ingList.appendChild(buildIngredient(i)));
+  ingList.id = 'modalIngList';
+  r.ingredients.forEach((i, idx) => {
+    const li = buildIngredient(i);
+    li.dataset.i = String(idx);
+    ingList.appendChild(li);
+  });
   append(right, ingHead, ingList);
 
   /* steps section */
@@ -970,6 +1186,9 @@ function openModal(id) {
     append(tipBox, el('span', null, '💡'), tipContent);
     right.appendChild(tipBox);
   }
+
+  buildAdjustPanel(r);
+  renderScaling(r);
 
   document.getElementById('recipeModal').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1002,7 +1221,7 @@ function openPreview() {
   [
     [r.prep + (r.prepNote ? ' ' + r.prepNote : ''), 'Preparación'],
     [r.cook, 'Cocción'],
-    [r.servings, 'Porciones']
+    [scaleTotalF(r)[0] !== scaleTotalF(r)[1] || Scale.target !== r.sBase ? Scale.target + ' ' + r.sUnit + ' · ajustado' : r.servings, 'Porciones']
   ].forEach(([v, l]) => {
     const item = el('div', 'print-meta-item');
     append(item, el('span', 'print-meta-val', v), el('span', null, l));
@@ -1018,17 +1237,15 @@ function openPreview() {
   const ingCol = el('div', 'print-ingredients');
   ingCol.appendChild(el('h4', 'print-col-label', 'Ingredientes'));
   const ingUl = el('ul');
-  r.ingredients.forEach(i => {
+  const pF = scaleTotalF(r);
+  r.ingredients.forEach((i, idx) => {
     const li = el('li');
-    li.textContent = i;
+    li.textContent = ingLineText(r.ing[idx], i, pF);
     ingUl.appendChild(li);
   });
   ingCol.appendChild(ingUl);
   const macroGrid = el('div', 'print-macros');
-  [
-    [r.kcal, 'kcal'], [r.p + 'g', 'proteína'],
-    [r.c + 'g', 'carbos'], [r.g + 'g', 'grasas']
-  ].forEach(([v, l]) => {
+  _macroVals(r).cells.forEach(([v, l]) => {
     const cell = el('div', 'print-macro-cell');
     append(cell, el('div', 'print-macro-val', String(v)), el('div', 'print-macro-lbl', l));
     macroGrid.appendChild(cell);
