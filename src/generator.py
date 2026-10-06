@@ -11,6 +11,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from .models import Recipe
+from .quantities import parse_servings, structure_ingredients
 
 
 _ROOT = Path(__file__).resolve().parent.parent
@@ -44,6 +45,7 @@ def _load_step_icons() -> dict[str, dict]:
 
 def _recipe_to_js(recipe: Recipe) -> dict:
     """Convert a Recipe to the JS-compatible dict the index template expects."""
+    s_base, s_unit = parse_servings(recipe.servings)
     return {
         "name": recipe.name,
         "sub": recipe.subtitle,
@@ -54,6 +56,9 @@ def _recipe_to_js(recipe: Recipe) -> dict:
         "prepNote": recipe.prep_note,
         "cook": recipe.cook,
         "servings": recipe.servings,
+        "sBase": s_base,
+        "sUnit": s_unit,
+        "ing": structure_ingredients(recipe),
         "kcal": recipe.nutrition.kcal,
         "p": recipe.nutrition.protein,
         "c": recipe.nutrition.carbs,
